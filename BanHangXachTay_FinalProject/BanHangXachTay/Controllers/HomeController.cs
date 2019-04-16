@@ -26,5 +26,10 @@ namespace BanHangXachTay.Controllers
 
             return View();
         }
+
+        public ActionResult product_detail()
+        {
+            return View();
+        }
     }
 }
