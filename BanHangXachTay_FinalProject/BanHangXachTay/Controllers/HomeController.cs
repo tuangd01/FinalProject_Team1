@@ -13,21 +13,32 @@ namespace BanHangXachTay.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult AboutViews()
         {
             ViewBag.Message = "Your application description page.";
 
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult ContactViews()
         {
             ViewBag.Message = "Your contact page.";
 
             return View();
         }
+        public ActionResult YourCartViews()
+        {
+            ViewBag.Message = "Your cart page.";
 
-        public ActionResult product_detail()
+            return View();
+        }
+
+        public ActionResult WomanViews()
+        {
+            return View();
+        }
+
+        public ActionResult ManViews()
         {
             return View();
         }

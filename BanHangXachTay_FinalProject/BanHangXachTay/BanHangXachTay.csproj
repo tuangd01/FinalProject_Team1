@@ -165,7 +165,6 @@
     <Compile Include="Content\DB_Banhangxachtay.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
-    <Compile Include="Controllers\DatHangController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\QLSPController.cs" />
     <Compile Include="Global.asax.cs">
@@ -315,8 +314,8 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\AboutViews.cshtml" />
+    <Content Include="Views\Home\ContactViews.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
@@ -330,20 +329,20 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\product_detail.cshtml" />
-    <Content Include="Views\DatHang\Index.cshtml" />
     <Content Include="Views\QLSP\Create.cshtml" />
     <Content Include="Views\QLSP\Delete.cshtml" />
     <Content Include="Views\QLSP\Details.cshtml" />
     <Content Include="Views\QLSP\Edit.cshtml" />
     <Content Include="Views\QLSP\Index.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Home\YourCartViews.cshtml" />
+    <Content Include="Views\Home\WomanViews.cshtml" />
+    <Content Include="Views\Home\ManViews.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\themes\js\images\" />
     <Folder Include="Content\themes\js\js\" />
-    <Folder Include="Views\DatHang\App_LocalResources\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
