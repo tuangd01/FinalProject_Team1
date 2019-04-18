@@ -1,0 +1,43 @@
+﻿body{
+	margin: 0px;padding: 0px;
+}
+.the-form-wrapper{
+	width: 437px;
+	margin-left: 200px;
+	height: 266px;
+	border: 2px solid #4197ee;
+}
+.row-wrapper{
+	padding:10px 80px;
+	width: 330px;
+	height: 20px;
+
+}
+.topic-filter-wrapper label{
+    float:left;
+}
+#topic-filter{
+	width: 125px;
+	margin-left: 10px;
+	float: left;
+}
+.label-wrapper{
+	float: left;
+}
+.input-wrapper{
+	float:right;
+}
+.submit-wrapper #submit{
+	margin: -2px 0px;
+	width: 439px;
+	background-color: #4197ee;
+	padding: 10px 0px;
+	color: white;
+	margin-left: 200px;
+}
+.required{
+    color:red;
+}
+
+
+

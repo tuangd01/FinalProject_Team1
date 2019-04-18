@@ -1,0 +1,77 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+
+<h2>Contact</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/Content/Contact_User.css">
+</head>
+<body>
+    <div class="contact-form">
+        <h1>Hàng Xách Tay US Xin Hân Hạnh Được Hỗ Trợ Quý Khách</h1>
+        <div class="the-form-wrapper">
+            <div class="topic-filter-wrapper clearfix">
+                <label for="topic-filter">Quý khách đang quan tâm về: </label>
+                <select id="topic-filter" class="topic-filter" name="topic-filter">
+                    <option value="-1">Chọn chủ đề</option>
+                    <option value="1">Tư vấn</option>
+                    <option value="2">Khiếu nại - Phản ánh</option>
+                    <option value="3">Hợp tác với Hangxachtayus</option>
+                    <option value="4">Góp ý cải tiến</option>
+                </select>
+            </div>
+            <div class="row-wrapper clearfix">
+                <div class="label-wrapper">
+                    <label for="title">Tiêu đề <strong class="required">*</strong></label>
+                    
+                </div>
+                <div class="input-wrapper">
+                    <input id="title" name="title" class="input title" type="text">
+                </div>
+            </div>
+            <div class="row-wrapper clearfix">
+                <div class="label-wrapper">
+                    <label for="message">Nội dung <strong class="required">*</strong></label>
+                    
+                </div>
+                <div class="input-wrapper">
+                    <textarea id="message" name="message" class="textarea message" placeholder="Xin quý khách vui lòng mô tả chi tiết"></textarea>
+                </div>
+            </div>
+            <div class="row-wrapper clearfix">
+                <div class="label-wrapper">
+                    <label for="fullname">Họ và tên <strong class="required">*</strong></label>
+                   
+                </div>
+                <div class="input-wrapper">
+                    <input id="fullname" name="fullname" class="input fullname" type="text">
+                </div>
+            </div>
+            <div class="row-wrapper clearfix">
+                <div class="label-wrapper">
+                    <label for="email">Ðịa chỉ email</label>
+                </div>
+                <div class="input-wrapper">
+                    <input id="email" name="email" class="input email" type="text">
+                </div>
+            </div>
+            <div class="row-wrapper clearfix">
+                <div class="label-wrapper">
+                    <label for="tel">Số điện thoại</label>
+                </div>
+                <div class="input-wrapper">
+                    <input id="tel" name="tel" class="input tel" type="text" maxlength="11">
+                </div>
+            </div>
+        </div>
+        <div class="submit-wrapper">
+            <input id="submit" name="submit" class="submit submit" type="submit" value="Gửi Liên Hệ" onclick="return SubmitContact();">
+        </div>
+
+    </div>
+</body>
+</html>
