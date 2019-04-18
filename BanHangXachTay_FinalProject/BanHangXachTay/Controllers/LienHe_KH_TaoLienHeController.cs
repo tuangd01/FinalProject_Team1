@@ -6,16 +6,11 @@ using System.Web.Mvc;
 
 namespace BanHangXachTay.Controllers
 {
-    public class ContactController : Controller
+    public class LienHe_KH_TaoLienHeController : Controller
     {
         //
-        // GET: /Contact/
+        // GET: /Contact_Customer/
         public ActionResult Index()
-        {
-            return View();
-        }
-
-        public ActionResult Admin()
         {
             return View();
         }

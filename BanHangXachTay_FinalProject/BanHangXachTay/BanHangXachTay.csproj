@@ -164,7 +164,9 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Content\DB_Banhangxachtay.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\LienHe_Admin_PhanHoi_TrangThaiController.cs" />
+    <Compile Include="Controllers\LienHe_Admin_Timkiem_XemController.cs" />
+    <Compile Include="Controllers\LienHe_KH_TaoLienHeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\QLSPController.cs" />
     <Compile Include="Global.asax.cs">
@@ -334,7 +336,6 @@
     <Content Include="Views\QLSP\Details.cshtml" />
     <Content Include="Views\QLSP\Edit.cshtml" />
     <Content Include="Views\QLSP\Index.cshtml" />
-    <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\Home\YourCartViews.cshtml" />
     <Content Include="Views\Home\WomanViews.cshtml" />
     <Content Include="Views\Home\ManViews.cshtml" />
