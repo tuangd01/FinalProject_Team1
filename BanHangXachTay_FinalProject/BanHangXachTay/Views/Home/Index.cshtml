@@ -43,7 +43,7 @@
             <div class="span8">
                 <div class="account pull-right">
                     <ul class="user-menu">
-                        <li><a href="./AboutViews">My Account</a></li>
+                        <li><a href="@Url.Action("AboutViews","Home")">My Account</a></li>
                         <li><a href="./YourCartViews">YourCart</a></li>
                         <li><a href="./ContactViews">Checkout</a></li>
                         <li><a href="register.html">Login</a></li>
@@ -55,11 +55,11 @@
     <div id="wrapper" class="container">
         <section class="navbar main-menu">
             <div class="navbar-inner main-menu">
-                <a href="@Url.Action("Index","Home") class="logo pull-left"><img src="/Content/themes/images/logo.png" class="site_logo" alt=""></a>
+                <a href="@Url.Action("Index","Home")" class="logo pull-left"><img src="/Content/themes/images/logo.png" class="site_logo" alt=""></a>
                 <nav id="menu" class="pull-right">
                     <ul>
                         <li>
-                            <a href="./WomanViews">Woman</a>
+                            <a href="@Url.Action("WomanViews","Home")">Woman</a>
                             <ul>
                                 <li><a href="./products.html">Lacinia nibh</a></li>
                                 <li><a href="./products.html">Eget molestie</a></li>

@@ -345,7 +345,9 @@
     <Content Include="Views\QLSP\Index.cshtml" />
     <Content Include="Views\Home\WomanViews.cshtml" />
     <Content Include="Views\Home\ManViews.cshtml" />
-    <Content Include="Views\YourCart\YourCartViews.cshtml" />
+    <Content Include="Views\YourCart\YourCartViews.cshtml">
+      <BrowseToURL>~/YourCart/YourCartViews</BrowseToURL>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
