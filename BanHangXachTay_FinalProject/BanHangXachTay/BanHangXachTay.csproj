@@ -169,6 +169,7 @@
     <Compile Include="Controllers\LienHe_KH_TaoLienHeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\QLSPController.cs" />
+    <Compile Include="Controllers\YourCartController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -241,6 +242,12 @@
     <Content Include="Content\themes\images\feature_img_2.png" />
     <Content Include="Content\themes\images\feature_img_3.png" />
     <Content Include="Content\themes\images\gotop.png" />
+    <Content Include="Content\themes\images\iconFacebook.png" />
+    <Content Include="Content\themes\images\iconJCB.png" />
+    <Content Include="Content\themes\images\iconMasterCard.png" />
+    <Content Include="Content\themes\images\iconVisaCard.png" />
+    <Content Include="Content\themes\images\iconYoutube.png" />
+    <Content Include="Content\themes\images\iconZalo.png" />
     <Content Include="Content\themes\images\ladies\1.jpg" />
     <Content Include="Content\themes\images\ladies\2.jpg" />
     <Content Include="Content\themes\images\ladies\3.jpg" />
@@ -336,9 +343,9 @@
     <Content Include="Views\QLSP\Details.cshtml" />
     <Content Include="Views\QLSP\Edit.cshtml" />
     <Content Include="Views\QLSP\Index.cshtml" />
-    <Content Include="Views\Home\YourCartViews.cshtml" />
     <Content Include="Views\Home\WomanViews.cshtml" />
     <Content Include="Views\Home\ManViews.cshtml" />
+    <Content Include="Views\YourCart\YourCartViews.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
