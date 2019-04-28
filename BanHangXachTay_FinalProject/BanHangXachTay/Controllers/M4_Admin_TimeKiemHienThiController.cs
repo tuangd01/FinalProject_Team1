@@ -6,10 +6,10 @@ using System.Web.Mvc;
 
 namespace BanHangXachTay.Controllers
 {
-    public class LienHe_Admin_PhanHoi_TrangThaiController : Controller
+    public class M4_Admin_TimeKiemHienThiController : Controller
     {
         //
-        // GET: /LienHe_Admin_PhanHoi_TrangThai/
+        // GET: /M4_Admin_TimeKiemHienThi/
         public ActionResult Index()
         {
             return View();

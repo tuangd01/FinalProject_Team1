@@ -164,10 +164,10 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Content\DB_Banhangxachtay.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\LienHe_Admin_PhanHoi_TrangThaiController.cs" />
-    <Compile Include="Controllers\LienHe_Admin_Timkiem_XemController.cs" />
-    <Compile Include="Controllers\LienHe_KH_TaoLienHeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\M4_Admin_CapNhatTrangThaiController.cs" />
+    <Compile Include="Controllers\M4_Admin_TimeKiemHienThiController.cs" />
+    <Compile Include="Controllers\M4_KH_TaoThongTinLienHeController.cs" />
     <Compile Include="Controllers\QLSPController.cs" />
     <Compile Include="Controllers\YourCartController.cs" />
     <Compile Include="Global.asax.cs">
@@ -348,11 +348,15 @@
     <Content Include="Views\YourCart\YourCartViews.cshtml">
       <BrowseToURL>~/YourCart/YourCartViews</BrowseToURL>
     </Content>
+    <Content Include="Views\LienHe_Admin_PhanHoi_TrangThai\Repord.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\themes\js\images\" />
     <Folder Include="Content\themes\js\js\" />
+    <Folder Include="Views\M4_Admin_CapNhatTrangThai\" />
+    <Folder Include="Views\M4_Admin_TimeKiemHienThi\" />
+    <Folder Include="Views\M4_KH_TạoThongTinLienHe\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
