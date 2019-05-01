@@ -259,6 +259,8 @@
     <Content Include="Content\themes\images\ladies\9.jpg" />
     <Content Include="Content\themes\images\line_bar.png" />
     <Content Include="Content\themes\images\logo.png" />
+    <Content Include="Content\themes\images\LogoLazada.png" />
+    <Content Include="Content\themes\images\LogoLotte.png" />
     <Content Include="Content\themes\images\m1.png" />
     <Content Include="Content\themes\images\m2.png" />
     <Content Include="Content\themes\images\m3.png" />
