@@ -106,7 +106,7 @@
         <!--/////////////////////////////-->
         <section class="header_text">
             <h4 class="title"><span class="text">Giỏ hàng của bạn</span></h4>
-            
+
             <div class="deals__empty"><img class="deals__empty-img" src="https://vcdn.tikicdn.com/media/upload/2017/12/18/dfd8ebb029976f70e8a132459fd6405d.jpg" alt=""></div>
         </section>
 
@@ -212,7 +212,7 @@
                                 <div class="responsive">
                                     <img src="/Content/themes/images/feature_img_2.png" alt="" />
                                     <h4>QUẢN LÝ<strong>TÀI KHOẢN</strong></h4>
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -238,17 +238,17 @@
             </div>
         </section>
 
-        
+
         <!--/////////////////////////////-->
         <section class="our_client">
             <h4 class="title"><span class="text">Liên kết với</span></h4>
             <div class="row">
-                
+
                 <div class="span3">
-                        <a href="https://www.lotte.vn/"><img alt="" src="~/Content/themes/images/LogoLazada.png"></a>
+                    <a href="https://www.lotte.vn/"><img alt="" src="~/Content/themes/images/LogoLazada.png"></a>
 
                 </div>
-                
+
             </div>
         </section>
         <section id="footer-bar">
@@ -300,10 +300,14 @@
                         <a rel="nofollow" href="https://zalo.me/pc" target="_blank" title="Zalo">
                             <a href="https://zalo.me/pc"><img alt="" src="~/Content/themes/images/iconZalo.png"></a>
                         </a>
-                     
+
                     </div>
-                    
+
                 </div>
+
+
+                <button onclick="topFunction()" id="myButton" title="Go to top">^</button>
+
 
 
             </div>
@@ -327,6 +331,24 @@
                 });
             });
         });
+    </script>
+    <script>
+        // Khi cuộn xuống >20px thì xuất hiện Button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myButton").style.display = "block";
+            } else {
+                document.getElementById("myButton").style.display = "none";
+            }
+        }
+
+        // Khi click vào thì go to top
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
     </script>
 </body>
 </html>
