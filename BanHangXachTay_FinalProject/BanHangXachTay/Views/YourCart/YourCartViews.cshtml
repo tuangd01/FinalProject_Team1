@@ -36,15 +36,15 @@
         <div class="row">
             <div class="span4">
                 <form method="POST" class="search_form">
-                    <input type="text" class="input.-block-level search-query" placeholder="eg. T-shirt">
+                    <input type="text" class="input.-block-level search-query" placeholder="Tìm kiếm nhẹ!">
                 </form>
             </div>
             <div class="span8">
                 <div class="account pull-right">
                     <ul class="user-menu">
-                        <li><a href="@Url.Action("AboutViews","Home")">My Account</a></li>
-                        <li><a href="@Url.Action("YourCartViews","YourCart")">YourCart</a></li>
-                        <li><a href="@Url.Action("ContactViews","Home")">Checkout</a></li>
+                        <li><a href="@Url.Action("AboutViews","Home")">Tài khoàn của bạn</a></li>
+                        <li><a href="@Url.Action("YourCartViews","YourCart")">Giỏ Hàng</a></li>
+                        <li><a href="@Url.Action("ContactViews","Home")">Địa điểm</a></li>
                         <li><a href="#">Login</a></li>
                     </ul>
                 </div>
@@ -60,25 +60,26 @@
                 <nav id="menu" class="pull-right">
                     <ul>
                         <li>
-                            <a href="./WomanViews">Woman</a>
+                            <a href="./WomanViews">Quần Áo Nữ</a>
                             <ul>
-                                <li><a href="./products.html">Lacinia nibh</a></li>
-                                <li><a href="./products.html">Eget molestie</a></li>
-                                <li><a href="./products.html">Varius purus</a></li>
+                                <li><a href="#">Áo</a></li>
+                                <li><a href="#">Quần</a></li>
+                                <li><a href="#">Váy</a></li>
                             </ul>
                         </li>
-                        <li><a href="./ManViews">Man</a></li>
+                        <li><a href="./ManViews">Quần Áo Nam</a></li>
                         <li>
-                            <a href="./products.html">Sport</a>
+                            <a href="#">Mũ</a>
+                            <a href="#">Phụ kiện</a>
                             <ul>
-                                <li><a href="./products.html">Gifts and Tech</a></li>
-                                <li><a href="./products.html">Ties and Hats</a></li>
-                                <li><a href="./products.html">Cold Weather</a></li>
+                                <li><a href="#">Thắt Lưng</a></li>
+                                <li><a href="#">Balo</a></li>
+                                <li><a href="#">Túi</a></li>
                             </ul>
                         </li>
-                        <li><a href="./products.html">Hangbag</a></li>
-                        <li><a href="./products.html">Best Seller</a></li>
-                        <li><a href="./products.html">Top Seller</a></li>
+                        <li><a href="#">Giầy</a></li>
+                        <li><a href="#">Hàng Giảm giá</a></li>
+                        
                     </ul>
                 </nav>
             </div>
@@ -89,15 +90,21 @@
             <div class="flexslider">
                 <ul class="slides">
                     <li>
-                        <img src="/Content/themes/images/carousel/banner-1.jpg" alt="" />
+                        <a href="//pages.lazada.vn/wow/i/vn/VNCampaign/di-cho-dau-thang?hybrid=1&amp;scm=1003.4.icms-zebra-5000379-2587043.OTHER_5913680655_3899276" title="Đi chợ đầu tháng" data-spm="dbr2" exp-tracking="bannerSlider">
+                            <img class="main-img J_LazyImg" alt="Đi chợ đầu tháng" src="//laz-img-cdn.alicdn.com/images/ims-web/TB1LwUbTNYaK1RjSZFnXXa80pXa.jpg_1200x1200Q100.jpg_.webp">
+                        </a>                    </li>
+                    <li>
+                        <a href="https://fptshop.com.vn/may-tinh-xach-tay/hp-envy-13-ah1011tu-core-i5-8265u"><img src="//cdn.fptshop.com.vn/Uploads/Originals/2019/4/1/636896772193642123_HP-T4.png" alt="HP Envy 13"></a>
                     </li>
                     <li>
-                        <img src="/Content/themes/images/carousel/banner-2.jpg" alt="" />
-                        <div class="intro">
-                            <h1>Mid season sale</h1>
-                            <p><span>Up to 50% Off</span></p>
-                            <p><span>On selected items online and in stores</span></p>
-                        </div>
+                        <a href="https://meta.vn/khuyenmai/165/giai-nhiet-mua-he.html?ref=hometopslide-quat">
+                            <img src="https://s.meta.com.vn/img/thumb.ashx/Data/2019/Thang02/bao-gia-chao-he-970x375.png" class="slide-image" id="slide-1703" data-src="/Data/2019/Thang02/bao-gia-chao-he-970x375.png" alt="Giải cứu mùa hè">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://meta.vn/dong-ho-nu-c3323">
+                            <img src="https://s.meta.com.vn/img/thumb.ashx/Data/2019/Thang04/mien-phi-van-chuyen-dong-ho-970x375.png" class="slide-image" id="slide-1810" data-src="/Data/2019/Thang04/mien-phi-van-chuyen-dong-ho-970x375.png" alt="Đồng hồ chính hãng">
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -306,8 +313,7 @@
                 </div>
 
 
-                <button onclick="topFunction()" id="myButton" title="Go to top">^</button>
-
+                <div id="topcontrol" title="Scroll Back to Top" style="position: fixed; bottom: 12px; right: 0px; opacity: 1; cursor: pointer;"><img src="~/Content/themes/images/gotop.png" style="width:40px; height:40px; margin-top: 25px; margin-right: 17px;"></div>
 
 
             </div>
@@ -332,24 +338,7 @@
             });
         });
     </script>
-    <script>
-        // Khi cuộn xuống >20px thì xuất hiện Button
-        window.onscroll = function () { scrollFunction() };
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("myButton").style.display = "block";
-            } else {
-                document.getElementById("myButton").style.display = "none";
-            }
-        }
-
-        // Khi click vào thì go to top
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-    </script>
+  
 </body>
 </html>
 
