@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewBag.Title = "YourCartViews";
+    ViewBag.Title = "ProductDetailView";
 }
 
 <!DOCTYPE html>
@@ -115,137 +115,55 @@
 
         <!--/////////////////////////////-->
         <section class="header_text">
-            <h4 class="title"><span class="text">Giỏ hàng của bạn</span></h4>
-
-            <div class="deals__empty"><img class="deals__empty-img" src="https://vcdn.tikicdn.com/media/upload/2017/12/18/dfd8ebb029976f70e8a132459fd6405d.jpg" alt=""></div>
+            <h4 class="title"><span class="text">CHI TIẾT SẢN PHẨM</span></h4>
+            <div>LIÊN HỆ QUẢNG CÁO: 0979320779</div>
         </section>
 
 
         <!--/////////////////////////////-->
         <section class="main-content">
-            <div class="row">
-                <div class="span12">
-                    <div class="row">
-                        <div class="span12">
-                            <h4 class="title">
-                                <span class="pull-left"><span class="text"><span class="line">Sản Phẩm <strong>Bán Chạy</strong></span></span></span>
-                                <span class="pull-right">
-                                    <a class="left button" href="#myCarousel" data-slide="prev"></a><a class="right button" href="#myCarousel" data-slide="next"></a>
-                                </span>
-                            </h4>
-                            <div id="myCarousel" class="myCarousel carousel slide">
-                                <div class="carousel-inner">
-                                    <div class="active item">
-                                        <ul class="thumbnails">
-                                            <li class="span3">
-                                                <div class="product-box">
-                                                    <span class="sale_tag"></span>
-                                                    <p><a href="@Url.Action("ProductDetailView","ProductDetail")"><img src="/Content/themes/images/ladies/1.jpg" alt="" /></a></p>
-                                                    <a href="@Url.Action("ProductDetailView","ProductDetail")" class="title">TEN SAN PHAM</a><br />
-                                                    <a href="@Url.Action("ProductDetailView","ProductDetail")" class="category">SIZE</a>
-                                                    <p class="price">$17.25</p>
-                                                </div>
-                                            </li>
-
-                                            <li class="span3">
-                                                <div class="product-box">
-                                                    <span class="sale_tag"></span>
-                                                    <p><a href="product_detail.html"><img src="/Content/themes/images/ladies/2.jpg" alt="" /></a></p>
-                                                    <a href="product_detail.html" class="title">TEN SAN PHAM</a><br />
-                                                    <a href="products.html" class="category">SIZE</a>
-                                                    <p class="price">$32.50</p>
-                                                </div>
-                                            </li>
-                                            <li class="span3">
-                                                <div class="product-box">
-                                                    <p><a href="product_detail.html"><img src="/Content/themes/images/ladies/3.jpg" alt="" /></a></p>
-                                                    <a href="product_detail.html" class="title">TEN SAN PHAM</a><br />
-                                                    <a href="products.html" class="category">SIZE</a>
-                                                    <p class="price">$14.20</p>
-                                                </div>
-                                            </li>
-                                            <li class="span3">
-                                                <div class="product-box">
-                                                    <p><a href="product_detail.html"><img src="/Content/themes/images/ladies/4.jpg" alt="" /></a></p>
-                                                    <a href="product_detail.html" class="title">TEN SAN PHAM</a><br />
-                                                    <a href="products.html" class="category">SIZE</a>
-                                                    <p class="price">$31.45</p>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="item">
-                                        <ul class="thumbnails">
-                                            <li class="span3">
-                                                <div class="product-box">
-                                                    <p><a href="product_detail.html"><img src="/Content/themes/images/ladies/5.jpg" alt="" /></a></p>
-                                                    <a href="product_detail.html" class="title">TEN SAN PHAM</a><br />
-                                                    <a href="products.html" class="category">SIZE</a>
-                                                    <p class="price">$22.30</p>
-                                                </div>
-                                            </li>
-                                            <li class="span3">
-                                                <div class="product-box">
-                                                    <p><a href="product_detail.html"><img src="/Content/themes/images/ladies/6.jpg" alt="" /></a></p>
-                                                    <a href="product_detail.html" class="title">TEN SAN PHAM</a><br />
-                                                    <a href="products.html" class="category">SIZE</a>
-                                                    <p class="price">$40.25</p>
-                                                </div>
-                                            </li>
-                                            <li class="span3">
-                                                <div class="product-box">
-                                                    <p><a href="product_detail.html"><img src="/Content/themes/images/ladies/7.jpg" alt="" /></a></p>
-                                                    <a href="product_detail.html" class="title">TEN SAN PHAM</a><br />
-                                                    <a href="products.html" class="category">SIZE</a>
-                                                    <p class="price">$10.45</p>
-                                                </div>
-                                            </li>
-                                            <li class="span3">
-                                                <div class="product-box">
-                                                    <p><a href="product_detail.html"><img src="/Content/themes/images/ladies/8.jpg" alt="" /></a></p>
-                                                    <a href="product_detail.html" class="title">TEN SAN PHAM</a><br />
-                                                    <a href="products.html" class="category">SIZE</a>
-                                                    <p class="price">$35.50</p>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <ul class="thumbnails">
+                <li class="span4">
+                    <div>
+                        <img src="/Content/themes/images/ladies/1.jpg" alt="Ten SP" style="opacity: 1;" data-spm-anchor-id="id">
                     </div>
-                    <br />
+                </li>
 
-                    <div class="row feature_box">
-                        <div class="span4">
-                            <div class="service">
-                                <div class="responsive">
-                                    <img src="/Content/themes/images/feature_img_2.png" alt="" />
-                                    <h4>QUẢN LÝ<strong>TÀI KHOẢN</strong></h4>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="span4">
-                            <div class="service">
-                                <div class="customize">
-                                    <img src="/Content/themes/images/feature_img_1.png" alt="" />
-                                    <h4>MUA<strong>THÊM HÀNG</strong></h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="span4">
-                            <div class="service">
-                                <div class="support">
-                                    <img src="/Content/themes/images/feature_img_3.png" alt="" />
-                                    <h4>HỔ TRỢ KHÁCH HÀNG<strong>24/7</strong></h4>
-                                    <p>HOT LINE: 0979320779</p>
-                                </div>
-                            </div>
-                        </div>
+                <li class="span4">
+                    <div class="pdp-mod-product-badge-wrapper"  style="text-align:center">
+                        
+                        <span class="title">TEN SAN PHAM</span>
+                        <br>
+                        <br/>
+                        <span class="category">SIZE</span>
+                        <br>
+                        <br />
+                        <p  style="text-align:left"><font size="5"><strike>$37.50</strike></font></p>
+                        <br />
+                        <p class="price" style="text-align:left"><font size="9" color="red">$32.50</font></p>
+                        <p style="background-color:#ccc;height:1px"></p>
                     </div>
-                </div>
-            </div>
+                    <div style="width:auto">
+                        <select>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        <p style="background-color:#ccc;height:1px"></p>
+                    </div>
+                    <div>
+                        <button style="width:125px">Chọn</button>
+                    </div>
+                </li>
+                <li>
+                    <details>
+                        <summary><mark>Phương thức giao hàng</mark></summary>
+                        <p>thiet ke phuong thuc giao hang</p>
+                    </details>
+                </li>
+
+            </ul>
         </section>
 
 
@@ -344,6 +262,8 @@
 
 </body>
 </html>
+
+
 
 
 

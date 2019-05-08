@@ -168,6 +168,7 @@
     <Compile Include="Controllers\M4_Admin_CapNhatTrangThaiController.cs" />
     <Compile Include="Controllers\M4_Admin_TimeKiemHienThiController.cs" />
     <Compile Include="Controllers\M4_KH_TaoThongTinLienHeController.cs" />
+    <Compile Include="Controllers\ProductDetailController.cs" />
     <Compile Include="Controllers\QLSPController.cs" />
     <Compile Include="Controllers\YourCartController.cs" />
     <Compile Include="Global.asax.cs">
@@ -351,6 +352,7 @@
       <BrowseToURL>~/YourCart/YourCartViews</BrowseToURL>
     </Content>
     <Content Include="Views\LienHe_Admin_PhanHoi_TrangThai\Repord.cshtml" />
+    <Content Include="Views\ProductDetail\ProductDetailView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
