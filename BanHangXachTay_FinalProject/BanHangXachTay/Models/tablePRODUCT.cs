@@ -7,19 +7,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BanHangXachTay
+namespace BanHangXachTay.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class tableTTSP
+    public partial class tablePRODUCT
     {
         public int idSP { get; set; }
-        public string maSP { get; set; }
+        public string loaiSP { get; set; }
         public string tenSP { get; set; }
-        public Nullable<int> dongia { get; set; }
-        public Nullable<int> soluong { get; set; }
+        public Nullable<int> dongiaSP { get; set; }
+        public Nullable<int> soluongSP { get; set; }
         public Nullable<System.DateTime> ngaynhap { get; set; }
-        public string ghichu { get; set; }
+        public string nhacungcap { get; set; }
+        public byte[] img { get; set; }
+        public string ghichuSP { get; set; }
     }
 }

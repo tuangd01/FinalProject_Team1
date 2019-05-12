@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CsK23T2aModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tableBILL">
+          <Key>
+            <PropertyRef Name="idHD" />
+          </Key>
+          <Property Name="idHD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idKH" Type="int" />
+          <Property Name="tenKH" Type="nvarchar" MaxLength="50" />
+          <Property Name="sodienthoaiKH" Type="varchar" MaxLength="10" />
+          <Property Name="ngaydathang" Type="date" />
+          <Property Name="ngaygiaohang" Type="date" />
+          <Property Name="ngaynhanhang" Type="date" />
+          <Property Name="diachinhanhang" Type="nvarchar" MaxLength="100" />
+          <Property Name="idSP" Type="int" />
+          <Property Name="tenSP" Type="nvarchar" MaxLength="50" />
+          <Property Name="dongiaSP" Type="int" />
+          <Property Name="soluongSP" Type="int" />
+          <Property Name="ghichuSP" Type="nvarchar" MaxLength="100" />
+          <Property Name="thanhtienBILL" Type="int" />
+          <Property Name="soluongBILL" Type="int" />
+          <Property Name="dongiaBILL" Type="int" />
+          <Property Name="tongdoanhthu" Type="int" />
+          <Property Name="ghichuBILL" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tableCUSTOMER">
+          <Key>
+            <PropertyRef Name="idKH" />
+          </Key>
+          <Property Name="idKH" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tenKH" Type="nvarchar" MaxLength="50" />
+          <Property Name="gioitinh" Type="nvarchar" MaxLength="10" />
+          <Property Name="sodienthoaiKH" Type="varchar" MaxLength="10" />
+          <Property Name="diachi" Type="nvarchar" MaxLength="100" />
+          <Property Name="ghichu" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tablePRODUCT">
+          <Key>
+            <PropertyRef Name="idSP" />
+          </Key>
+          <Property Name="idSP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="loaiSP" Type="varchar" MaxLength="7" />
+          <Property Name="tenSP" Type="nvarchar" MaxLength="50" />
+          <Property Name="dongiaSP" Type="int" />
+          <Property Name="soluongSP" Type="int" />
+          <Property Name="ngaynhap" Type="date" />
+          <Property Name="nhacungcap" Type="nvarchar" MaxLength="50" />
+          <Property Name="img" Type="image" />
+          <Property Name="ghichuSP" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityContainer Name="CsK23T2aModelStoreContainer">
+          <EntitySet Name="tableBILL" EntityType="Self.tableBILL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tableCUSTOMER" EntityType="Self.tableCUSTOMER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tablePRODUCT" EntityType="Self.tablePRODUCT" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CsK23T2aModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tableBILL">
+          <Key>
+            <PropertyRef Name="idHD" />
+          </Key>
+          <Property Name="idHD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idKH" Type="Int32" />
+          <Property Name="tenKH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="sodienthoaiKH" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ngaydathang" Type="DateTime" Precision="0" />
+          <Property Name="ngaygiaohang" Type="DateTime" Precision="0" />
+          <Property Name="ngaynhanhang" Type="DateTime" Precision="0" />
+          <Property Name="diachinhanhang" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="idSP" Type="Int32" />
+          <Property Name="tenSP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="dongiaSP" Type="Int32" />
+          <Property Name="soluongSP" Type="Int32" />
+          <Property Name="ghichuSP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="thanhtienBILL" Type="Int32" />
+          <Property Name="soluongBILL" Type="Int32" />
+          <Property Name="dongiaBILL" Type="Int32" />
+          <Property Name="tongdoanhthu" Type="Int32" />
+          <Property Name="ghichuBILL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tableCUSTOMER">
+          <Key>
+            <PropertyRef Name="idKH" />
+          </Key>
+          <Property Name="idKH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tenKH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="gioitinh" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="sodienthoaiKH" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="diachi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ghichu" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tablePRODUCT">
+          <Key>
+            <PropertyRef Name="idSP" />
+          </Key>
+          <Property Name="idSP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="loaiSP" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="tenSP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="dongiaSP" Type="Int32" />
+          <Property Name="soluongSP" Type="Int32" />
+          <Property Name="ngaynhap" Type="DateTime" Precision="0" />
+          <Property Name="nhacungcap" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="img" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="ghichuSP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="CsK23T2aEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tableBILLs" EntityType="Self.tableBILL" />
+          <EntitySet Name="tableCUSTOMERs" EntityType="Self.tableCUSTOMER" />
+          <EntitySet Name="tablePRODUCTs" EntityType="Self.tablePRODUCT" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CsK23T2aModelStoreContainer" CdmEntityContainer="CsK23T2aEntities1">
+          <EntitySetMapping Name="tableBILLs">
+            <EntityTypeMapping TypeName="CsK23T2aModel.tableBILL">
+              <MappingFragment StoreEntitySet="tableBILL">
+                <ScalarProperty Name="idHD" ColumnName="idHD" />
+                <ScalarProperty Name="idKH" ColumnName="idKH" />
+                <ScalarProperty Name="tenKH" ColumnName="tenKH" />
+                <ScalarProperty Name="sodienthoaiKH" ColumnName="sodienthoaiKH" />
+                <ScalarProperty Name="ngaydathang" ColumnName="ngaydathang" />
+                <ScalarProperty Name="ngaygiaohang" ColumnName="ngaygiaohang" />
+                <ScalarProperty Name="ngaynhanhang" ColumnName="ngaynhanhang" />
+                <ScalarProperty Name="diachinhanhang" ColumnName="diachinhanhang" />
+                <ScalarProperty Name="idSP" ColumnName="idSP" />
+                <ScalarProperty Name="tenSP" ColumnName="tenSP" />
+                <ScalarProperty Name="dongiaSP" ColumnName="dongiaSP" />
+                <ScalarProperty Name="soluongSP" ColumnName="soluongSP" />
+                <ScalarProperty Name="ghichuSP" ColumnName="ghichuSP" />
+                <ScalarProperty Name="thanhtienBILL" ColumnName="thanhtienBILL" />
+                <ScalarProperty Name="soluongBILL" ColumnName="soluongBILL" />
+                <ScalarProperty Name="dongiaBILL" ColumnName="dongiaBILL" />
+                <ScalarProperty Name="tongdoanhthu" ColumnName="tongdoanhthu" />
+                <ScalarProperty Name="ghichuBILL" ColumnName="ghichuBILL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tableCUSTOMERs">
+            <EntityTypeMapping TypeName="CsK23T2aModel.tableCUSTOMER">
+              <MappingFragment StoreEntitySet="tableCUSTOMER">
+                <ScalarProperty Name="idKH" ColumnName="idKH" />
+                <ScalarProperty Name="tenKH" ColumnName="tenKH" />
+                <ScalarProperty Name="gioitinh" ColumnName="gioitinh" />
+                <ScalarProperty Name="sodienthoaiKH" ColumnName="sodienthoaiKH" />
+                <ScalarProperty Name="diachi" ColumnName="diachi" />
+                <ScalarProperty Name="ghichu" ColumnName="ghichu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tablePRODUCTs">
+            <EntityTypeMapping TypeName="CsK23T2aModel.tablePRODUCT">
+              <MappingFragment StoreEntitySet="tablePRODUCT">
+                <ScalarProperty Name="idSP" ColumnName="idSP" />
+                <ScalarProperty Name="loaiSP" ColumnName="loaiSP" />
+                <ScalarProperty Name="tenSP" ColumnName="tenSP" />
+                <ScalarProperty Name="dongiaSP" ColumnName="dongiaSP" />
+                <ScalarProperty Name="soluongSP" ColumnName="soluongSP" />
+                <ScalarProperty Name="ngaynhap" ColumnName="ngaynhap" />
+                <ScalarProperty Name="nhacungcap" ColumnName="nhacungcap" />
+                <ScalarProperty Name="img" ColumnName="img" />
+                <ScalarProperty Name="ghichuSP" ColumnName="ghichuSP" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
