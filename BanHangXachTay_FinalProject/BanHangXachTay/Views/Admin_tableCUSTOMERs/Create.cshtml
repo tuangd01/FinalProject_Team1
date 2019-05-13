@@ -4,7 +4,7 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
+<h2>Thêm mới khách hàng</h2>
 
 
 @using (Html.BeginForm()) 
@@ -12,7 +12,7 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>tableCUSTOMER</h4>
+        <h4></h4>
         <hr />
         @Html.ValidationSummary(true)
         <div class="form-group">
@@ -50,7 +50,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.ghichu, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.ghichu)
+                @Html.TextAreaFor(model => model.ghichu)
                 @Html.ValidationMessageFor(model => model.ghichu)
             </div>
         </div>
@@ -67,6 +67,5 @@
     @Html.ActionLink("Back to List", "Index")
 </div>
 
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+    @Styles.Render("~/bundles/jqueryval")
+
