@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using BanHangXachTay.Models;
+using System.Transactions;
 
 namespace BanHangXachTay.Controllers
 {
@@ -17,22 +18,23 @@ namespace BanHangXachTay.Controllers
         // GET: Admin_tablePRODUCTs
         public ActionResult Index()
         {
-            return View(db.tablePRODUCTs.ToList());
+            var model = db.tablePRODUCTs.ToList();
+            return View(model);
         }
 
         // GET: Admin_tablePRODUCTs/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult Details(int id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            tablePRODUCT tablePRODUCT = db.tablePRODUCTs.Find(id);
-            if (tablePRODUCT == null)
+            var model = db.tablePRODUCTs.Find(id);
+            if (model == null)
             {
                 return HttpNotFound();
             }
-            return View(tablePRODUCT);
+            return View(model);
         }
 
         // GET: Admin_tablePRODUCTs/Create
@@ -46,16 +48,37 @@ namespace BanHangXachTay.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "idSP,loaiSP,tenSP,dongiaSP,soluongSP,ngaynhap,nhacungcap,img,ghichuSP")] tablePRODUCT tablePRODUCT)
+        public ActionResult Create(tablePRODUCT model)
         {
             if (ModelState.IsValid)
             {
-                db.tablePRODUCTs.Add(tablePRODUCT);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
+                using (var scope = new TransactionScope())
+                {
+                    //Add Day
+                    model.ngaynhap = DateTime.Today;
 
-            return View(tablePRODUCT);
+                    //Add model to database
+                    db.tablePRODUCTs.Add(model);
+                    db.SaveChanges();
+
+                    //Save file to App_Data
+                    var path = Server.MapPath("~/App_Data");
+                    path = System.IO.Path.Combine(path, model.idSP.ToString());
+                    Request.Files["Image"].SaveAs(path);
+
+                    //Accept all and persistence
+                    scope.Complete();
+                    return RedirectToAction("Index");
+                }
+            }
+            return View(model);
+        }
+
+        public ActionResult Image(string id)
+        {
+            var path = Server.MapPath("~/App_Data");
+            path = System.IO.Path.Combine(path, id);
+            return File(path, "image/*");
         }
 
         // GET: Admin_tablePRODUCTs/Edit/5
