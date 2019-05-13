@@ -4,64 +4,83 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Thông tin đơn hàng</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Thêm mới", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.idKH)
         </th>
+
         <th>
             @Html.DisplayNameFor(model => model.tenKH)
         </th>
+
         <th>
             @Html.DisplayNameFor(model => model.sodienthoaiKH)
         </th>
+
         <th>
             @Html.DisplayNameFor(model => model.ngaydathang)
         </th>
+
         <th>
             @Html.DisplayNameFor(model => model.ngaygiaohang)
         </th>
+
         <th>
             @Html.DisplayNameFor(model => model.ngaynhanhang)
         </th>
+
         <th>
             @Html.DisplayNameFor(model => model.diachinhanhang)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.idSP)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.tenSP)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.dongiaSP)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.soluongSP)
-        </th>
+
         <th>
             @Html.DisplayNameFor(model => model.ghichuSP)
         </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.idSP)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.tenSP)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.dongiaSP)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.soluongSP)
+        </th>
+
         <th>
             @Html.DisplayNameFor(model => model.thanhtienBILL)
         </th>
+
+     
+        
         <th>
             @Html.DisplayNameFor(model => model.soluongBILL)
         </th>
+
         <th>
             @Html.DisplayNameFor(model => model.dongiaBILL)
         </th>
+
         <th>
             @Html.DisplayNameFor(model => model.tongdoanhthu)
         </th>
+
         <th>
             @Html.DisplayNameFor(model => model.ghichuBILL)
         </th>
+
         <th></th>
     </tr>
 
