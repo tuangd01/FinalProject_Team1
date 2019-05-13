@@ -4,7 +4,7 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
+<h2>Thêm mới Bill</h2>
 
 
 @using (Html.BeginForm()) 
@@ -12,7 +12,7 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>tableBILL</h4>
+        <h4></h4>
         <hr />
         @Html.ValidationSummary(true)
         <div class="form-group">
@@ -106,7 +106,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.ghichuSP, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.ghichuSP)
+                @Html.TextAreaFor(model => model.ghichuSP)
                 @Html.ValidationMessageFor(model => model.ghichuSP)
             </div>
         </div>
@@ -146,7 +146,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.ghichuBILL, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.ghichuBILL)
+                @Html.TextAreaFor(model => model.ghichuBILL)
                 @Html.ValidationMessageFor(model => model.ghichuBILL)
             </div>
         </div>
