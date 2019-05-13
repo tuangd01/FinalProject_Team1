@@ -1,0 +1,75 @@
+﻿@model IEnumerable<BanHangXachTay.Models.tablePRODUCT>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.loaiSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tenSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dongiaSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.soluongSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ngaynhap)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nhacungcap)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.img)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ghichuSP)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.loaiSP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tenSP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dongiaSP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.soluongSP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ngaynhap)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nhacungcap)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.img)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ghichuSP)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idSP }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idSP }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idSP })
+        </td>
+    </tr>
+}
+
+</table>

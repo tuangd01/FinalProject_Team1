@@ -1,0 +1,82 @@
+﻿@model BanHangXachTay.Models.tablePRODUCT
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tablePRODUCT</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.loaiSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.loaiSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tenSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tenSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dongiaSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dongiaSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.soluongSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.soluongSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ngaynhap)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngaynhap)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nhacungcap)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nhacungcap)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.img)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.img)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ghichuSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ghichuSP)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idSP }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -6,117 +6,111 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using BanHangXachTay;
+using BanHangXachTay.Models;
 
 namespace BanHangXachTay.Controllers
 {
-    public class QLSPController : Controller
+    public class Admin_tableCUSTOMERsController : Controller
     {
-        private BanHangEntities db = new BanHangEntities();
+        private CsK23T2aEntities1 db = new CsK23T2aEntities1();
 
-        // GET: /QLSP/
-        public ActionResult Index(string searchString)
+        // GET: Admin_tableCUSTOMERs
+        public ActionResult Index()
         {
-            var sps = from l in db.tableTTSPs
-                      select l;
-            if (!String.IsNullOrEmpty(searchString))
-            {
-                sps = sps.Where(s => s.tenSP.Contains(searchString));
-            }
-            return View(sps);
+            return View(db.tableCUSTOMERs.ToList());
         }
 
-        // GET: /QLSP/Details/5
-        public ActionResult Details(string id)
+        // GET: Admin_tableCUSTOMERs/Details/5
+        public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            tableTTSP tablettsp = db.tableTTSPs.Find(id);
-            if (tablettsp == null)
+            tableCUSTOMER tableCUSTOMER = db.tableCUSTOMERs.Find(id);
+            if (tableCUSTOMER == null)
             {
                 return HttpNotFound();
             }
-            return View(tablettsp);
+            return View(tableCUSTOMER);
         }
 
-        // GET: /QLSP/Create
+        // GET: Admin_tableCUSTOMERs/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: /QLSP/Create
+        // POST: Admin_tableCUSTOMERs/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="idSP,maSP,tenSP,dongia,soluong,ngaynhap,ghichu")] tableTTSP tablettsp)
+        public ActionResult Create([Bind(Include = "idKH,tenKH,gioitinh,sodienthoaiKH,diachi,ghichu")] tableCUSTOMER tableCUSTOMER)
         {
             if (ModelState.IsValid)
             {
-                db.tableTTSPs.Add(tablettsp);
+                db.tableCUSTOMERs.Add(tableCUSTOMER);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(tablettsp);
+            return View(tableCUSTOMER);
         }
 
-        // GET: /QLSP/Edit/5
-        public ActionResult Edit(string id)
+        // GET: Admin_tableCUSTOMERs/Edit/5
+        public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            tableTTSP tablettsp = db.tableTTSPs.Find(id);
-            if (tablettsp == null)
+            tableCUSTOMER tableCUSTOMER = db.tableCUSTOMERs.Find(id);
+            if (tableCUSTOMER == null)
             {
                 return HttpNotFound();
             }
-            return View(tablettsp);
+            return View(tableCUSTOMER);
         }
 
-        // POST: /QLSP/Edit/5
+        // POST: Admin_tableCUSTOMERs/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="idSP,maSP,tenSP,dongia,soluong,ngaynhap,ghichu")] tableTTSP tablettsp)
+        public ActionResult Edit([Bind(Include = "idKH,tenKH,gioitinh,sodienthoaiKH,diachi,ghichu")] tableCUSTOMER tableCUSTOMER)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(tablettsp).State = EntityState.Modified;
+                db.Entry(tableCUSTOMER).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(tablettsp);
+            return View(tableCUSTOMER);
         }
 
-        // GET: /QLSP/Delete/5
-        public ActionResult Delete(string id)
+        // GET: Admin_tableCUSTOMERs/Delete/5
+        public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            tableTTSP tablettsp = db.tableTTSPs.Find(id);
-            if (tablettsp == null)
+            tableCUSTOMER tableCUSTOMER = db.tableCUSTOMERs.Find(id);
+            if (tableCUSTOMER == null)
             {
                 return HttpNotFound();
             }
-            return View(tablettsp);
+            return View(tableCUSTOMER);
         }
 
-        // POST: /QLSP/Delete/5
+        // POST: Admin_tableCUSTOMERs/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(string id)
+        public ActionResult DeleteConfirmed(int id)
         {
-            tableTTSP tablettsp = db.tableTTSPs.Find(id);
-            db.tableTTSPs.Remove(tablettsp);
+            tableCUSTOMER tableCUSTOMER = db.tableCUSTOMERs.Find(id);
+            db.tableCUSTOMERs.Remove(tableCUSTOMER);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

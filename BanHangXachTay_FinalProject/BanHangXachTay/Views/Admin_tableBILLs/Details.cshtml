@@ -1,0 +1,154 @@
+﻿@model BanHangXachTay.Models.tableBILL
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tableBILL</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.idKH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idKH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tenKH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tenKH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sodienthoaiKH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sodienthoaiKH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ngaydathang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngaydathang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ngaygiaohang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngaygiaohang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ngaynhanhang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngaynhanhang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.diachinhanhang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.diachinhanhang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tenSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tenSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dongiaSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dongiaSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.soluongSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.soluongSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ghichuSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ghichuSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.thanhtienBILL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.thanhtienBILL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.soluongBILL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.soluongBILL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dongiaBILL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dongiaBILL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tongdoanhthu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tongdoanhthu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ghichuBILL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ghichuBILL)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idHD }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

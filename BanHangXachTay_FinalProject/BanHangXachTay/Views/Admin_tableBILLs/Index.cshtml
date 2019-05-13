@@ -1,0 +1,129 @@
+﻿@model IEnumerable<BanHangXachTay.Models.tableBILL>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idKH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tenKH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sodienthoaiKH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ngaydathang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ngaygiaohang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ngaynhanhang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.diachinhanhang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tenSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dongiaSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.soluongSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ghichuSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.thanhtienBILL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.soluongBILL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dongiaBILL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tongdoanhthu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ghichuBILL)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.idKH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tenKH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sodienthoaiKH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ngaydathang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ngaygiaohang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ngaynhanhang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.diachinhanhang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idSP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tenSP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dongiaSP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.soluongSP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ghichuSP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.thanhtienBILL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.soluongBILL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dongiaBILL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tongdoanhthu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ghichuBILL)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idHD }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idHD }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idHD })
+        </td>
+    </tr>
+}
+
+</table>
