@@ -15,6 +15,7 @@ namespace BanHangXachTay.Models
     
     public partial class tableCUSTOMER
     {
+        [Display(Name="ID khách hàng")]
         public int idKH { get; set; }
         [Display(Name="Tên khách hàng")]
         public string tenKH { get; set; }

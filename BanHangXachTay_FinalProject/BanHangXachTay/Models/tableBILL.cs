@@ -15,6 +15,7 @@ namespace BanHangXachTay.Models
     
     public partial class tableBILL
     {
+        [Display(Name="ID hóa đơn")]
         public int idHD { get; set; }
         [Display(Name="Mã khách hàng")]
         public Nullable<int> idKH { get; set; }

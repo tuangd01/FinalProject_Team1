@@ -88,7 +88,7 @@
 
         <!--/////////////////////////////-->
         <section class="homepage-slider" id="home-slider">
-            <<div class="flexslider">
+            <div class="flexslider">
                 <ul class="slides">
                     <li>
                         @*<a href="//pages.lazada.vn/wow/i/vn/VNCampaign/di-cho-dau-thang?hybrid=1&amp;scm=1003.4.icms-zebra-5000379-2587043.OTHER_5913680655_3899276" title="Đi chợ đầu tháng" data-spm="dbr2" exp-tracking="bannerSlider">
@@ -176,7 +176,9 @@
                     @foreach (var item in Model)
                     {
                         <tr>
-                            <td></td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.idSP)
+                            </td>
                             <td>
                                 @Html.DisplayFor(modelItem => item.tenSP)
                             </td>

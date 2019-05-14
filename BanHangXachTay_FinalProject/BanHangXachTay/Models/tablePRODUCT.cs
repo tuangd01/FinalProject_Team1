@@ -15,7 +15,7 @@ namespace BanHangXachTay.Models
     
     public partial class tablePRODUCT
     {
-
+        [Display(Name="ID sản phẩm")]
         public int idSP { get; set; }
         [Display(Name = "Loại sản phẩm")]
         public string loaiSP { get; set; }
