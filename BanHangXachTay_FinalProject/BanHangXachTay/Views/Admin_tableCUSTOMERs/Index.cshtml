@@ -3,293 +3,66 @@
 @{
     ViewBag.Title = "Index";
 }
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Bootstrap E-commerce Templates</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <!--[if ie]><meta content='IE=8' http-equiv='X-UA-Compatible'/><![endif]-->
-    <!-- bootstrap -->
-    <link href="/Content/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/Content/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
-
-    <link href="/Content/themes/css/bootstrappage.css" rel="stylesheet" />
-
-    <!-- global styles -->
-    <link href="/Content/themes/css/flexslider.css" rel="stylesheet" />
-    <link href="/Content/themes/css/main.css" rel="stylesheet" />
-
-    <!-- scripts -->
-    <script src="/Content/themes/js/jquery-1.7.2.min.js"></script>
-    <script src="/Content/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/Content/themes/js/superfish.js"></script>
-    <script src="/Content/themes/js/jquery.scrolltotop.js"></script>
-    <!--[if lt IE 9]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <script src="js/respond.min.js"></script>
-    <![endif]-->
-</head>
-<body>
-    <div id="top-bar" class="container">
-        <div class="row">
-            <div class="span4">
-                <form method="POST" class="search_form">
-                    <input type="text" class="input.-block-level search-query" placeholder="Tìm kiếm!">
-                </form>
-            </div>
-            <div class="span8">
-                <div class="account pull-right">
-                    <ul class="user-menu">
-                        <li><a href="@Url.Action("AboutViews","Home")">Tài khoản của bạn</a></li>
-                        <li><a href="@Url.Action("YourCartViews","YourCart")">Giỏ Hàng</a></li>
-                        <li><a href="@Url.Action("ContactViews","Home")">Địa điểm</a></li>
-                        <li><a href="#">Login</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--/////////////////////////////-->
-    <div id="wrapper" class="container">
-        <section class="navbar main-menu">
-            <div class="navbar-inner main-menu">
-                <a href="@Url.Action("Index","Home")" class="logo pull-left"><img src="/Content/themes/images/logo.png" class="site_logo" alt=""></a>
-                <nav id="menu" class="pull-right">
-                    <ul>
-                        <li>
-                            <a href="./WomanViews">Quần Áo Nữ</a>
-                            <ul>
-                                <li><a href="#">Áo</a></li>
-                                <li><a href="#">Quần</a></li>
-                                <li><a href="#">Váy</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="./ManViews">Quần Áo Nam</a></li>
-                        <li>
-                            <a href="#">Mũ</a>
-                            <a href="#">Phụ kiện</a>
-                            <ul>
-                                <li><a href="#">Thắt Lưng</a></li>
-                                <li><a href="#">Balo</a></li>
-                                <li><a href="#">Túi</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Giầy</a></li>
-                        <li><a href="#">Hàng Giảm giá</a></li>
-
-                    </ul>
-                </nav>
-            </div>
-        </section>
-
-        <!--/////////////////////////////-->
-        <section class="homepage-slider" id="home-slider">
-            <div class="flexslider">
-                <ul class="slides">
-                    <li>
-                        @*<a href="//pages.lazada.vn/wow/i/vn/VNCampaign/di-cho-dau-thang?hybrid=1&amp;scm=1003.4.icms-zebra-5000379-2587043.OTHER_5913680655_3899276" title="Đi chợ đầu tháng" data-spm="dbr2" exp-tracking="bannerSlider">
-                                <img class="main-img J_LazyImg" alt="Đi chợ đầu tháng" src="//laz-img-cdn.alicdn.com/images/ims-web/TB1LwUbTNYaK1RjSZFnXXa80pXa.jpg_1200x1200Q100.jpg_.webp">
-                            </a>*@
-                        <a href="#"><img alt="" src="~/Content/themes/images/Banner8.jpg" style="height:400px"></a>
-                    </li>
-                    <li>
-                        @*<a href="//pages.lazada.vn/wow/i/vn/VNCampaign/thu-tu-vui-ve?hybrid=1&amp;scm=1003.4.icms-zebra-5000379-2587043.OTHER_5915855071_3927029" title="Thứ Tư Vui Vẻ" data-spm="dbr1" exp-tracking="bannerSlider">
-                                <img class="main-img" src="//laz-img-cdn.alicdn.com/images/ims-web/TB1gl9lURLoK1RjSZFuXXXn0XXa.jpg_1200x1200.jpg" alt="Thứ Tư Vui Vẻ">
-                            </a>*@
-                        <a href="#"><img alt="" src="~/Content/themes/images/Banner2.jpg" style="height:400px"></a>
-
-                    </li>
-                    <li>
-                        @*<a href="https://meta.vn/khuyenmai/165/giai-nhiet-mua-he.html?ref=hometopslide-quat">
-                                <img src="https://s.meta.com.vn/img/thumb.ashx/Data/2019/Thang02/bao-gia-chao-he-970x375.png" class="slide-image" id="slide-1703" data-src="/Data/2019/Thang02/bao-gia-chao-he-970x375.png" alt="Giải cứu mùa hè">
-                            </a>*@
-                        <a href="#"><img alt="" src="~/Content/themes/images/Banner3.jpg" style="height:400px"></a>
-
-                    </li>
-
-                    <li>
-                        <a href="https://bellamoda.com.vn/"><img alt="" src="~/Content/themes/images/Banner5.jpg" style="height:400px"></a>
-
-                    </li>
-                    <li>
-                        <a href="http://hebe.com.vn/"><img alt="" src="~/Content/themes/images/Banner4.png" style="height:400px"></a>
-                    </li>
-                    <li>
-                        <a href="http://hebe.com.vn/"><img alt="" src="~/Content/themes/images/Banner6.png" style="height:400px"></a>
-                    </li>
-                    <li>
-                        <a href="http://hebe.com.vn/"><img alt="" src="~/Content/themes/images/Banner7.jpg" style="height:400px"></a>
-                    </li>
-
-                </ul>
-            </div>
-        </section>
-
-        <!--/////////////////////////////-->
-        <section class="header_text">
 
 
 
-            @*<div class="deals__empty"><img class="deals__empty-img" src="https://vcdn.tikicdn.com/media/upload/2017/12/18/dfd8ebb029976f70e8a132459fd6405d.jpg" alt=""></div>*@
-
-            <h2>Thông tin khách hàng</h2>
-
-            <p>
-                @Html.ActionLink("Thêm khách hàng mới", "Create")
-            </p>
-
-            <table class="table">
-                <tr>
-                    <th>
-                        @Html.DisplayNameFor(model =>model.idKH)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.tenKH)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.gioitinh)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.sodienthoaiKH)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.diachi)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.ghichu)
-                    </th>
-                    <th></th>
-                </tr>
-
-                @foreach (var item in Model)
-                {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem =>item.idKH)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.tenKH)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.gioitinh)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.sodienthoaiKH)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.diachi)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.ghichu)
-                        </td>
-                        <td>
-                            @Html.ActionLink("Edit", "Edit", new { id = item.idKH }) |
-                            @Html.ActionLink("Details", "Details", new { id = item.idKH }) |
-                            @Html.ActionLink("Delete", "Delete", new { id = item.idKH })
-                        </td>
-                    </tr>
-                }
-
-            </table>
+<h4 class="title"><span class="text">Thong tin khach hang</span></h4>
 
 
+<p>
+    @Html.ActionLink("Thêm khách hàng mới", "Create")
+</p>
 
-            <section class="our_client">
-                <h4 class="title"><span class="text">Liên kết với</span></h4>
-                <div class="row">
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idKH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tenKH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gioitinh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sodienthoaiKH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.diachi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ghichu)
+        </th>
+        <th></th>
+    </tr>
 
-                    <div class="span3">
-                        <a href="https://www.lotte.vn/"><img alt="" src="~/Content/themes/images/LogoLazada.png"></a>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.idKH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tenKH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.gioitinh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sodienthoaiKH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.diachi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ghichu)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.idKH }) |
+                @Html.ActionLink("Details", "Details", new { id = item.idKH }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.idKH })
+            </td>
+        </tr>
+    }
 
-                    </div>
-
-                </div>
-            </section>
-            <section id="footer-bar">
-                <div class="row">
-                    <div class="span3">
-                        <h4>Hỗ trợ khách hàng</h4>
-                        <ul class="nav">
-                            <li>
-                                <p class="hotline-number">
-                                    Hotline đặt hàng: <a href=".#">0979320779</a><br>
-                                    <small>(Mr.Nguyên, 8-21h kể cả T7, CN)</small>
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="span2">
-                        <h4>Về Web</h4>
-                        <ul class="nav">
-
-                            <p>
-                            <li><a href="@Url.Action("AboutViews","Home")">Tài khoản của bạn</a></li>
-                            <li><a href="@Url.Action("YourCartViews","YourCart")">Giỏ hàng của bạn</a></li>
-                            <li><a href="@Url.Action("ContactViews","Home")">Địa điểm</a></li>
-                            </p>
-
-
-                        </ul>
-                    </div>
-
-                    <div class="span4">
-                        <h4>Phương thức thanh toán</h4>
-                        <div class="nav-other payment">
-                            <a href="#"><img alt="" src="~/Content/themes/images/iconVisaCard.png"></a>
-                            <a href="#"><img alt="" src="~/Content/themes/images/iconMasterCard.png"></a>
-                            <a href="#"><img alt="" src="~/Content/themes/images/iconJCB.png"></a>
-                        </div>
-                    </div>
-
-                    <div class="span3">
-                        <h4>KẾT NỐI VỚI CHÚNG TÔI</h4>
-                        <div class="nav-other social-conn">
-                            <a rel="nofollow" href="https://www.facebook.com/KangHyyyy" target="_blank" title="Facebook">
-                                <a href="https://www.facebook.com/KangHyyyy"><img alt="" src="~/Content/themes/images/iconFacebook.png"></a>
-                            </a>
-                            <a rel="nofollow" href="https://www.youtube.com/" target="_blank" title="Youtube">
-                                <a href="https://www.youtube.com/"><img alt="" src="~/Content/themes/images/iconYoutube.png"></a>
-                            </a>
-                            <a rel="nofollow" href="https://zalo.me/pc" target="_blank" title="Zalo">
-                                <a href="https://zalo.me/pc"><img alt="" src="~/Content/themes/images/iconZalo.png"></a>
-                            </a>
-
-                        </div>
-
-                    </div>
-
-
-                    <div id="topcontrol" title="Scroll Back to Top" style="position: fixed; bottom: 12px; right: 0px; opacity: 1; cursor: pointer;"><img src="~/Content/themes/images/gotop.png" style="width:40px; height:40px; margin-top: 25px; margin-right: 17px;"></div>
-
-
-                </div>
-            </section>
-            <section id="copyright">
-                <span></span>
-            </section>
-    </div>
-    <script src="/Content/themes/js/common.js"></script>
-    <script src="/Content/themes/js/jquery.flexslider-min.js"></script>
-    <script type="text/javascript">
-        $(function () {
-            $(document).ready(function () {
-                $('.flexslider').flexslider({
-                    animation: "fade",
-                    slideshowSpeed: 4000,
-                    animationSpeed: 600,
-                    controlNav: false,
-                    directionNav: true,
-                    controlsContainer: ".flex-container" // the container that holds the flexslider
-                });
-            });
-        });
-    </script>
-
-</body>
-</html>
-
-
+</table>

@@ -4,106 +4,84 @@
     ViewBag.Title = "Index";
 }
 
+<h4 class="title"><span class="text">Quan Ly San Pham</span></h4>
+<p>
+    @Html.ActionLink("Thêm sản phẩm", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tenSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.img)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.loaiSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dongiaSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.soluongSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nhacungcap)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ngaynhap)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ghichuSP)
+        </th>
+        <th></th>
+    </tr>
 
-<section class="header_text">
-    <h4 class="title"><span class="text">Quan Ly San Pham</span></h4>
-    <h4 class="title"><span class="text">create k them dc img</span></h4>
-    <h4 class="title"><span class="text">khong luu duoc item xuong database</span></h4>
-    @*<div class="deals__empty"><img class="deals__empty-img" src="https://vcdn.tikicdn.com/media/upload/2017/12/18/dfd8ebb029976f70e8a132459fd6405d.jpg" alt=""></div>*@
-    <div>
-        <h2>Thông tin giỏ hàng</h2>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.idSP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tenSP)
+            </td>
+            <td>
+                <img src="@Url.Action("Image", new { id = item.idSP})" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.loaiSP)
+            </td>
+            <td>
+                @if (item.dongiaSP.HasValue)
+                {
+                    @item.dongiaSP.Value.ToString("N0")
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.soluongSP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nhacungcap)
+            </td>
+            <td>
+                @if (item.ngaynhap.HasValue)
+                {
+                    @item.ngaynhap.Value.ToString("dd/MM/yyyy")
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ghichuSP)
+            </td>
+            <td>
+                @Html.ActionLink("Sua", "Edit", new { id = item.idSP }) |
+                @Html.ActionLink("Xem", "Details", new { id = item.idSP }) |
+                @Html.ActionLink("Xoa", "Delete", new { id = item.idSP })
+            </td>
+        </tr>
+    }
 
-        <p>
-            @Html.ActionLink("Thêm sản phẩm", "Create")
-        </p>
-        <table class="table">
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.idSP)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.tenSP)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.img)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.loaiSP)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.dongiaSP)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.soluongSP)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.nhacungcap)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.ngaynhap)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.ghichuSP)
-                </th>
-                <th></th>
-            </tr>
-
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.idSP)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.tenSP)
-                    </td>
-                    <td>
-                        <img src="@Url.Action("Image", new { id = item.idSP})"/>
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.loaiSP)
-                    </td>
-                    <td>
-                        @if (item.dongiaSP.HasValue)
-                        {
-                            @item.dongiaSP.Value.ToString("N0")
-                        }
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.soluongSP)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.nhacungcap)
-                    </td>
-                    <td>
-                        @if (item.ngaynhap.HasValue)
-                        {
-                            @item.ngaynhap.Value.ToString("dd/MM/yyyy")
-                        }
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.ghichuSP)
-                    </td>
-                    <td>
-                        @Html.ActionLink("Sua", "Edit", new { id = item.idSP }) |
-                        @Html.ActionLink("Xem", "Details", new { id = item.idSP }) |
-                        @Html.ActionLink("Xoa", "Delete", new { id = item.idSP })
-                    </td>
-                </tr>
-            }
-
-        </table>
-    </div>
-
-
-
-
-
-
-
-
-
-</section>
-
-
-
+</table>
