@@ -1,13 +1,13 @@
 ﻿
 @{
-    ViewBag.Title = "YourCartViews";
+    ViewBag.Title = "Giỏ hàng của bạn";
 }
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Bootstrap E-commerce Templates</title>
+    <title>Giỏ hàng của bạn</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <!--[if ie]><meta content='IE=8' http-equiv='X-UA-Compatible'/><![endif]-->
@@ -31,14 +31,16 @@
         <script src="js/respond.min.js"></script>
     <![endif]-->
 </head>
+
 <body>
-    <div id="top-bar" class="container">
+    @*<div id="top-bar" class="container">
         <div class="row">
             <div class="span4">
                 <form method="POST" class="search_form">
                     <input type="text" class="input.-block-level search-query" placeholder="Tìm kiếm!">
                 </form>
             </div>
+
             <div class="span8">
                 <div class="account pull-right">
                     <ul class="user-menu">
@@ -50,10 +52,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>*@
 
     <!--/////////////////////////////-->
-    <div id="wrapper" class="container">
+    @*<div id="wrapper" class="container">
         <section class="navbar main-menu">
             <div class="navbar-inner main-menu">
                 <a href="@Url.Action("Index","Home")" class="logo pull-left"><img src="/Content/themes/images/logo.png" class="site_logo" alt=""></a>
@@ -83,10 +85,10 @@
                     </ul>
                 </nav>
             </div>
-        </section>
+        </section>*@
 
         <!--/////////////////////////////-->
-        <section class="homepage-slider" id="home-slider">
+        @*<section class="homepage-slider" id="home-slider">
             <div class="flexslider">
                 <ul class="slides">
                     <li>
@@ -111,7 +113,7 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </section>*@
 
         <!--/////////////////////////////-->
         <section class="header_text">
@@ -131,10 +133,10 @@
                             <th scope="col">Tổng tiền</th>
                             <th scope="col">Nhà cung cấp</th>
                             <th scope="col">Ngày nhập</th>
-                            <th scope="col">Ghi chú</th>
-                            
+                            <th scope="col">Ghi chú</th>                            
                         </tr>
                     </thead>
+
                     <tbody>
                         <tr>
                             <th scope="row">69696969</th>
@@ -145,7 +147,7 @@
                             <td>Tâm đẹp trai</td>
                             <td>13/5/2019</td>
                             <td>giao cho Thầy Hồ healthy</td>
-</tr>
+                        </tr>
                         <tr>
                             <th scope="row">96969696</th>
                             <td>Áo T-Shirt hình KhÁ BảnH nhảy dậm chân</td>
@@ -169,16 +171,7 @@
                     </tbody>
                 </table>
             </div>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-         </section>
+        </section>
 
 
         <!--/////////////////////////////-->
@@ -188,7 +181,7 @@
                     <div class="row">
                         <div class="span12">
                             <h4 class="title">
-                                <span class="pull-left"><span class="text"><span class="line">Sản Phẩm <strong>Bán Chạy</strong></span></span></span>
+                                <span class="pull-left"><span class="text"><span class="line"><strong>Sản Phẩm Bán Chạy</strong></span></span></span>
                                 <span class="pull-right">
                                     <a class="left button" href="#myCarousel" data-slide="prev"></a><a class="right button" href="#myCarousel" data-slide="next"></a>
                                 </span>
@@ -281,7 +274,7 @@
                             <div class="service">
                                 <div class="responsive">
                                     <img src="/Content/themes/images/feature_img_2.png" alt="" />
-                                    <h4>QUẢN LÝ<strong>TÀI KHOẢN</strong></h4>
+                                    <h4><strong>QUẢN LÝ TÀI KHOẢN</strong></h4>
 
                                 </div>
                             </div>
@@ -290,7 +283,7 @@
                             <div class="service">
                                 <div class="customize">
                                     <img src="/Content/themes/images/feature_img_1.png" alt="" />
-                                    <h4>MUA<strong>THÊM HÀNG</strong></h4>
+                                    <h4><strong>MUA THÊM HÀNG</strong></h4>
                                 </div>
                             </div>
                         </div>
@@ -298,8 +291,8 @@
                             <div class="service">
                                 <div class="support">
                                     <img src="/Content/themes/images/feature_img_3.png" alt="" />
-                                    <h4>HỔ TRỢ KHÁCH HÀNG<strong>24/7</strong></h4>
-                                    <p>HOT LINE: 0979320779</p>
+                                    <h4><strong>HỖ TRỢ KHÁCH HÀNG 24/7</strong></h4>
+                                    <p>HOTLINE: 0979320779</p>
                                 </div>
                             </div>
                         </div>
@@ -313,14 +306,12 @@
         <section class="our_client">
             <h4 class="title"><span class="text">Liên kết với</span></h4>
             <div class="row">
-
                 <div class="span3">
                     <a href="https://www.lotte.vn/"><img alt="" src="~/Content/themes/images/LogoLazada.png"></a>
-
                 </div>
-
             </div>
         </section>
+
         <section id="footer-bar">
             <div class="row">
                 <div class="span3">
@@ -344,8 +335,6 @@
                         <li><a href="@Url.Action("YourCartViews","YourCart")">Giỏ hàng của bạn</a></li>
                         <li><a href="@Url.Action("ContactViews","Home")">Địa điểm</a></li>
                         </p>
-
-
                     </ul>
                 </div>
 
@@ -370,21 +359,18 @@
                         <a rel="nofollow" href="https://zalo.me/pc" target="_blank" title="Zalo">
                             <a href="https://zalo.me/pc"><img alt="" src="~/Content/themes/images/iconZalo.png"></a>
                         </a>
-
                     </div>
-
                 </div>
 
-
-                <div id="topcontrol" title="Scroll Back to Top" style="position: fixed; bottom: 12px; right: 0px; opacity: 1; cursor: pointer;"><img src="~/Content/themes/images/gotop.png" style="width:40px; height:40px; margin-top: 25px; margin-right: 17px;"></div>
-
-
+                <div id="topcontrol" title="Scroll Back to Top" style="position: fixed; bottom: 12px; right: 0px; opacity: 1; cursor: pointer;"><img src="~/Content/themes/images/gotop.png" style="width:40px; height:40px; margin-top: 25px; margin-right: 17px;"></div>     
             </div>
         </section>
+
         <section id="copyright">
             <span></span>
         </section>
     </div>
+
     <script src="/Content/themes/js/common.js"></script>
     <script src="/Content/themes/js/jquery.flexslider-min.js"></script>
     <script type="text/javascript">
