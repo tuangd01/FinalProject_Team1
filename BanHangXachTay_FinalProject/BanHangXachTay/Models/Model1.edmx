@@ -4,7 +4,24 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="CsK23T2aModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="CsK23T2aModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Contact">
+          <Key>
+            <PropertyRef Name="idContact" />
+          </Key>
+          <Property Name="idContact" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="chuDe" Type="nvarchar" MaxLength="50" />
+          <Property Name="tieuDe" Type="nvarchar" MaxLength="100" />
+          <Property Name="noiDung" Type="nvarchar(max)" />
+          <Property Name="hoTen" Type="nvarchar" MaxLength="200" />
+          <Property Name="email" Type="varchar" MaxLength="200" />
+          <Property Name="sdt" Type="varchar" MaxLength="20" />
+          <Property Name="thoiGianGui" Type="datetime" />
+          <Property Name="trangThai" Type="bit" />
+          <Property Name="traLoi" Type="nvarchar(max)" />
+          <Property Name="thoigianTraLoi" Type="datetime" />
+          <Property Name="ghiChu" Type="nvarchar" MaxLength="500" />
+        </EntityType>
         <EntityType Name="tableBILL">
           <Key>
             <PropertyRef Name="idHD" />
@@ -54,12 +71,12 @@
           <Property Name="ghichuSP" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityContainer Name="CsK23T2aModelStoreContainer">
+          <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tableBILL" EntityType="Self.tableBILL" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tableCUSTOMER" EntityType="Self.tableCUSTOMER" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tablePRODUCT" EntityType="Self.tablePRODUCT" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="CsK23T2aModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -115,7 +132,25 @@
           <EntitySet Name="tableBILLs" EntityType="Self.tableBILL" />
           <EntitySet Name="tableCUSTOMERs" EntityType="Self.tableCUSTOMER" />
           <EntitySet Name="tablePRODUCTs" EntityType="Self.tablePRODUCT" />
+          <EntitySet Name="Contacts" EntityType="CsK23T2aModel.Contact" />
         </EntityContainer>
+        <EntityType Name="Contact">
+          <Key>
+            <PropertyRef Name="idContact" />
+          </Key>
+          <Property Name="idContact" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="chuDe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="tieuDe" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="noiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="hoTen" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="sdt" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="thoiGianGui" Type="DateTime" Precision="3" />
+          <Property Name="trangThai" Type="Boolean" />
+          <Property Name="traLoi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="thoigianTraLoi" Type="DateTime" Precision="3" />
+          <Property Name="ghiChu" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -170,6 +205,24 @@
                 <ScalarProperty Name="nhacungcap" ColumnName="nhacungcap" />
                 <ScalarProperty Name="img" ColumnName="img" />
                 <ScalarProperty Name="ghichuSP" ColumnName="ghichuSP" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contacts">
+            <EntityTypeMapping TypeName="CsK23T2aModel.Contact">
+              <MappingFragment StoreEntitySet="Contact">
+                <ScalarProperty Name="ghiChu" ColumnName="ghiChu" />
+                <ScalarProperty Name="thoigianTraLoi" ColumnName="thoigianTraLoi" />
+                <ScalarProperty Name="traLoi" ColumnName="traLoi" />
+                <ScalarProperty Name="trangThai" ColumnName="trangThai" />
+                <ScalarProperty Name="thoiGianGui" ColumnName="thoiGianGui" />
+                <ScalarProperty Name="sdt" ColumnName="sdt" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="hoTen" ColumnName="hoTen" />
+                <ScalarProperty Name="noiDung" ColumnName="noiDung" />
+                <ScalarProperty Name="tieuDe" ColumnName="tieuDe" />
+                <ScalarProperty Name="chuDe" ColumnName="chuDe" />
+                <ScalarProperty Name="idContact" ColumnName="idContact" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

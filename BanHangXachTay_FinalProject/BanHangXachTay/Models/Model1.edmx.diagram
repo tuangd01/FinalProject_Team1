@@ -8,6 +8,7 @@
         <EntityTypeShape EntityType="CsK23T2aModel.tableBILL" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CsK23T2aModel.tableCUSTOMER" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CsK23T2aModel.tablePRODUCT" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CsK23T2aModel.Contact" Width="1.5" PointX="5.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
