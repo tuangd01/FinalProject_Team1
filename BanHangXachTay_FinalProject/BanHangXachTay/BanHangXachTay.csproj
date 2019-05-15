@@ -168,8 +168,8 @@
     <Compile Include="Controllers\Admin_tableBILLsController.cs" />
     <Compile Include="Controllers\Admin_tableCUSTOMERsController.cs" />
     <Compile Include="Controllers\Admin_tablePRODUCTsController.cs" />
+    <Compile Include="Controllers\Admin_TrangThai_TraLoi_XoaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\M4_Admin_CapNhatTrangThaiController.cs" />
     <Compile Include="Controllers\M4_Admin_TimeKiemHienThiController.cs" />
     <Compile Include="Controllers\M4_KH_TaoThongTinLienHeController.cs" />
     <Compile Include="Controllers\ProductDetailController.cs" />
@@ -406,7 +406,6 @@
     <Content Include="Views\YourCart\YourCartViews.cshtml">
       <BrowseToURL>~/YourCart/YourCartViews</BrowseToURL>
     </Content>
-    <Content Include="Views\LienHe_Admin_PhanHoi_TrangThai\Repord.cshtml" />
     <Content Include="Views\ProductDetail\ProductDetailView.cshtml" />
     <Content Include="Views\M4_KH_TaoThongTinLienHe\Index.cshtml" />
     <Content Include="Views\Admin_tablePRODUCTs\Create.cshtml" />
@@ -425,15 +424,15 @@
     <Content Include="Views\Admin_tableBILLs\Edit.cshtml" />
     <Content Include="Views\Admin_tableBILLs\Index.cshtml" />
     <Content Include="Views\Shared\_Layout1.cshtml" />
+    <Content Include="Views\Admin_TrangThai_TraLoi_Xoa\Delete.cshtml" />
+    <Content Include="Views\Admin_TrangThai_TraLoi_Xoa\TraLoi.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\themes\js\images\" />
     <Folder Include="Content\themes\js\js\" />
     <Folder Include="Views\Admin\" />
-    <Folder Include="Views\M4_Admin_CapNhatTrangThai\" />
     <Folder Include="Views\M4_Admin_TimeKiemHienThi\" />
-    <Folder Include="Views\M4_KH_TạoThongTinLienHe\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
