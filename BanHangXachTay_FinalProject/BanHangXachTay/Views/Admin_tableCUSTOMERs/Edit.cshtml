@@ -4,7 +4,7 @@
     ViewBag.Title = "Edit";
 }
 
-<h2>Edit</h2>
+<h2>Chỉnh sửa thông tin khách hàng</h2>
 
 
 @using (Html.BeginForm())
@@ -12,7 +12,7 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>tableCUSTOMER</h4>
+        <h4></h4>
         <hr />
         @Html.ValidationSummary(true)
         @Html.HiddenFor(model => model.idKH)
@@ -66,7 +66,7 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Quay lại", "Index")
 </div>
 
 @section Scripts {

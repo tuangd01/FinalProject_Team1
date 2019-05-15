@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h4 class="title"><span class="text">Thong tin khach hang</span></h4>
+<h4 class="title"><span class="text">Thông tin đơn hàng</span></h4>
 <p>
     @Html.ActionLink("Thêm mới", "Create")
 </p>
@@ -120,9 +120,9 @@
                 @Html.DisplayFor(modelItem => item.ghichuBILL)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.idHD }) |
-                @Html.ActionLink("Details", "Details", new { id = item.idHD }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.idHD })
+                @Html.ActionLink("Sửa", "Edit", new { id = item.idHD }) |
+                @Html.ActionLink("Xem", "Details", new { id = item.idHD }) |
+                @Html.ActionLink("Xóa", "Delete", new { id = item.idHD })
             </td>
         </tr>
     }

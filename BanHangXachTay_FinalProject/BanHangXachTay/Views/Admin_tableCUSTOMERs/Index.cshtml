@@ -6,7 +6,7 @@
 
 
 
-<h4 class="title"><span class="text">Thong tin khach hang</span></h4>
+<h4 class="title"><span class="text">Thông tin khách hàng</span></h4>
 
 
 <p>
@@ -58,9 +58,9 @@
                 @Html.DisplayFor(modelItem => item.ghichu)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.idKH }) |
-                @Html.ActionLink("Details", "Details", new { id = item.idKH }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.idKH })
+                @Html.ActionLink("Sửa", "Edit", new { id = item.idKH }) |
+                @Html.ActionLink("Xem", "Details", new { id = item.idKH }) |
+                @Html.ActionLink("Xóa", "Delete", new { id = item.idKH })
             </td>
         </tr>
     }
