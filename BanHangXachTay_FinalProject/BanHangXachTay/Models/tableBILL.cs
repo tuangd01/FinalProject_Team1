@@ -12,18 +12,6 @@ namespace BanHangXachTay.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-<<<<<<< HEAD
-    
-    public partial class tableBILL
-    {
-        [Display(Name = "Id hóa đơn")]
-        public int idHD { get; set; }
-        [Display(Name = "Id khách hàng")]
-        public Nullable<int> idKH { get; set; }
-        [Display(Name = "Tên khách hàng")]
-        public string tenKH { get; set; }
-        [Display(Name = "Số điện thoại")]
-=======
 
     public partial class tableBILL
     {
@@ -34,7 +22,6 @@ namespace BanHangXachTay.Models
         [Display(Name = "Tên khách hàng")]
         public string tenKH { get; set; }
         [Display(Name = "Sđt")]
->>>>>>> 1d0d995bd84c21fcb9a5a25c3f6bfd9ec178fc81
         public string sodienthoaiKH { get; set; }
         [Display(Name = "Ngày đặt")]
         public Nullable<System.DateTime> ngaydathang { get; set; }
@@ -42,15 +29,9 @@ namespace BanHangXachTay.Models
         public Nullable<System.DateTime> ngaygiaohang { get; set; }
         [Display(Name = "Ngày nhận")]
         public Nullable<System.DateTime> ngaynhanhang { get; set; }
-<<<<<<< HEAD
-        [Display(Name = "Địa chỉ")]
-        public string diachinhanhang { get; set; }
-        [Display(Name = "Id sản phẩm")]
-=======
         [Display(Name = "Địa chỉ nhận")]
         public string diachinhanhang { get; set; }
         [Display(Name = "Mã sản phẩm")]
->>>>>>> 1d0d995bd84c21fcb9a5a25c3f6bfd9ec178fc81
         public Nullable<int> idSP { get; set; }
         [Display(Name = "Tên sản phẩm")]
         public string tenSP { get; set; }
@@ -60,26 +41,16 @@ namespace BanHangXachTay.Models
         public Nullable<int> soluongSP { get; set; }
         [Display(Name = "Ghi chú")]
         public string ghichuSP { get; set; }
-<<<<<<< HEAD
-        [Display(Name = "Thành tiền")]
-=======
         [Display(Name = "Bill-Tổng tiền")]
->>>>>>> 1d0d995bd84c21fcb9a5a25c3f6bfd9ec178fc81
         public Nullable<int> thanhtienBILL { get; set; }
         [Display(Name = "Bill-Số lượng")]
         public Nullable<int> soluongBILL { get; set; }
         [Display(Name = "Bill-Đơn giá")]
         public Nullable<int> dongiaBILL { get; set; }
-<<<<<<< HEAD
-        [Display(Name = "Bill-Tổng thu")]
-        public Nullable<int> tongdoanhthu { get; set; }
-        [Display(Name = "Bill-Ghi chú")]
-=======
         [Display(Name = "Tổng doanh thu")]
         public Nullable<int> tongdoanhthu { get; set; }
         [Display(Name = "Bill-Ghi chú")]
 
->>>>>>> 1d0d995bd84c21fcb9a5a25c3f6bfd9ec178fc81
         public string ghichuBILL { get; set; }
     }
 }
