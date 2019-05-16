@@ -12,10 +12,17 @@ namespace BanHangXachTay.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+<<<<<<< HEAD
     
     public partial class tableCUSTOMER
     {
         [Display(Name = "Id khách hàng")]
+=======
+
+    public partial class tableCUSTOMER
+    {
+        [Display(Name = "ID khách hàng")]
+>>>>>>> 1d0d995bd84c21fcb9a5a25c3f6bfd9ec178fc81
         public int idKH { get; set; }
         [Display(Name = "Tên khách hàng")]
         public string tenKH { get; set; }
