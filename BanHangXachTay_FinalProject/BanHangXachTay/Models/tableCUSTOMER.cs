@@ -11,14 +11,29 @@ namespace BanHangXachTay.Models
 {
     using System;
     using System.Collections.Generic;
+<<<<<<< HEAD
     
     public partial class tableCUSTOMER
     {
         public int idKH { get; set; }
+=======
+    using System.ComponentModel.DataAnnotations;
+
+    public partial class tableCUSTOMER
+    {
+        [Display(Name = "ID khách hàng")]
+        public int idKH { get; set; }
+        [Display(Name = "Tên khách hàng")]
+>>>>>>> d963beb610f3b4bccc159092b5073806d70c9f60
         public string tenKH { get; set; }
         public string gioitinh { get; set; }
         public string sodienthoaiKH { get; set; }
         public string diachi { get; set; }
+<<<<<<< HEAD
+=======
+        [Display(Name = "Ghi chú")]
+
+>>>>>>> d963beb610f3b4bccc159092b5073806d70c9f60
         public string ghichu { get; set; }
     }
 }

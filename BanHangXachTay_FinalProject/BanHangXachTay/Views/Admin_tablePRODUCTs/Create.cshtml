@@ -15,101 +15,40 @@
         <h4></h4>
         <hr />
         @Html.ValidationSummary(true)
+    
+        <div class="form-group">
+            @Html.LabelFor(model => model.loaiSP, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.loaiSP)
+                @Html.ValidationMessageFor(model => model.loaiSP)
+            </div>
+        </div>
+                       
+        <div class="form-group">
+            @Html.LabelFor(model => model.tenSP, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.tenSP)
+                @Html.ValidationMessageFor(model => model.tenSP)
+            </div>
+        </div>
+                        
+        <div class="form-group">
+            @Html.LabelFor(model => model.dongiaSP, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.dongiaSP)
+                @Html.ValidationMessageFor(model => model.dongiaSP)
+            </div>
+        </div>
 
-        <div class="row">
-            <div>
-                <table class="table table-bordered table-hover table-condensed table-striped">
-                    <ul>
-                        <li>
-                            <div class="form-group">
-                                @Html.LabelFor(model => model.loaiSP, htmlAttributes: new { @class = "control-label col-md-2" })
-                                <div class="col-md-10">
-                                    @Html.EditorFor(model => model.loaiSP)
-                                    @Html.ValidationMessageFor(model => model.loaiSP)
-                                </div>
-                            </div>
-                        </li>
+        <div class="form-group">
+            @Html.LabelFor(model => model.soluongSP, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.soluongSP)
+                @Html.ValidationMessageFor(model => model.soluongSP)
+            </div>
+        </div>
 
-                        <li>
-
-                        </li>
-                        <li>
-                            <div class="form-group">
-                                @Html.LabelFor(model => model.tenSP, htmlAttributes: new { @class = "control-label col-md-2" })
-                                <div class="col-md-10">
-                                    @Html.EditorFor(model => model.tenSP)
-                                    @Html.ValidationMessageFor(model => model.tenSP)
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-
-                        </li>
-                        <li>
-                            <div class="form-group">
-                                @Html.LabelFor(model => model.dongiaSP, htmlAttributes: new { @class = "control-label col-md-2" })
-                                <div class="col-md-10">
-                                    @Html.EditorFor(model => model.dongiaSP)
-                                    @Html.ValidationMessageFor(model => model.dongiaSP)
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-
-                        </li>
-                        <li>
-                            <div class="form-group">
-                                @Html.LabelFor(model => model.soluongSP, htmlAttributes: new { @class = "control-label col-md-2" })
-                                <div class="col-md-10">
-                                    @Html.EditorFor(model => model.soluongSP)
-                                    @Html.ValidationMessageFor(model => model.soluongSP)
-                                </div>
-                            </div>
-                        </li>
-
-
-
-                        <li>
-
-                        </li>
-                        <li>
-                            <div class="form-group">
-                                @Html.LabelFor(model => model.nhacungcap, htmlAttributes: new { @class = "control-label col-md-2" })
-                                <div class="col-md-10">
-                                    @Html.EditorFor(model => model.nhacungcap)
-                                    @Html.ValidationMessageFor(model => model.nhacungcap)
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-
-                        </li>
-                        <li>
-                            <div class="form-group">
-                                <label for="1201" class="control-label col-md-2">Hình ảnh</label>
-                                <div class="col-md-10">
-                                    <input type="file" name="Image" id="1201" onchange="readIMG(this)" />
-                                    <img id="Demo" />
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-
-                        </li>
-                        <li>
-                            <div class="form-group">
-                                @Html.LabelFor(model => model.ghichuSP, htmlAttributes: new { @class = "control-label col-md-2" })
-                                <div class="col-md-10">
-                                    @Html.TextAreaFor(model => model.ghichuSP)
-                                    @Html.ValidationMessageFor(model => model.ghichuSP)
-                                </div>
-                            </div>
-                        </li>
-
+<<<<<<< HEAD
                         <li>
                             <div class="form-group">
                                 <div class="col-md-offset-2 col-md-10">
@@ -119,8 +58,39 @@
                         </li>
                     </ul>
                 </table>
+=======
+        <div class="form-group">
+            @Html.LabelFor(model => model.nhacungcap, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.nhacungcap)
+                @Html.ValidationMessageFor(model => model.nhacungcap)
             </div>
         </div>
+                       
+        <div class="form-group">
+            <label for="1201" class="control-label col-md-2">Hình ảnh</label>
+            <div class="col-md-10">
+                <input type="file" name="Image" id="1201" onchange="readIMG(this)" />
+                <img id="Demo" />
+            </div>
+        </div>
+                        
+        <div class="form-group">
+            @Html.LabelFor(model => model.ghichuSP, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.ghichuSP)
+                @Html.ValidationMessageFor(model => model.ghichuSP)
+            </div>
+        </div>
+                       
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+>>>>>>> d963beb610f3b4bccc159092b5073806d70c9f60
+            </div>
+        </div>
+                        
+        
 
 
 

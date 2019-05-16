@@ -11,11 +11,23 @@ namespace BanHangXachTay.Models
 {
     using System;
     using System.Collections.Generic;
+<<<<<<< HEAD
     
     public partial class tableBILL
     {
         public int idHD { get; set; }
         public int idKH { get; set; }
+=======
+    using System.ComponentModel.DataAnnotations;
+
+    public partial class tableBILL
+    {
+        [Display(Name = "ID hóa đơn")]
+        public int idHD { get; set; }
+        [Display(Name = "Mã khách hàng")]
+        public Nullable<int> idKH { get; set; }
+        [Display(Name = "Tên khách hàng")]
+>>>>>>> d963beb610f3b4bccc159092b5073806d70c9f60
         public string tenKH { get; set; }
         public string sodienthoaiKH { get; set; }
         public Nullable<System.DateTime> ngaydathang { get; set; }
@@ -31,6 +43,11 @@ namespace BanHangXachTay.Models
         public Nullable<int> soluongBILL { get; set; }
         public Nullable<int> dongiaBILL { get; set; }
         public Nullable<int> tongdoanhthu { get; set; }
+<<<<<<< HEAD
+=======
+        [Display(Name = "Bill-Ghi chú")]
+
+>>>>>>> d963beb610f3b4bccc159092b5073806d70c9f60
         public string ghichuBILL { get; set; }
     }
 }
