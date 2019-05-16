@@ -24,6 +24,10 @@ namespace BanHangXachTay
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css/bootstrap").Include("~/Content/bootstrap.min.css", new CssRewriteUrlTransform()));
+
+            bundles.Add(new StyleBundle("~/Content/bootstrap").Include(
+    "~/Content/bootstrap.css",
+    "~/Content/bootstrap-theme.css"));
         }
     }
 }

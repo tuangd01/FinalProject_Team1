@@ -11,7 +11,7 @@
 {
     @Html.AntiForgeryToken()
 
-    <div class="form-horizontal">
+    <div class="pager pagination-lg" >
         <h4></h4>
         <hr />
         @Html.ValidationSummary(true)
@@ -113,7 +113,7 @@
                         <li>
                             <div class="form-group">
                                 <div class="col-md-offset-2 col-md-10">
-                                    <input type="submit" value="Create" class="btn btn-default" />
+                                    <input type="submit" value="Create" class="btn btn-info" />
                                 </div>
                             </div>
                         </li>
@@ -128,7 +128,7 @@
 }
 
 <div>
-    @Html.ActionLink("Quay lại", "Index")
+    <a href="~/Admin_tablePRODUCTs/Index" class="btn btn-inverse" role="button">Quay Lại</a>
 </div>
 
 

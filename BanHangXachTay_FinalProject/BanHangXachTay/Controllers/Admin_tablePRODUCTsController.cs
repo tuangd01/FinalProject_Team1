@@ -8,6 +8,10 @@ using System.Web;
 using System.Web.Mvc;
 using BanHangXachTay.Models;
 using System.Transactions;
+using System.Linq.Expressions;
+using PagedList;
+using PagedList.Mvc;
+
 
 namespace BanHangXachTay.Controllers
 {
@@ -16,12 +20,77 @@ namespace BanHangXachTay.Controllers
         private CsK23T2aEntities1 db = new CsK23T2aEntities1();
 
         // GET: Admin_tablePRODUCTs
-        public ActionResult Index()
+        public ActionResult Index(int? size, int? page, string sortProperty, string sortOrder, string searchString)
         {
-            var model = db.tablePRODUCTs.ToList();
-            return View(model);
-        }
+            // 1. Tạo biến ViewBag gồm sortOrder, searchValue, sortProperty và page
+            if (sortOrder == "asc") ViewBag.sortOrder = "desc";
+            if (sortOrder == "desc") ViewBag.sortOrder = "";
+            if (sortOrder == "") ViewBag.sortOrder = "asc";
+            ViewBag.searchValue = searchString;
+            ViewBag.sortProperty = sortProperty;
+            ViewBag.page = page;
 
+            // 2. Tạo danh sách chọn số trang
+            List<SelectListItem> items = new List<SelectListItem>();
+            items.Add(new SelectListItem { Text = "5 Sản Phẩm", Value = "5" });
+            items.Add(new SelectListItem { Text = "7 Sản Phẩm", Value = "7" });
+            items.Add(new SelectListItem { Text = "10 Sản Phẩm", Value = "10" });
+            items.Add(new SelectListItem { Text = "15 Sản Phẩm", Value = "15" });
+            items.Add(new SelectListItem { Text = "30 Sản Phẩm", Value = "30" });
+            items.Add(new SelectListItem { Text = "100 Sản Phẩm", Value = "100" });
+            items.Add(new SelectListItem { Text = "200 Sản Phẩm", Value = "200" });
+
+            // 3. Thiết lập số trang đang chọn vào danh sách List<SelectListItem> items
+            foreach (var item in items)
+            {
+                if (item.Value == size.ToString()) item.Selected = true;
+            }
+            ViewBag.size = items;
+            ViewBag.currentSize = size;
+
+         
+            // 4. Truy vấn lấy tất cả đường dẫn
+            var sanpham = from l in db.tablePRODUCTs
+                        select l;
+
+            // 5. Tạo thuộc tính sắp xếp mặc định là "ID"
+            if (String.IsNullOrEmpty(sortProperty)) sortProperty = "ID";
+
+            // 5. Thêm phần tìm kiếm
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                sanpham = sanpham.Where(s => s.tenSP.Contains(searchString));
+            }
+           
+
+            // Tạo kích thước trang (pageSize), mặc định là 5.
+            page = page ?? 1;
+            int pageSize = (size ?? 5);
+
+            ViewBag.pageSize = pageSize;
+
+            // 6. Toán tử ?? trong C# mô tả nếu page khác null thì lấy giá trị page, còn
+            // nếu page = null thì lấy giá trị 1 cho biến pageNumber. 
+            int pageNumber = (page ?? 1);
+
+            // 6.2 Lấy tổng số record chia cho kích thước để biết bao nhiêu trang
+            int checkTotal = (int)(sanpham.ToList().Count / pageSize) + 1;
+            // Nếu trang vượt qua tổng số trang thì thiết lập là 1 hoặc tổng số trang
+            if (pageNumber > checkTotal) pageNumber = checkTotal;
+
+            // 7. Trả về các Sản phẩm được phân trang theo kích thước và số trang.
+            return View(db.tablePRODUCTs.ToList().OrderBy(n => n.idSP).ToPagedList(pageNumber, pageSize));
+
+            /// aaaaaaaaaa
+        }
+        [HttpPost, HttpParaAction]
+    
+        public ActionResult Reset()
+        {
+            ViewBag.searchValue = "";
+            Index(null, null, "", "", "");
+            return View();
+        }
         // GET: Admin_tablePRODUCTs/Details/5
         public ActionResult Details(int id)
         {
@@ -138,13 +207,6 @@ namespace BanHangXachTay.Controllers
             return RedirectToAction("Index");
         }
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+     
     }
 }

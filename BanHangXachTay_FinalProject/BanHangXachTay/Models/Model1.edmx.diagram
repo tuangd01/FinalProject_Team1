@@ -5,9 +5,9 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="9b79c46f85174c19b2bc144d344194f7" Name="Diagram1" ZoomLevel="96">
-        <EntityTypeShape EntityType="CsK23T2aModel.tableBILL" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CsK23T2aModel.tableCUSTOMER" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CsK23T2aModel.tablePRODUCT" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CsK23T2aModel.tableBILL" Width="1.5" PointX="1.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CsK23T2aModel.tableCUSTOMER" Width="1.5" PointX="4.625" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CsK23T2aModel.tablePRODUCT" Width="1.5" PointX="4.25" PointY="3.375" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

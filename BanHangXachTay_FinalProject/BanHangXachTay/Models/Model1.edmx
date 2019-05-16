@@ -68,7 +68,7 @@
             <PropertyRef Name="idHD" />
           </Key>
           <Property Name="idHD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="idKH" Type="Int32" />
+          <Property Name="idKH" Type="Int32" Nullable="false" />
           <Property Name="tenKH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="sodienthoaiKH" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="ngaydathang" Type="DateTime" Precision="0" />

@@ -15,23 +15,32 @@ namespace BanHangXachTay.Models
     
     public partial class tablePRODUCT
     {
-        [Display(Name="ID sản phẩm")]
+        [Display (Name= "Mã Sản Phẩm")]
+        [Required]
         public int idSP { get; set; }
-        [Display(Name = "Loại sản phẩm")]
+        [Display(Name = "Loại Sản Phẩm")]
+        [Required]
         public string loaiSP { get; set; }
-        [Display(Name = "Tên sản phẩm")]
+        [Display(Name = "Tên Sản Phẩm")]
+        [Required]
         public string tenSP { get; set; }
-        [Display(Name = "Đơn giá")]
+        [Display(Name = "Đơn Giá")]
+        [Required]
         public Nullable<int> dongiaSP { get; set; }
-        [Display(Name = "Số lượng")]
+        [Display(Name = "Số Lượng")]
+        [Required]
         public Nullable<int> soluongSP { get; set; }
-        [Display(Name = "Ngày nhập")]
+        [Display(Name = "Ngày Nhập")]
+        [Required]
         public Nullable<System.DateTime> ngaynhap { get; set; }
-        [Display(Name = "Nhà cung cấp")]
+        [Display(Name = "Nhà Cung Cấp")]
+        [Required]
         public string nhacungcap { get; set; }
-        [Display(Name = "Hình ảnh")]
+        [Display(Name = "Hình Ảnh")]
+        [Required]
         public byte[] img { get; set; }
-        [Display(Name = "Ghi chú")]
+        [Display(Name = "Ghi Chú")]
+        [Required]
         public string ghichuSP { get; set; }
     }
 }

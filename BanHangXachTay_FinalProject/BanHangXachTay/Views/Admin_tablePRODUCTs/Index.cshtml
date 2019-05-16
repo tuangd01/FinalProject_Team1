@@ -1,43 +1,57 @@
-﻿@model IEnumerable<BanHangXachTay.Models.tablePRODUCT>
+﻿@using BanHangXachTay.Models;
+@using PagedList.Mvc;
+@model PagedList.PagedList<BanHangXachTay.Models.tablePRODUCT>
+
+
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Quản lí sản phẩm";
 }
 
 <h4 class="title"><span class="text">Quản lí sản phẩm</span></h4>
 <p>
-    @Html.ActionLink("Thêm sản phẩm", "Create")
+    <a href="~/Admin_tablePRODUCTs/Create" class="btn btn-inverse" role="button">Thêm Sản Phẩm</a>
 </p>
-<table class="table">
+
+@using (Html.BeginForm("Index", "Admin_tablePRODUCTs", FormMethod.Get))
+{
+    <p>
+        Tìm Sản Phẩm: @Html.TextBox("SearchString", (string)ViewBag.searchValue) <input type="submit" class="btn btn-info" value="Tìm kiếm" /> <input type="submit" name="Reset" value="Mặc định" />
+       
+    </p>
+}
+
+<table class="table table-bordered table-hover">
+
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.idSP)
+        <th style="width:70px">
+            @Html.DisplayNameFor(model => model.First().idSP)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.tenSP)
+        <th style="width:200px">
+            @Html.DisplayNameFor(model => model.First().img)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.img)
+        <th style="width:200px">
+            @Html.DisplayNameFor(model => model.First().tenSP)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.loaiSP)
+        <th style ="width:120px">
+            @Html.DisplayNameFor(model => model.First().loaiSP)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.dongiaSP)
+        <th style="width:200px">
+            @Html.DisplayNameFor(model => model.First().dongiaSP)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.soluongSP)
+        <th style="width:100px">
+            @Html.DisplayNameFor(model => model.First().soluongSP)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.nhacungcap)
+        <th style="width:200px">
+            @Html.DisplayNameFor(model => model.First().nhacungcap)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ngaynhap)
+        <th style="width:auto">
+            @Html.DisplayNameFor(model => model.First().ngaynhap)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ghichuSP)
+        <th style="width:300px">
+            @Html.DisplayNameFor(model => model.First().ghichuSP)
         </th>
-        <th></th>
+        <th style ="width:200px"></th>
     </tr>
 
     @foreach (var item in Model)
@@ -47,11 +61,12 @@
                 @Html.DisplayFor(modelItem => item.idSP)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.tenSP)
-            </td>
-            <td>
                 <img src="@Url.Action("Image", new { id = item.idSP})" />
             </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tenSP)
+            </td>
+          
             <td>
                 @Html.DisplayFor(modelItem => item.loaiSP)
             </td>
@@ -77,11 +92,39 @@
                 @Html.DisplayFor(modelItem => item.ghichuSP)
             </td>
             <td>
-                @Html.ActionLink("Sửa", "Edit", new { id = item.idSP }) |
-                @Html.ActionLink("Xem", "Details", new { id = item.idSP }) |
+                @Html.ActionLink("Chỉnh Sửa", "Edit", new { id = item.idSP })
+                @Html.ActionLink("Xem", "Details", new { id = item.idSP }) 
                 @Html.ActionLink("Xóa", "Delete", new { id = item.idSP })
             </td>
         </tr>
     }
 
 </table>
+<!-- Thêm mã phân trang -->
+
+
+<div class="pager">
+    <div class="">
+        @using (Html.BeginForm("Index", "Admin_tablePRODUCTs", FormMethod.Get))
+        {
+            <p>
+                Hiên Thị: @Html.DropDownList("size", (List<SelectListItem>)ViewBag.size, new { @onchange = "this.form.submit();" })
+            </p>
+
+            @Html.Hidden("page", (object)ViewBag.page)
+            @Html.Hidden("sortProperty", (object)ViewBag.sortProperty)
+            @Html.Hidden("sortOrder", (object)ViewBag.sortOrder)
+            @Html.Hidden("searchString", (object)ViewBag.searchValue)
+        }
+    </div>
+    <div class="center text-right">
+        Trang: @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
+
+
+    </div>
+    <div class="pagination page gradient">
+        @Html.PagedListPager(Model, page => Url.Action("Admin_tablePRODUCTs/Index", new { page, size = ViewBag.currentSize, sortProperty = ViewBag.sortProperty, sortOrder = ViewBag.SortOrder, searchString = ViewBag.searchValue }))
+    </div>
+</div>
+
+<!-- Kết thúc -->
