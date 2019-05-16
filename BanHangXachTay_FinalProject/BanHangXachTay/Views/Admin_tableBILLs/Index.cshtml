@@ -1,14 +1,14 @@
 ﻿@model IEnumerable<BanHangXachTay.Models.tableBILL>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Thông tin đơn hàng";
 }
 
 <h4 class="title"><span class="text">Thông tin đơn hàng</span></h4>
 <p>
     @Html.ActionLink("Thêm mới", "Create")
 </p>
-<table class="table">
+<table class="table table-bordered table-condensed table-hover table-striped">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.idHD)
