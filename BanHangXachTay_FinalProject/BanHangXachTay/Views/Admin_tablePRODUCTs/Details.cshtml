@@ -4,23 +4,18 @@
     ViewBag.Title = "Details";
 }
 
-<<<<<<< HEAD
-<h2>Chi Tiết Sản Phẩm: @Html.DisplayFor(model => model.tenSP) </h2> 
-=======
 <h2>Thông tin sản phẩm</h2>
->>>>>>> d963beb610f3b4bccc159092b5073806d70c9f60
 
 <div>
     <h4></h4>
     <hr />
-    <dl class="dl-horizontal page">
-
+    <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.img)
+            @Html.DisplayNameFor(model => model.loaiSP)
         </dt>
 
         <dd>
-            <img src="@Url.Action("Image", new { id = Model.idSP })" width="300px" />
+            @Html.DisplayFor(model => model.loaiSP)
         </dd>
 
         <dt>
@@ -31,15 +26,6 @@
             @Html.DisplayFor(model => model.tenSP)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.loaiSP)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.loaiSP)
-        </dd>
-
-        
         <dt>
             @Html.DisplayNameFor(model => model.dongiaSP)
         </dt>
@@ -73,6 +59,14 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.img)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.img)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.ghichuSP)
         </dt>
 
@@ -84,6 +78,5 @@
 </div>
 <p>
     @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.idSP }) |
-   
-    <a href="~/Admin_tablePRODUCTs/Index" class="btn btn-inverse" role="button">Quay Lại</a>
+    @Html.ActionLink("Quay lại", "Index")
 </p>

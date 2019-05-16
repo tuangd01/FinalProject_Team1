@@ -15,41 +15,24 @@ namespace BanHangXachTay.Models
 
     public partial class tablePRODUCT
     {
-<<<<<<< HEAD
-        [Display (Name= "Mã Sản Phẩm")]
-        [Required]
-=======
         [Display(Name = "ID sản phẩm")]
->>>>>>> d963beb610f3b4bccc159092b5073806d70c9f60
         public int idSP { get; set; }
-        [Display(Name = "Loại Sản Phẩm")]
-        [Required]
+        [Display(Name = "Loại sản phẩm")]
         public string loaiSP { get; set; }
-        [Display(Name = "Tên Sản Phẩm")]
-        [Required]
+        [Display(Name = "Tên sản phẩm")]
         public string tenSP { get; set; }
-        [Display(Name = "Đơn Giá")]
-        [Required]
+        [Display(Name = "Đơn giá")]
         public Nullable<int> dongiaSP { get; set; }
-        [Display(Name = "Số Lượng")]
-        [Required]
+        [Display(Name = "Số lượng")]
         public Nullable<int> soluongSP { get; set; }
-        [Display(Name = "Ngày Nhập")]
-        [Required]
+        [Display(Name = "Ngày nhập")]
         public Nullable<System.DateTime> ngaynhap { get; set; }
-        [Display(Name = "Nhà Cung Cấp")]
-        [Required]
+        [Display(Name = "Nhà cung cấp")]
         public string nhacungcap { get; set; }
-        [Display(Name = "Hình Ảnh")]
-        [Required]
+        [Display(Name = "Hình ảnh")]
         public byte[] img { get; set; }
-<<<<<<< HEAD
-        [Display(Name = "Ghi Chú")]
-        [Required]
-=======
         [Display(Name = "Ghi chú")]
 
->>>>>>> d963beb610f3b4bccc159092b5073806d70c9f60
         public string ghichuSP { get; set; }
     }
 }

@@ -11,7 +11,7 @@
 {
     @Html.AntiForgeryToken()
 
-    <div class="pager pagination-lg" >
+    <div class="form-horizontal">
         <h4></h4>
         <hr />
         @Html.ValidationSummary(true)
@@ -48,17 +48,6 @@
             </div>
         </div>
 
-<<<<<<< HEAD
-                        <li>
-                            <div class="form-group">
-                                <div class="col-md-offset-2 col-md-10">
-                                    <input type="submit" value="Create" class="btn btn-info" />
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </table>
-=======
         <div class="form-group">
             @Html.LabelFor(model => model.nhacungcap, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -86,7 +75,6 @@
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Create" class="btn btn-default" />
->>>>>>> d963beb610f3b4bccc159092b5073806d70c9f60
             </div>
         </div>
                         
@@ -98,7 +86,7 @@
 }
 
 <div>
-    <a href="~/Admin_tablePRODUCTs/Index" class="btn btn-inverse" role="button">Quay Lại</a>
+    @Html.ActionLink("Quay lại", "Index")
 </div>
 
 
