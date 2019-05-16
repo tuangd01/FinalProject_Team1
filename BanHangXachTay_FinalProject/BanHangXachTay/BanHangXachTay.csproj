@@ -165,10 +165,10 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Content\DB_Banhangxachtay.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Admin_CapNhat_Xoa_TraLoiController.cs" />
     <Compile Include="Controllers\Admin_tableBILLsController.cs" />
     <Compile Include="Controllers\Admin_tableCUSTOMERsController.cs" />
     <Compile Include="Controllers\Admin_tablePRODUCTsController.cs" />
-    <Compile Include="Controllers\Admin_TrangThai_TraLoi_XoaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\M4_Admin_TimeKiemHienThiController.cs" />
     <Compile Include="Controllers\M4_KH_TaoThongTinLienHeController.cs" />
@@ -247,6 +247,8 @@
     <Content Include="Content\bootstrap\img\glyphicons-halflings.png" />
     <Content Include="Content\bootstrap\js\bootstrap.js" />
     <Content Include="Content\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\Contact\css\TraLoi.css" />
+    <Content Include="Content\Contact\img\11433.jpg" />
     <Content Include="Content\Contact_User.css" />
     <Content Include="Content\themes\css\bootstrappage.css" />
     <Content Include="Content\themes\css\flexslider.css" />
@@ -424,8 +426,11 @@
     <Content Include="Views\Admin_tableBILLs\Edit.cshtml" />
     <Content Include="Views\Admin_tableBILLs\Index.cshtml" />
     <Content Include="Views\Shared\_Layout1.cshtml" />
-    <Content Include="Views\Admin_TrangThai_TraLoi_Xoa\Delete.cshtml" />
-    <Content Include="Views\Admin_TrangThai_TraLoi_Xoa\TraLoi.cshtml" />
+    <Content Include="Views\Admin_CapNhat_Xoa_TraLoi\Create.cshtml" />
+    <Content Include="Views\Admin_CapNhat_Xoa_TraLoi\Delete.cshtml" />
+    <Content Include="Views\Admin_CapNhat_Xoa_TraLoi\Details.cshtml" />
+    <Content Include="Views\Admin_CapNhat_Xoa_TraLoi\Edit.cshtml" />
+    <Content Include="Views\Admin_CapNhat_Xoa_TraLoi\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,26 @@
+﻿* {
+    padding:0;margin:0;
+    font-family:sans-serif;
+    
+}
+.Content-Form-TraLoiContact{
+    width:1000px;
+    color:#808080;
+    /*background: url("/Content/Contact/img/11433.jpg") no-repeat center;*/
+    /*background-size:cover;*/
+    /*padding:40px;*/
+    font-size:30px;
+}
+.row-info{
+    width:20%;
+    display:block;
+    text-align:left;
+}
+.left{
+    display:inline-block;
+}
+
+.row{
+    width:30%;
+}
+
