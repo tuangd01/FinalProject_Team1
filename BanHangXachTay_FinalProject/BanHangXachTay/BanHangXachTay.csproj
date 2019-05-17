@@ -221,7 +221,7 @@
     <Content Include="Content\bootstrap\js\bootstrap.js" />
     <Content Include="Content\bootstrap\js\bootstrap.min.js" />
     <Content Include="Content\Contact\css\TraLoi.css" />
-    <Content Include="Content\Contact\img\11433.jpg" />
+    <Content Include="Content\Contact\img\bg.png" />
     <Content Include="Content\Contact_User.css" />
     <Content Include="Content\themes\css\bootstrappage.css" />
     <Content Include="Content\themes\css\flexslider.css" />

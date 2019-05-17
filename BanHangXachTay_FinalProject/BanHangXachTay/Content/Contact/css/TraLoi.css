@@ -1,26 +1,109 @@
 ﻿* {
     padding:0;margin:0;
-    font-family:sans-serif;
-    
+    font-family:"montserat" ,sans-serif;
+    color: #ddd;
+	
 }
-.Content-Form-TraLoiContact{
-    width:1000px;
-    color:#808080;
-    /*background: url("/Content/Contact/img/11433.jpg") no-repeat center;*/
-    /*background-size:cover;*/
-    /*padding:40px;*/
-    font-size:30px;
+.contact{
+	max-width: 100%;
+	margin:auto;
+	background:url('/Content/Contact/img/bg.png') no-repeat center;
+	background-size: cover;
+	height: 100vh;
 }
-.row-info{
-    width:20%;
-    display:block;
-    text-align:left;
+.contact-form{
+	width: 800px;
+	margin:auto;
 }
-.left{
-    display:inline-block;
+h1{
+	text-align: center;
+
+}
+.border{ 
+	width: 100px;
+	height: 10px;
+	background: #34495e;
+	margin: 20px auto 0 auto;
+
 }
 
-.row{
-    width:30%;
+.form-InfoContact{
+	padding-top: 20px;
+	display: flexbox;
 }
+.row-info .left{
+	padding-right: 10px;
+}
+.row-info{
+	margin: 5px 0;
+	padding: 5px;
+}
+.contact-left{
+	flex: 1;
+	margin-right: 20px;
+
+}
+.contact-right{
+	flex:1;
+}
+.bottom-right{
+display: flexbox;
+
+}
+.email{
+	flex: 1;
+
+}
+.sdt{
+	flex:1;
+}
+
+.form-ReplyContact{
+	width: 100%;
+}
+.form-reply{
+}
+
+.row-reply{
+	padding: 10px 0;
+}
+.trangthai .left{
+ display: inline;
+ padding-right: 20px;
+}
+textarea{
+	width: 87%;
+	padding:5px 40px;
+	margin: 10px 0;
+	font-size: 25px;
+	height: 100px;
+	background-color: #111;
+	outline: none;
+	transition: 0.5s;
+	resize: none;
+	border-radius: 10px;
+}
+textarea:focus{
+	box-shadow: 0 0 10px 4px #34495e;
+}
+.note-admin{
+	height: 35px;
+}
+.send{
+	padding: 12px 50px;
+	height: 50px;
+	border-radius: 20px;
+	float: right;
+	margin-right: 30px;
+	border: 0;
+	cursor: pointer;
+	transition: 0.5s;
+	background-color: #34495e;
+}
+.send:hover{
+	background-color: #2980b9;
+}
+
+
+
 
