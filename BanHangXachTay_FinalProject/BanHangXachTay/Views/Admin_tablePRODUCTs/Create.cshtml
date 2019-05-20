@@ -10,9 +10,9 @@
 @using (Html.BeginForm("Create", "Admin_tablePRODUCTs", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
-
-        <h4></h4>
-        <hr />
+    
+    <div class="pager pagination-lg">
+    
         @Html.ValidationSummary(true)
 
         <div class="form-group">
@@ -81,11 +81,10 @@
         </div>
 
 
-
-
-
     </div>
-}
+    }
+
+
 
 <div>
     <a href="~/Admin_tablePRODUCTs/Index" class="btn btn-inverse" role="button">Quay Lại</a>
