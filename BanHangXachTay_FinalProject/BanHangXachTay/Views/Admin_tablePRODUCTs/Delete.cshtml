@@ -1,12 +1,12 @@
 ﻿@model BanHangXachTay.Models.tablePRODUCT
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Xóa Sản Phẩm"; 
 }
 
 
 
-<h2>Bạn có chắc muốn xóa không?</h2>
+<h2>Bạn có chắc muốn xóa @Html.DisplayFor(model => model.tenSP) khỏi danh sách không?</h2>
 <div>
     <h4></h4>
     <hr />
@@ -46,7 +46,6 @@
                 @Model.dongiaSP.Value.ToString("N0")
             }
         </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.soluongSP)
         </dt>
