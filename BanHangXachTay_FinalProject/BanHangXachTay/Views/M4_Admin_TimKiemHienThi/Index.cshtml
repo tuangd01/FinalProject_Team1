@@ -1,0 +1,76 @@
+﻿@model IEnumerable<BanHangXachTay.Models.Contact>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="~/Content/Contact/css/CssBaiKietNha.css" rel="stylesheet" />
+}
+
+
+<div class="mid">
+    <div class="search">
+        @using (Html.BeginForm())
+        {
+            <p>
+                @Html.TextBox("SearchString", "", new { @class = "txtSearch", @placeholder = "Bạn muốn tìm kiếm..." })
+                <button class="btnSearch" id="buttonSearch"><i class="fas fa-search"></i></button>
+            </p>
+        }
+    </div>
+
+    <table class="table">
+        <tr>
+            <th>
+                Trạng thái
+            </th>
+            <th>
+                Chủ đề
+            </th>
+            <th>
+                Tên
+            </th>
+            <th>
+                Tiêu đề
+            </th>
+
+            <th class="Bỏ"></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @{
+            if (@item.trangThai == true)
+            {
+                <span class="span1">Đã xem</span>
+            }
+            else
+            {
+                <span class="span2">Chưa xem</span>
+            }
+
+                    }
+                </td>
+                <td>
+                    @item.chuDe
+                </td>
+                <td>
+                    @item.hoTen
+                </td>
+                <td>
+                    @item.tieuDe
+                </td>
+
+                <td>
+
+                    @Html.ActionLink("Chi tiết", "Details", new { id = item.idContact })
+
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
