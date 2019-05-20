@@ -11,11 +11,10 @@
 {
     @Html.AntiForgeryToken()
 
-    <div class="form-horizontal">
         <h4></h4>
         <hr />
         @Html.ValidationSummary(true)
-    
+
         <div class="form-group">
             @Html.LabelFor(model => model.loaiSP, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -23,7 +22,7 @@
                 @Html.ValidationMessageFor(model => model.loaiSP)
             </div>
         </div>
-                       
+
         <div class="form-group">
             @Html.LabelFor(model => model.tenSP, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -31,7 +30,7 @@
                 @Html.ValidationMessageFor(model => model.tenSP)
             </div>
         </div>
-                        
+
         <div class="form-group">
             @Html.LabelFor(model => model.dongiaSP, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -48,6 +47,8 @@
             </div>
         </div>
 
+
+
         <div class="form-group">
             @Html.LabelFor(model => model.nhacungcap, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -55,7 +56,7 @@
                 @Html.ValidationMessageFor(model => model.nhacungcap)
             </div>
         </div>
-                       
+
         <div class="form-group">
             <label for="1201" class="control-label col-md-2">Hình ảnh</label>
             <div class="col-md-10">
@@ -63,7 +64,7 @@
                 <img id="Demo" />
             </div>
         </div>
-                        
+
         <div class="form-group">
             @Html.LabelFor(model => model.ghichuSP, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -71,14 +72,15 @@
                 @Html.ValidationMessageFor(model => model.ghichuSP)
             </div>
         </div>
-                       
+
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Create" class="btn btn-info" />
+               
             </div>
         </div>
-                        
-        
+
+
 
 
 
@@ -86,7 +88,7 @@
 }
 
 <div>
-    @Html.ActionLink("Quay lại", "Index")
+    <a href="~/Admin_tablePRODUCTs/Index" class="btn btn-inverse" role="button">Quay Lại</a>
 </div>
 
 

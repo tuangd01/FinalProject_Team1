@@ -4,18 +4,22 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Thông tin sản phẩm</h2>
+<h2>Chi Tiết Sản Phẩm: @Html.DisplayFor(model => model.tenSP) </h2>
+
+
+
 
 <div>
     <h4></h4>
     <hr />
-    <dl class="dl-horizontal">
+    <dl class="dl-horizontal page">
+
         <dt>
-            @Html.DisplayNameFor(model => model.loaiSP)
+            @Html.DisplayNameFor(model => model.img)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.loaiSP)
+            <img src="@Url.Action("Image", new { id = Model.idSP })" width="200" />
         </dd>
 
         <dt>
@@ -27,11 +31,23 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.loaiSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.loaiSP)
+        </dd>
+
+
+        <dt>
             @Html.DisplayNameFor(model => model.dongiaSP)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.dongiaSP)
+            @if (Model.dongiaSP.HasValue)
+            {
+                @Model.dongiaSP.Value.ToString("N0")
+            }
         </dd>
 
         <dt>
@@ -39,7 +55,10 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.soluongSP)
+            @if (Model.soluongSP.HasValue)
+            {
+                @Model.soluongSP.Value.ToString("N0")
+            }
         </dd>
 
         <dt>
@@ -47,7 +66,10 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.ngaynhap)
+            @if (Model.ngaynhap.HasValue)
+            {
+                @Model.ngaynhap.Value.ToString("dd/MM/yyyy")
+            }
         </dd>
 
         <dt>
@@ -56,14 +78,6 @@
 
         <dd>
             @Html.DisplayFor(model => model.nhacungcap)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.img)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.img)
         </dd>
 
         <dt>
@@ -78,5 +92,6 @@
 </div>
 <p>
     @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.idSP }) |
-    @Html.ActionLink("Quay lại", "Index")
+
+    <a href="~/Admin_tablePRODUCTs/Index" class="btn btn-inverse" role="button">Quay Lại</a>
 </p>

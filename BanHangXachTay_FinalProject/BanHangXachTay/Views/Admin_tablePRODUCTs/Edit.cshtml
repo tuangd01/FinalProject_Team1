@@ -10,8 +10,8 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
+
+    <div class="pager pagination-lg table">
         <h4></h4>
         <hr />
         @Html.ValidationSummary(true)
@@ -65,13 +65,15 @@
             </div>
         </div>
 
+
         <div class="form-group">
-            @Html.LabelFor(model => model.img, htmlAttributes: new { @class = "control-label col-md-2" })
+            <label for="1201" class="control-label col-md-2">Hình ảnh</label>
             <div class="col-md-10">
-                @Html.EditorFor(model => model.img)
-                @Html.ValidationMessageFor(model => model.img)
+                <input type="file" name="Image" id="1201" onchange="readIMG(this)" />
+                <img id="Demo" />
             </div>
         </div>
+
 
         <div class="form-group">
             @Html.LabelFor(model => model.ghichuSP, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -83,16 +85,33 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Save" class="btn btn-info" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Quay lại", "Index")
+    <a href="~/Admin_tablePRODUCTs/Index" class="btn btn-inverse" role="button">Quay Lại</a>
 </div>
 
 
-    @Styles.Render("~/bundles/jqueryval")
+@Styles.Render("~/bundles/jqueryval")
 
+@section Scripts {
+    <script>
+        function readIMG(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#Demo')
+                        .attr('src', e.target.result)
+                        .width(150)
+                        .height(200);
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+}

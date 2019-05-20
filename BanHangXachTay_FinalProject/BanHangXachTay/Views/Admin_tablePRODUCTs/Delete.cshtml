@@ -12,11 +12,11 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.loaiSP)
+            @Html.DisplayNameFor(model => model.img)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.loaiSP)
+            <img src="@Url.Action("Image", new { id = Model.idSP })" width="200" />
         </dd>
 
         <dt>
@@ -28,11 +28,23 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.loaiSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.loaiSP)
+        </dd>
+
+
+        <dt>
             @Html.DisplayNameFor(model => model.dongiaSP)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.dongiaSP)
+            @if (Model.dongiaSP.HasValue)
+            {
+                @Model.dongiaSP.Value.ToString("N0")
+            }
         </dd>
 
         <dt>
@@ -40,7 +52,10 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.soluongSP)
+            @if (Model.soluongSP.HasValue)
+            {
+                @Model.soluongSP.Value.ToString("N0")
+            }
         </dd>
 
         <dt>
@@ -48,7 +63,10 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.ngaynhap)
+            @if (Model.ngaynhap.HasValue)
+            {
+                @Model.ngaynhap.Value.ToString("dd/MM/yyyy")
+            }
         </dd>
 
         <dt>
@@ -60,28 +78,19 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.img)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.img)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.ghichuSP)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.ghichuSP)
         </dd>
-
     </dl>
 
     @using (Html.BeginForm()) {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
             @Html.ActionLink("Quay lại", "Index")
         </div>
     }
