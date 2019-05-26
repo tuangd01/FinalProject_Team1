@@ -14,8 +14,7 @@ namespace BanHangXachTay.Controllers
         private List<tablePRODUCT> SPMoi(int count)
          {
 
-             return db.tablePRODUCTs.OrderByDescending(a => a.ngaynhap).Take(count).ToList();
-           
+             return db.tablePRODUCTs.OrderByDescending(n => n.ngaynhap).Take(count).ToList();
          }
         public ActionResult Details(int id)
         {
