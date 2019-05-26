@@ -29,5 +29,7 @@ namespace BanHangXachTay.Models
         public virtual DbSet<tableCUSTOMER> tableCUSTOMERs { get; set; }
         public virtual DbSet<tablePRODUCT> tablePRODUCTs { get; set; }
         public virtual DbSet<Contact> Contacts { get; set; }
+        public virtual DbSet<LoaiSanPham> LoaiSanPhams { get; set; }
+        public virtual DbSet<NHACUNGCAP> NHACUNGCAPs { get; set; }
     }
 }

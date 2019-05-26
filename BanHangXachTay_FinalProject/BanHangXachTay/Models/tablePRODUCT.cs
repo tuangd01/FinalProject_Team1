@@ -12,13 +12,11 @@ namespace BanHangXachTay.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-
+    
     public partial class tablePRODUCT
     {
         [Display(Name = "ID sản phẩm")]
         public int idSP { get; set; }
-        [Display(Name = "Loại sản phẩm")]
-        public string loaiSP { get; set; }
         [Display(Name = "Tên sản phẩm")]
         public string tenSP { get; set; }
         [Display(Name = "Đơn giá")]
@@ -32,7 +30,13 @@ namespace BanHangXachTay.Models
         [Display(Name = "Hình ảnh")]
         public byte[] img { get; set; }
         [Display(Name = "Ghi chú")]
-
         public string ghichuSP { get; set; }
+        [Display(Name = "Loại Sản Phẩm")]
+        public Nullable<int> idloaiSP { get; set; }
+        [Display(Name = "Nhà Cung Cấp")]
+        public Nullable<int> MaNCC { get; set; }
+    
+        public virtual LoaiSanPham LoaiSanPham { get; set; }
+        public virtual NHACUNGCAP NHACUNGCAP { get; set; }
     }
 }

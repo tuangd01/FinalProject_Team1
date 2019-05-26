@@ -34,7 +34,7 @@
                 @Html.DisplayNameFor(model => model.First().tenSP)
             </th>
             <th style="width:120px">
-                @Html.DisplayNameFor(model => model.First().loaiSP)
+                @Html.DisplayNameFor(model => model.First().idloaiSP)
             </th>
             <th style="width:200px">
                 @Html.DisplayNameFor(model => model.First().dongiaSP)
@@ -43,7 +43,7 @@
                 @Html.DisplayNameFor(model => model.First().soluongSP)
             </th>
             <th style="width:200px">
-                @Html.DisplayNameFor(model => model.First().nhacungcap)
+                @Html.DisplayNameFor(model => model.First().MaNCC)
             </th>
             <th style="width:auto">
                 @Html.DisplayNameFor(model => model.First().ngaynhap)
@@ -68,7 +68,7 @@
                 </td>
 
                 <td>
-                    @Html.DisplayFor(modelItem => item.loaiSP)
+                    @Html.DisplayFor(modelItem => item.LoaiSanPham.TenLoaiSP)
                 </td>
                 <td>
                     @if (item.dongiaSP.HasValue)
@@ -80,7 +80,7 @@
                     @Html.DisplayFor(modelItem => item.soluongSP)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.nhacungcap)
+                    @Html.DisplayFor(modelItem => item.NHACUNGCAP.TenNCC)
                 </td>
                 <td>
                     @if (item.ngaynhap.HasValue)
@@ -123,7 +123,7 @@
 
         </div>
         <div class="pagination page gradient">
-            @Html.PagedListPager(Model, page => Url.Action("Admin_tablePRODUCTs/Index", new { page, size = ViewBag.currentSize, sortProperty = ViewBag.sortProperty, sortOrder = ViewBag.SortOrder, searchString = ViewBag.searchValue }))
+            @Html.PagedListPager(Model, page => Url.Action("/Index", new { page, size = ViewBag.currentSize, sortProperty = ViewBag.sortProperty, sortOrder = ViewBag.SortOrder, searchString = ViewBag.searchValue }))
         </div>
     </div>
 

@@ -109,6 +109,8 @@ namespace BanHangXachTay.Controllers
         // GET: Admin_tablePRODUCTs/Create
         public ActionResult Create()
         {
+            ViewBag.idloaiSP = new SelectList(db.LoaiSanPhams.ToList().OrderBy(n => n.TenLoaiSP), "idloaiSP", "TenLoaiSP");
+            ViewBag.MaNCC = new SelectList(db.NHACUNGCAPs.ToList().OrderBy(n => n.TenNCC), "MaNCC","TenNCC");
             return View();
         }
 
@@ -116,7 +118,7 @@ namespace BanHangXachTay.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
+         [ValidateAntiForgeryToken]
         public ActionResult Create(tablePRODUCT model)
         {
             if (ModelState.IsValid)
@@ -143,6 +145,9 @@ namespace BanHangXachTay.Controllers
             return View(model);
         }
 
+        
+        
+
         public ActionResult Image(string id)
         {
             var path = Server.MapPath("~/App_Data");
@@ -151,8 +156,9 @@ namespace BanHangXachTay.Controllers
         }
 
         // GET: Admin_tablePRODUCTs/Edit/5
-        public ActionResult Edit(int? id)
+        public ActionResult Edit(int id)
         {
+
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -160,25 +166,46 @@ namespace BanHangXachTay.Controllers
             tablePRODUCT tablePRODUCT = db.tablePRODUCTs.Find(id);
             if (tablePRODUCT == null)
             {
-                return HttpNotFound();
+                Response.StatusCode = 404;
+                return null;
             }
+            ViewBag.idloaiSP = new SelectList(db.LoaiSanPhams.ToList().OrderBy(n => n.TenLoaiSP), "idLSP", "TenLoaiSP", tablePRODUCT.idloaiSP);
+            ViewBag.MaNCC = new SelectList(db.NHACUNGCAPs.ToList().OrderBy(n => n.TenNCC), "MaNCC", "TenNCC", tablePRODUCT.MaNCC);
             return View(tablePRODUCT);
+
+            
         }
+
 
         // POST: Admin_tablePRODUCTs/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "idSP,loaiSP,tenSP,dongiaSP,soluongSP,ngaynhap,nhacungcap,img,ghichuSP")] tablePRODUCT tablePRODUCT)
+        public ActionResult Edit(tablePRODUCT model)
         {
-            if (ModelState.IsValid)
+           if (ModelState.IsValid)
             {
-                db.Entry(tablePRODUCT).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                using (var scope = new TransactionScope())
+                {
+                    //Add Day
+                    model.ngaynhap = DateTime.Today;
+
+                    //Add model to database
+                    db.tablePRODUCTs.Add(model);
+                    db.SaveChanges();
+
+                    //Save file to App_Data
+                    var path = Server.MapPath("~/App_Data");
+                    path = System.IO.Path.Combine(path, model.idSP.ToString());
+                    Request.Files["Image"].SaveAs(path);
+
+                    //Accept all and persistence
+                    scope.Complete();
+                    return RedirectToAction("Index");
+                }
             }
-            return View(tablePRODUCT);
+            return View(model);
         }
 
         // GET: Admin_tablePRODUCTs/Delete/5
@@ -206,6 +233,8 @@ namespace BanHangXachTay.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+       
 
 
     }

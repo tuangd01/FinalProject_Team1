@@ -15,13 +15,7 @@
     
         @Html.ValidationSummary(true)
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.loaiSP, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.loaiSP)
-                @Html.ValidationMessageFor(model => model.loaiSP)
-            </div>
-        </div>
+        
 
         <div class="form-group">
             @Html.LabelFor(model => model.tenSP, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -47,16 +41,23 @@
             </div>
         </div>
 
-
+        <div class="form-group">
+            @Html.LabelFor(model => model.idloaiSP, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("idloaiSP")
+            </div>
+        </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.nhacungcap, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.nhacungcap)
-                @Html.ValidationMessageFor(model => model.nhacungcap)
+                @Html.DropDownList("MaNCC")
             </div>
         </div>
 
+
+
+       
         <div class="form-group">
             <label for="1201" class="control-label col-md-2">Hình ảnh</label>
             <div class="col-md-10">
