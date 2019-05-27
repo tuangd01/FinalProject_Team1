@@ -12,19 +12,15 @@ namespace BanHangXachTay.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class tablePRODUCT
+    public partial class tablePRODUCTofYourCart
     {
+        
         public int idSP { get; set; }
         public string tenSP { get; set; }
+        public byte[] img { get; set; }
         public Nullable<int> dongiaSP { get; set; }
         public Nullable<int> soluongSP { get; set; }
-        public Nullable<System.DateTime> ngaynhap { get; set; }
-        public byte[] img { get; set; }
-        public string ghichuSP { get; set; }
-        public Nullable<int> idloaiSP { get; set; }
-        public Nullable<int> MaNCC { get; set; }
-    
-        public virtual LoaiSanPham LoaiSanPham { get; set; }
-        public virtual NHACUNGCAP NHACUNGCAP { get; set; }
+        public Nullable<int> thanhtien { get; set; }
+        public string ghichu { get; set; }
     }
 }

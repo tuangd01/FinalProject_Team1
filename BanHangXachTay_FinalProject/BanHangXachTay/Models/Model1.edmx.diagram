@@ -13,6 +13,7 @@
         <EntityTypeShape EntityType="CsK23T2aModel.NHACUNGCAP" Width="1.5" PointX="0.75" PointY="8.75" />
         <AssociationConnector Association="CsK23T2aModel.FK_loaisp" />
         <AssociationConnector Association="CsK23T2aModel.FK_nhacungcap" />
+        <EntityTypeShape EntityType="CsK23T2aModel.tablePRODUCTofYourCart" Width="1.5" PointX="5.375" PointY="5.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

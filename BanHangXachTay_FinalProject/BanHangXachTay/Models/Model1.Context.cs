@@ -31,5 +31,8 @@ namespace BanHangXachTay.Models
         public virtual DbSet<Contact> Contacts { get; set; }
         public virtual DbSet<LoaiSanPham> LoaiSanPhams { get; set; }
         public virtual DbSet<NHACUNGCAP> NHACUNGCAPs { get; set; }
+        public virtual DbSet<tablePRODUCTofYourCart> tablePRODUCTofYourCarts { get; set; }
+
+        public System.Data.Entity.DbSet<BanHangXachTay.Models.Cart> Carts { get; set; }
     }
 }

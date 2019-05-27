@@ -175,7 +175,9 @@
     <Compile Include="Controllers\Admin_CapNhat_Xoa_TraLoiController.cs" />
     <Compile Include="Controllers\Admin_tableBILLsController.cs" />
     <Compile Include="Controllers\Admin_tableCUSTOMERsController.cs" />
+    <Compile Include="Controllers\Admin_tablePRODUCTofYourCartsController.cs" />
     <Compile Include="Controllers\Admin_tablePRODUCTsController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\M4_Admin_TimKiemHienThiController.cs" />
     <Compile Include="Controllers\M4_KH_TaoThongTinLienHeController.cs" />
@@ -184,6 +186,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Contact.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -217,6 +220,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tablePRODUCT.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tablePRODUCTofYourCart.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -397,6 +403,12 @@
     <Content Include="Views\M4_Admin_TimKiemHienThi\Details.cshtml" />
     <Content Include="Views\M4_Admin_TimKiemHienThi\Index.cshtml" />
     <Content Include="Views\Home\Details.cshtml" />
+    <Content Include="Views\Admin_tablePRODUCTofYourCarts\Create.cshtml" />
+    <Content Include="Views\Admin_tablePRODUCTofYourCarts\Delete.cshtml" />
+    <Content Include="Views\Admin_tablePRODUCTofYourCarts\Details.cshtml" />
+    <Content Include="Views\Admin_tablePRODUCTofYourCarts\Edit.cshtml" />
+    <Content Include="Views\Admin_tablePRODUCTofYourCarts\Index.cshtml" />
+    <Content Include="Views\Cart\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="CsK23T2aModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="CsK23T2aModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Contact">
           <Key>
             <PropertyRef Name="idContact" />
@@ -86,6 +86,18 @@
           <Property Name="idloaiSP" Type="int" />
           <Property Name="MaNCC" Type="int" />
         </EntityType>
+        <EntityType Name="tablePRODUCTofYourCart">
+          <Key>
+            <PropertyRef Name="idSP" />
+          </Key>
+          <Property Name="idSP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tenSP" Type="nvarchar" MaxLength="100" />
+          <Property Name="img" Type="image" />
+          <Property Name="dongiaSP" Type="int" />
+          <Property Name="soluongSP" Type="int" />
+          <Property Name="thanhtien" Type="int" />
+          <Property Name="ghichu" Type="nvarchar" MaxLength="500" />
+        </EntityType>
         <Association Name="FK_loaisp">
           <End Role="LoaiSanPham" Type="Self.LoaiSanPham" Multiplicity="0..1" />
           <End Role="tablePRODUCT" Type="Self.tablePRODUCT" Multiplicity="*" />
@@ -117,6 +129,7 @@
           <EntitySet Name="tableBILL" EntityType="Self.tableBILL" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tableCUSTOMER" EntityType="Self.tableCUSTOMER" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tablePRODUCT" EntityType="Self.tablePRODUCT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tablePRODUCTofYourCart" EntityType="Self.tablePRODUCTofYourCart" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_loaisp" Association="Self.FK_loaisp">
             <End Role="LoaiSanPham" EntitySet="LoaiSanPham" />
             <End Role="tablePRODUCT" EntitySet="tablePRODUCT" />
@@ -195,6 +208,7 @@
             <End Role="NHACUNGCAP" EntitySet="NHACUNGCAPs" />
             <End Role="tablePRODUCT" EntitySet="tablePRODUCTs" />
           </AssociationSet>
+          <EntitySet Name="tablePRODUCTofYourCarts" EntityType="CsK23T2aModel.tablePRODUCTofYourCart" />
         </EntityContainer>
         <EntityType Name="Contact">
           <Key>
@@ -255,6 +269,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="tablePRODUCTofYourCart">
+          <Key>
+            <PropertyRef Name="idSP" />
+          </Key>
+          <Property Name="idSP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tenSP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="img" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="dongiaSP" Type="Int32" />
+          <Property Name="soluongSP" Type="Int32" />
+          <Property Name="thanhtien" Type="Int32" />
+          <Property Name="ghichu" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -345,6 +371,19 @@
                 <ScalarProperty Name="Diachi" ColumnName="Diachi" />
                 <ScalarProperty Name="TenNCC" ColumnName="TenNCC" />
                 <ScalarProperty Name="MaNCC" ColumnName="MaNCC" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tablePRODUCTofYourCarts">
+            <EntityTypeMapping TypeName="CsK23T2aModel.tablePRODUCTofYourCart">
+              <MappingFragment StoreEntitySet="tablePRODUCTofYourCart">
+                <ScalarProperty Name="ghichu" ColumnName="ghichu" />
+                <ScalarProperty Name="thanhtien" ColumnName="thanhtien" />
+                <ScalarProperty Name="soluongSP" ColumnName="soluongSP" />
+                <ScalarProperty Name="dongiaSP" ColumnName="dongiaSP" />
+                <ScalarProperty Name="img" ColumnName="img" />
+                <ScalarProperty Name="tenSP" ColumnName="tenSP" />
+                <ScalarProperty Name="idSP" ColumnName="idSP" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
