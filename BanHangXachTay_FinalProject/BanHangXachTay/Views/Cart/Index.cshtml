@@ -1,0 +1,62 @@
+﻿@model IEnumerable<BanHangXachTay.Models.Cart>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h4 class="title"><span class="text">Giỏ hàng của bạn</span></h4>
+
+<table class="table table-bordered table-condensed table-hover table-striped">
+    <tr>
+        <th>
+            Id sản phẩm
+        </th>
+        <th>
+            Tên sản phẩm
+        </th>
+        <th>
+            Đơn giá
+        </th>
+        <th>
+            Số lượng
+        </th>
+        <th>
+            Tổng tiền
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.tablePRODUCTofYourCart.idSP
+            </td>
+            <td>
+                @item.tablePRODUCTofYourCart.tenSP
+            </td>
+            <td>
+                @item.tablePRODUCTofYourCart.dongiaSP
+            </td>
+            <td>
+                @item.tablePRODUCTofYourCart.soluongSP
+            </td>
+            <td>
+                @(item.tablePRODUCTofYourCart.dongiaSP * item.tablePRODUCTofYourCart.soluongSP)
+            </td>
+
+            <td>
+
+                <a href="@Url.Action("Delete", new { id = item.id })">Xóa</a>
+            </td>
+        </tr>
+    }
+
+
+</table>
+
+<a href="@Url.Action("Create", "Admin_tableBILLs")">Lưu BILL</a>
+
+<div>
+    <a href="@Url.Action("Index","Admin_tablePRODUCTofYourCarts")">Quay lại danh sách sản phẩm</a>
+</div>
