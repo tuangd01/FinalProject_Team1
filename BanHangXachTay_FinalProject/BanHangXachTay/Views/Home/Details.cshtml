@@ -20,9 +20,9 @@
 <div>
   
     <div style="width:40%; float:left; border-left: dotted 1px; border-color:azure">
-        <img src="@Url.Action("Image", new { id = Model.idSP})" width="100%" />
+        <img src="~/Admin_tablePRODUCTs/image/@Model.idSP" width="100%" />
     </div>
-    <div style="width:60%; float:left; padding:10px">
+    <div style="width:58%; float:right; padding:10px">
         <h4 style="font-weight:bold;color:red"> Tên Sản Phẩm : @Model.tenSP</h4> 
         <p style="text-align:justify"><span style="color:red; font-weight:bold"> Ghi Chú: </span> @Model.ghichuSP</p>
         <p style="font-weight:bold"> Giá Bán: <span style="color:red;font-size:16pt">

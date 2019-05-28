@@ -31,5 +31,6 @@ namespace BanHangXachTay.Models
         public virtual DbSet<Contact> Contacts { get; set; }
         public virtual DbSet<LoaiSanPham> LoaiSanPhams { get; set; }
         public virtual DbSet<NHACUNGCAP> NHACUNGCAPs { get; set; }
+        public virtual DbSet<Admin> Admins { get; set; }
     }
 }
