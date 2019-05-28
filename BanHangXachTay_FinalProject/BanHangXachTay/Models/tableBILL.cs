@@ -12,12 +12,12 @@ namespace BanHangXachTay.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-
+    
     public partial class tableBILL
     {
-        [Display(Name = "ID hóa đơn")]
+        [Display(Name="id hóa đơn")]
         public int idHD { get; set; }
-        [Display(Name = "Mã khách hàng")]
+        [Display(Name = "id khách hàng")]
         public Nullable<int> idKH { get; set; }
         [Display(Name = "Tên khách hàng")]
         public string tenKH { get; set; }
@@ -31,7 +31,7 @@ namespace BanHangXachTay.Models
         public Nullable<System.DateTime> ngaynhanhang { get; set; }
         [Display(Name = "Địa chỉ nhận")]
         public string diachinhanhang { get; set; }
-        [Display(Name = "Mã sản phẩm")]
+        [Display(Name = "id sản phẩm")]
         public Nullable<int> idSP { get; set; }
         [Display(Name = "Tên sản phẩm")]
         public string tenSP { get; set; }
@@ -39,18 +39,17 @@ namespace BanHangXachTay.Models
         public Nullable<int> dongiaSP { get; set; }
         [Display(Name = "Số lượng")]
         public Nullable<int> soluongSP { get; set; }
-        [Display(Name = "Ghi chú")]
+        [Display(Name = "Ghi chú cho sản phẩm")]
         public string ghichuSP { get; set; }
-        [Display(Name = "Bill-Tổng tiền")]
+        [Display(Name = "Thành tiền trên BILL")]
         public Nullable<int> thanhtienBILL { get; set; }
-        [Display(Name = "Bill-Số lượng")]
+        [Display(Name = "Số lượng trên BILL")]
         public Nullable<int> soluongBILL { get; set; }
-        [Display(Name = "Bill-Đơn giá")]
+        [Display(Name = "Đơn giá trên BILL")]
         public Nullable<int> dongiaBILL { get; set; }
         [Display(Name = "Tổng doanh thu")]
         public Nullable<int> tongdoanhthu { get; set; }
-        [Display(Name = "Bill-Ghi chú")]
-
+        [Display(Name = "Ghi chú trên BILL")] 
         public string ghichuBILL { get; set; }
     }
 }

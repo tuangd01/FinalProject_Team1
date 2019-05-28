@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BanHangXachTay.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +9,24 @@ namespace BanHangXachTay.Controllers
 {
     public class HomeController : Controller
     {
+         CsK23T2aEntities1 db = new CsK23T2aEntities1();
+
+        private List<tablePRODUCT> SPMoi(int count)
+         {
+
+             return db.tablePRODUCTs.OrderByDescending(n => n.ngaynhap).Take(count).ToList();
+         }
+        public ActionResult Details(int id)
+        {
+            var sanpham = from s in db.tablePRODUCTs
+                          where s.idSP == id
+                          select s;
+            return View(sanpham.Single());
+        }
         public ActionResult Index()
         {
-            return View();
+            var domoi = SPMoi(6);
+            return View(domoi);
         }
 
         public ActionResult AboutViews()

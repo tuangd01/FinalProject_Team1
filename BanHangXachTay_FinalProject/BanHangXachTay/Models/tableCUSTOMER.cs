@@ -12,10 +12,10 @@ namespace BanHangXachTay.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-
+    
     public partial class tableCUSTOMER
     {
-        [Display(Name = "ID khách hàng")]
+        [Display(Name="id khách hàng")]
         public int idKH { get; set; }
         [Display(Name = "Tên khách hàng")]
         public string tenKH { get; set; }
@@ -26,7 +26,6 @@ namespace BanHangXachTay.Models
         [Display(Name = "Địa chỉ")]
         public string diachi { get; set; }
         [Display(Name = "Ghi chú")]
-
         public string ghichu { get; set; }
     }
 }

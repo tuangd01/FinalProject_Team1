@@ -4,7 +4,7 @@
     ViewBag.Title = "Edit";
 }
 
-<h2>Bạn có chắc muốn sửa?</h2>
+<h2>Chỉnh sửa thông tin</h2>
 
 
 @using (Html.BeginForm())
@@ -17,13 +17,7 @@
         @Html.ValidationSummary(true)
         @Html.HiddenFor(model => model.idHD)
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.idKH, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.idKH)
-                @Html.ValidationMessageFor(model => model.idKH)
-            </div>
-        </div>
+        
 
         <div class="form-group">
             @Html.LabelFor(model => model.tenKH, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -41,21 +35,9 @@
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.ngaydathang, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.ngaydathang)
-                @Html.ValidationMessageFor(model => model.ngaydathang)
-            </div>
-        </div>
+        
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.ngaygiaohang, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.ngaygiaohang)
-                @Html.ValidationMessageFor(model => model.ngaygiaohang)
-            </div>
-        </div>
+        
 
         <div class="form-group">
             @Html.LabelFor(model => model.ngaynhanhang, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -73,45 +55,9 @@
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.idSP, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.idSP)
-                @Html.ValidationMessageFor(model => model.idSP)
-            </div>
-        </div>
+        
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.tenSP, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.tenSP)
-                @Html.ValidationMessageFor(model => model.tenSP)
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.dongiaSP, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.dongiaSP)
-                @Html.ValidationMessageFor(model => model.dongiaSP)
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.soluongSP, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.soluongSP)
-                @Html.ValidationMessageFor(model => model.soluongSP)
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.ghichuSP, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.ghichuSP)
-                @Html.ValidationMessageFor(model => model.ghichuSP)
-            </div>
-        </div>
+        
 
         <div class="form-group">
             @Html.LabelFor(model => model.thanhtienBILL, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -121,29 +67,6 @@
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.soluongBILL, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.soluongBILL)
-                @Html.ValidationMessageFor(model => model.soluongBILL)
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.dongiaBILL, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.dongiaBILL)
-                @Html.ValidationMessageFor(model => model.dongiaBILL)
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.tongdoanhthu, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.tongdoanhthu)
-                @Html.ValidationMessageFor(model => model.tongdoanhthu)
-            </div>
-        </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.ghichuBILL, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -155,7 +78,7 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Lưu lại" class="btn btn-primary" />
             </div>
         </div>
     </div>
