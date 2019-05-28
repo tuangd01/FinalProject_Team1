@@ -179,10 +179,9 @@
     <Compile Include="Controllers\Admin_tablePRODUCTsController.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\Admin_TimKiemHienThiController.cs" />
+    <Compile Include="Controllers\M4_Admin_TimKiemHienThiController.cs" />
     <Compile Include="Controllers\M4_KH_TaoThongTinLienHeController.cs" />
     <Compile Include="Controllers\ProductDetailController.cs" />
-    <Compile Include="Controllers\YourCartController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -398,12 +397,8 @@
     <Content Include="Views\Admin_CapNhat_Xoa_TraLoi\Create.cshtml" />
     <Content Include="Views\Admin_CapNhat_Xoa_TraLoi\Delete.cshtml" />
     <Content Include="Views\Admin_CapNhat_Xoa_TraLoi\Details.cshtml" />
-    <Content Include="Views\Admin_CapNhat_Xoa_TraLoi\Reply.cshtml" />
+    <Content Include="Views\Admin_CapNhat_Xoa_TraLoi\Edit.cshtml" />
     <Content Include="Views\Admin_CapNhat_Xoa_TraLoi\Index.cshtml" />
-<<<<<<< HEAD
-    <Content Include="Views\Admin_TimKiemHienThi\Details.cshtml" />
-    <Content Include="Views\Admin_TimKiemHienThi\Index.cshtml" />
-=======
     <Content Include="Views\M4_Admin_TimKiemHienThi\Details.cshtml" />
     <Content Include="Views\M4_Admin_TimKiemHienThi\Index.cshtml" />
     <Content Include="Views\Home\Details.cshtml" />
@@ -413,7 +408,6 @@
     <Content Include="Views\Admin_tablePRODUCTofYourCarts\Edit.cshtml" />
     <Content Include="Views\Admin_tablePRODUCTofYourCarts\Index.cshtml" />
     <Content Include="Views\Cart\Index.cshtml" />
->>>>>>> cd3463bc2554de63777b757c1cdc9acf09155ed9
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
