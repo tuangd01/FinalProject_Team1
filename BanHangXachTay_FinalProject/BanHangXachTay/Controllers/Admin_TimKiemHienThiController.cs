@@ -10,7 +10,7 @@ using BanHangXachTay.Models;
 
 namespace BanHangXachTay.Controllers
 {
-    public class M4_Admin_TimKiemHienThiController : Controller
+    public class Admin_TimKiemHienThiController : Controller
     {
         private CsK23T2aEntities1 db = new CsK23T2aEntities1();
 

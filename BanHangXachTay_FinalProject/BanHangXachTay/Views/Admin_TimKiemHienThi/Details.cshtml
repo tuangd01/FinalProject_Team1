@@ -1,5 +1,6 @@
 ﻿@model BanHangXachTay.Models.Contact
 
+
 @{
     ViewBag.Title = "Details";
 }
@@ -101,6 +102,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.idContact }) |
+    @Html.ActionLink("Trả Lời","Reply", new { id = Model.idContact }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

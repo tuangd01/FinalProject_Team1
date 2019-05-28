@@ -170,7 +170,7 @@
     <Compile Include="Controllers\Admin_tableCUSTOMERsController.cs" />
     <Compile Include="Controllers\Admin_tablePRODUCTsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\M4_Admin_TimKiemHienThiController.cs" />
+    <Compile Include="Controllers\Admin_TimKiemHienThiController.cs" />
     <Compile Include="Controllers\M4_KH_TaoThongTinLienHeController.cs" />
     <Compile Include="Controllers\ProductDetailController.cs" />
     <Compile Include="Controllers\YourCartController.cs" />
@@ -379,10 +379,10 @@
     <Content Include="Views\Admin_CapNhat_Xoa_TraLoi\Create.cshtml" />
     <Content Include="Views\Admin_CapNhat_Xoa_TraLoi\Delete.cshtml" />
     <Content Include="Views\Admin_CapNhat_Xoa_TraLoi\Details.cshtml" />
-    <Content Include="Views\Admin_CapNhat_Xoa_TraLoi\Edit.cshtml" />
+    <Content Include="Views\Admin_CapNhat_Xoa_TraLoi\Reply.cshtml" />
     <Content Include="Views\Admin_CapNhat_Xoa_TraLoi\Index.cshtml" />
-    <Content Include="Views\M4_Admin_TimKiemHienThi\Details.cshtml" />
-    <Content Include="Views\M4_Admin_TimKiemHienThi\Index.cshtml" />
+    <Content Include="Views\Admin_TimKiemHienThi\Details.cshtml" />
+    <Content Include="Views\Admin_TimKiemHienThi\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
