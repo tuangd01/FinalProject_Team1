@@ -181,7 +181,6 @@
     <Compile Include="Controllers\M4_Admin_TimKiemHienThiController.cs" />
     <Compile Include="Controllers\M4_KH_TaoThongTinLienHeController.cs" />
     <Compile Include="Controllers\ProductDetailController.cs" />
-    <Compile Include="Controllers\YourCartController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
