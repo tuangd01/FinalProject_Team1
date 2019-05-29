@@ -1,17 +1,18 @@
 ﻿@model BanHangXachTay.Models.Contact
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Delete";
 }
 
-<link href="~/Content/Contact/css/CssDetails.css" rel="stylesheet" />
-<h2>Thông tin</h2>
+<h2>Delete</h2>
 
+<h3>Are you sure you want to delete this?</h3>
 <div>
+    <h4>Contact</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            Chủ đề:
+            @Html.DisplayNameFor(model => model.chuDe)
         </dt>
 
         <dd>
@@ -19,7 +20,7 @@
         </dd>
 
         <dt>
-            Tiêu đề:
+            @Html.DisplayNameFor(model => model.tieuDe)
         </dt>
 
         <dd>
@@ -27,7 +28,7 @@
         </dd>
 
         <dt>
-            Nội dung:
+            @Html.DisplayNameFor(model => model.noiDung)
         </dt>
 
         <dd>
@@ -35,7 +36,7 @@
         </dd>
 
         <dt>
-            Họ và Tên:
+            @Html.DisplayNameFor(model => model.hoTen)
         </dt>
 
         <dd>
@@ -43,7 +44,7 @@
         </dd>
 
         <dt>
-            Email:
+            @Html.DisplayNameFor(model => model.email)
         </dt>
 
         <dd>
@@ -51,7 +52,7 @@
         </dd>
 
         <dt>
-            Số điện thoại:
+            @Html.DisplayNameFor(model => model.sdt)
         </dt>
 
         <dd>
@@ -59,7 +60,7 @@
         </dd>
 
         <dt>
-            Thời gian gửi:
+            @Html.DisplayNameFor(model => model.thoiGianGui)
         </dt>
 
         <dd>
@@ -67,7 +68,7 @@
         </dd>
 
         <dt>
-            Trạng thái:
+            @Html.DisplayNameFor(model => model.trangThai)
         </dt>
 
         <dd>
@@ -75,7 +76,7 @@
         </dd>
 
         <dt>
-            Trả lời:
+            @Html.DisplayNameFor(model => model.traLoi)
         </dt>
 
         <dd>
@@ -83,7 +84,7 @@
         </dd>
 
         <dt>
-            Thời gian trả lời:
+            @Html.DisplayNameFor(model => model.thoigianTraLoi)
         </dt>
 
         <dd>
@@ -91,7 +92,7 @@
         </dd>
 
         <dt>
-            Ghi chú:
+            @Html.DisplayNameFor(model => model.ghiChu)
         </dt>
 
         <dd>
@@ -99,7 +100,13 @@
         </dd>
 
     </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
 </div>
-<p>
-    @Html.ActionLink("Thoát ra", "Index")
-</p>

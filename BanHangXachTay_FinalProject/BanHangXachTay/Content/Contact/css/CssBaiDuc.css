@@ -1,0 +1,26 @@
+﻿section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#left {
+    float: left;
+    padding: 20px;
+    width: 500px;
+}
+
+#right {
+    float: left;
+    padding: 20px;
+}
+
+.btn {
+    text-align: center;
+    margin-top: 15%;
+}
+
+    .btn:hover {
+        background: #ff6a00;
+        color: white;
+    }

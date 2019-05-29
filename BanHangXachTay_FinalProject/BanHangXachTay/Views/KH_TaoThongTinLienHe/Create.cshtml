@@ -1,0 +1,72 @@
+﻿@model BanHangXachTay.Models.Contact
+
+@{
+    ViewBag.Title = "Create";
+}
+<link href="~/Content/Contact/css/CssBaiDuc.css" rel="stylesheet" />
+
+<h2>
+    Hộp thư hỗ trợ khách hàng
+</h2>
+
+<section>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <hr />
+            @Html.ValidationSummary(true)
+
+            <div class="form-group" id="left">
+                @Html.LabelFor(model => model.chuDe, "Chủ đề: ", htmlAttributes: new { @class = "" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.chuDe)
+                    @Html.ValidationMessageFor(model => model.chuDe)
+                </div>
+                @Html.LabelFor(model => model.tieuDe, "Tiêu đề: ", htmlAttributes: new { @class = "" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.tieuDe)
+                    @Html.ValidationMessageFor(model => model.tieuDe)
+                </div>
+                @Html.LabelFor(model => model.hoTen, "Họ và tên: ", htmlAttributes: new { @class = "" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.hoTen)
+                    @Html.ValidationMessageFor(model => model.hoTen)
+                </div>
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Gửi liên hệ" class="btn btn-default" />
+                </div>
+
+            </div>
+
+
+            <div class="form-group" id="right">
+                @Html.LabelFor(model => model.email, "Địa chỉ email: ", htmlAttributes: new { @class = "" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.email)
+                    @Html.ValidationMessageFor(model => model.email)
+                </div>
+                @Html.LabelFor(model => model.sdt, "Số điện thoại: ", htmlAttributes: new { @class = "" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.sdt)
+                    @Html.ValidationMessageFor(model => model.sdt)
+                </div>
+                @Html.LabelFor(model => model.noiDung, "Nội dung: ", htmlAttributes: new { @class = "" })
+                <div class="col-md-10" id="txtRight">
+                    @Html.TextAreaFor(model => model.noiDung)
+                    @Html.ValidationMessageFor(model => model.noiDung)
+                </div>
+            </div>
+
+            <div class="form-group">
+
+            </div>
+        </div>
+    }
+</section>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

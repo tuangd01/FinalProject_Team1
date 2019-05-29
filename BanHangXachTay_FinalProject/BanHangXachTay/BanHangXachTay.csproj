@@ -179,8 +179,8 @@
     <Compile Include="Controllers\Admin_tablePRODUCTsController.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KH_TaoThongTinLienHeController.cs" />
     <Compile Include="Controllers\M4_Admin_TimKiemHienThiController.cs" />
-    <Compile Include="Controllers\M4_KH_TaoThongTinLienHeController.cs" />
     <Compile Include="Controllers\ProductDetailController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -238,6 +238,8 @@
     <Content Include="Content\bootstrap\img\glyphicons-halflings.png" />
     <Content Include="Content\bootstrap\js\bootstrap.js" />
     <Content Include="Content\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\Contact\css\CssBaiDuc.css" />
+    <Content Include="Content\Contact\css\CssDetails.css" />
     <Content Include="Content\Contact\css\TraLoi.css" />
     <Content Include="Content\Contact\img\bg.png" />
     <Content Include="Content\Contact_User.css" />
@@ -408,6 +410,11 @@
     <Content Include="Views\Admin_tablePRODUCTofYourCarts\Edit.cshtml" />
     <Content Include="Views\Admin_tablePRODUCTofYourCarts\Index.cshtml" />
     <Content Include="Views\Cart\Index.cshtml" />
+    <Content Include="Views\KH_TaoThongTinLienHe\Create.cshtml" />
+    <Content Include="Views\KH_TaoThongTinLienHe\Delete.cshtml" />
+    <Content Include="Views\KH_TaoThongTinLienHe\Details.cshtml" />
+    <Content Include="Views\KH_TaoThongTinLienHe\Edit.cshtml" />
+    <Content Include="Views\KH_TaoThongTinLienHe\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

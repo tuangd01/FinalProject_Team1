@@ -1,9 +1,4 @@
-﻿body {
-    margin: 0px;
-    padding: 0px;
-    background: black;
-}
-
+﻿
 .span1 {
     color: green;
 }
@@ -17,9 +12,8 @@
 }
 
 th {
-    border: 1px solid #14bd9e;
-    color: white;
-    font-size: 30px;
+    border: 1px solid #ff6a00;
+    font-size: 20px;
     border-radius: 24px;
 }
 
@@ -30,8 +24,7 @@ th {
 td {
     padding: 10px;
     text-align: center;
-    color: white;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .search {
@@ -40,22 +33,21 @@ td {
 
 .txtSearch {
     background: none;
-    border: 1px solid #14bd9e;
+    border: 1px solid #ff6a00;
     height: 30px;
     width: 200px;
     border-radius: 24px;
-    color: white;
 }
 
 .btnSearch {
+    margin-top: -10px;
     background: none;
-    color: white;
     border-radius: 24px;
-    border: 1px solid #14bd9e;
+    border: 1px solid #ff6a00;
     height: 30px;
     width: 30px;
 }
 
     .btnSearch:hover {
-        background: #14bd9e;
+        background: #ff6a00;
     }
