@@ -18,6 +18,7 @@ namespace BanHangXachTay.Controllers
         public ActionResult Index()
         {
             var model = db.tablePRODUCTofYourCarts.ToList();
+            ViewBag.Message = TempData["StatusMessage"];
             return View(model);
         }
 
@@ -56,6 +57,7 @@ namespace BanHangXachTay.Controllers
                     // add model to database
                     db.tablePRODUCTofYourCarts.Add(model);
                     db.SaveChanges();
+                    TempData["StatusMessage"] = "Create successfully";
                     // save file to App_Data
                     var path = Server.MapPath("~/App_Data");
                     path = System.IO.Path.Combine(path, model.idSP.ToString());
@@ -102,6 +104,8 @@ namespace BanHangXachTay.Controllers
             {
                 db.Entry(model).State = EntityState.Modified;
                 db.SaveChanges();
+                TempData["StatusMessage"] = "Edit successfully";
+
                 return RedirectToAction("Index");
             }
             return View(model);
@@ -130,6 +134,7 @@ namespace BanHangXachTay.Controllers
             var model = db.tablePRODUCTofYourCarts.Find(id);
             db.tablePRODUCTofYourCarts.Remove(model);
             db.SaveChanges();
+            TempData["StatusMessage"] = "Delete successfully";
             return RedirectToAction("Index");
         }
 

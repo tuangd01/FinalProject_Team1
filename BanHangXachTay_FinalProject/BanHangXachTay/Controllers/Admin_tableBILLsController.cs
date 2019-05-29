@@ -18,6 +18,7 @@ namespace BanHangXachTay.Controllers
         public ActionResult Index()
         {
             var model = db.tableBILLs.ToList();
+            ViewBag.Message = TempData["StatusMessage"];
             return View(model);
         }
 
@@ -56,6 +57,7 @@ namespace BanHangXachTay.Controllers
 
                 db.tableBILLs.Add(model);
                 db.SaveChanges();
+                TempData["StatusMessage"] = "Create successfully";
                 return RedirectToAction("Index");
             }
 
@@ -88,6 +90,7 @@ namespace BanHangXachTay.Controllers
             {
                 db.Entry(model).State = EntityState.Modified;
                 db.SaveChanges();
+                TempData["StatusMessage"] = "Edit successfully";
                 return RedirectToAction("Index");
             }
             return View(model);
@@ -116,6 +119,7 @@ namespace BanHangXachTay.Controllers
             var model = db.tableBILLs.Find(id);
             db.tableBILLs.Remove(model);
             db.SaveChanges();
+            TempData["StatusMessage"] = "Delete successfully";
             return RedirectToAction("Index");
         }
 

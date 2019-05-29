@@ -17,22 +17,24 @@ namespace BanHangXachTay.Controllers
         // GET: Admin_tableCUSTOMERs
         public ActionResult Index()
         {
-            return View(db.tableCUSTOMERs.ToList());
+            var model = db.tableCUSTOMERs.ToList();
+            ViewBag.Message = TempData["StatusMessage"];
+            return View(model);
         }
 
         // GET: Admin_tableCUSTOMERs/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult Details(int id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            tableCUSTOMER tableCUSTOMER = db.tableCUSTOMERs.Find(id);
-            if (tableCUSTOMER == null)
+            var model = db.tableCUSTOMERs.Find(id);
+            if (model == null)
             {
                 return HttpNotFound();
             }
-            return View(tableCUSTOMER);
+            return View(model);
         }
 
         // GET: Admin_tableCUSTOMERs/Create
@@ -46,31 +48,32 @@ namespace BanHangXachTay.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "idKH,tenKH,gioitinh,sodienthoaiKH,diachi,ghichu")] tableCUSTOMER tableCUSTOMER)
+        public ActionResult Create( tableCUSTOMER model)
         {
             if (ModelState.IsValid)
             {
-                db.tableCUSTOMERs.Add(tableCUSTOMER);
+                db.tableCUSTOMERs.Add(model);
                 db.SaveChanges();
+                TempData["StatusMessage"] = "Create successfully";
                 return RedirectToAction("Index");
             }
 
-            return View(tableCUSTOMER);
+            return View(model);
         }
 
         // GET: Admin_tableCUSTOMERs/Edit/5
-        public ActionResult Edit(int? id)
+        public ActionResult Edit(int id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            tableCUSTOMER tableCUSTOMER = db.tableCUSTOMERs.Find(id);
-            if (tableCUSTOMER == null)
+            var model = db.tableCUSTOMERs.Find(id);
+            if (model == null)
             {
                 return HttpNotFound();
             }
-            return View(tableCUSTOMER);
+            return View(model);
         }
 
         // POST: Admin_tableCUSTOMERs/Edit/5
@@ -78,30 +81,31 @@ namespace BanHangXachTay.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "idKH,tenKH,gioitinh,sodienthoaiKH,diachi,ghichu")] tableCUSTOMER tableCUSTOMER)
+        public ActionResult Edit(tableCUSTOMER model)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(tableCUSTOMER).State = EntityState.Modified;
+                db.Entry(model).State = EntityState.Modified;
                 db.SaveChanges();
+                TempData["StatusMessage"] = "Edit successfully";
                 return RedirectToAction("Index");
             }
-            return View(tableCUSTOMER);
+            return View(model);
         }
 
         // GET: Admin_tableCUSTOMERs/Delete/5
-        public ActionResult Delete(int? id)
+        public ActionResult Delete(int id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            tableCUSTOMER tableCUSTOMER = db.tableCUSTOMERs.Find(id);
-            if (tableCUSTOMER == null)
+            var model = db.tableCUSTOMERs.Find(id);
+            if (model == null)
             {
                 return HttpNotFound();
             }
-            return View(tableCUSTOMER);
+            return View(model);
         }
 
         // POST: Admin_tableCUSTOMERs/Delete/5
@@ -109,9 +113,10 @@ namespace BanHangXachTay.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            tableCUSTOMER tableCUSTOMER = db.tableCUSTOMERs.Find(id);
-            db.tableCUSTOMERs.Remove(tableCUSTOMER);
+            var model = db.tableCUSTOMERs.Find(id);
+            db.tableCUSTOMERs.Remove(model);
             db.SaveChanges();
+            TempData["StatusMessage"] = "Delete successfully";
             return RedirectToAction("Index");
         }
 
