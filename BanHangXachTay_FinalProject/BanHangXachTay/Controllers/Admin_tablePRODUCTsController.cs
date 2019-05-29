@@ -169,7 +169,7 @@ namespace BanHangXachTay.Controllers
                 Response.StatusCode = 404;
                 return null;
             }
-            ViewBag.idloaiSP = new SelectList(db.LoaiSanPhams.ToList().OrderBy(n => n.TenLoaiSP), "idloaiSP", "TenLoaiSP",tablePRODUCT.idLSP);
+            ViewBag.idloaiSP = new SelectList(db.LoaiSanPhams.ToList().OrderBy(n => n.TenLoaiSP), "idLSP", "TenLoaiSP", tablePRODUCT.idloaiSP);
             ViewBag.MaNCC = new SelectList(db.NHACUNGCAPs.ToList().OrderBy(n => n.TenNCC), "MaNCC", "TenNCC", tablePRODUCT.MaNCC);
             return View(tablePRODUCT);
 
@@ -188,20 +188,24 @@ namespace BanHangXachTay.Controllers
             {
                 using (var scope = new TransactionScope())
                 {
-                
+                    //Add Day
+                    model.ngaynhap = DateTime.Today;
 
-                    
+                    //Add model to database
+                    db.tablePRODUCTs.Add(model);
+                    db.SaveChanges();
 
+                    //Save file to App_Data
                     var path = Server.MapPath("~/App_Data");
                     path = System.IO.Path.Combine(path, model.idSP.ToString());
-                    
-                    UpdateModel(model);
-                    db.SaveChanges();
+                    Request.Files["Image"].SaveAs(path);
+
+                    //Accept all and persistence
                     scope.Complete();
-                    
+                    return RedirectToAction("Index");
                 }
             }
-            return RedirectToAction("Index");
+            return View(model);
         }
 
         // GET: Admin_tablePRODUCTs/Delete/5

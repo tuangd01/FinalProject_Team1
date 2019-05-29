@@ -4,15 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="CsK23T2aModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="Admin">
-          <Key>
-            <PropertyRef Name="UserAdmin" />
-          </Key>
-          <Property Name="UserAdmin" Type="varchar" MaxLength="30" Nullable="false" />
-          <Property Name="PassAdmin" Type="varchar" MaxLength="30" Nullable="false" />
-          <Property Name="HoTen" Type="nvarchar" MaxLength="50" />
-        </EntityType>
+    <Schema Namespace="CsK23T2aModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Contact">
           <Key>
             <PropertyRef Name="idContact" />
@@ -91,8 +83,20 @@
           <Property Name="ngaynhap" Type="date" />
           <Property Name="img" Type="image" />
           <Property Name="ghichuSP" Type="nvarchar" MaxLength="100" />
-          <Property Name="idLSP" Type="int" />
+          <Property Name="idloaiSP" Type="int" />
           <Property Name="MaNCC" Type="int" />
+        </EntityType>
+        <EntityType Name="tablePRODUCTofYourCart">
+          <Key>
+            <PropertyRef Name="idSP" />
+          </Key>
+          <Property Name="idSP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tenSP" Type="nvarchar" MaxLength="100" />
+          <Property Name="img" Type="image" />
+          <Property Name="dongiaSP" Type="int" />
+          <Property Name="soluongSP" Type="int" />
+          <Property Name="thanhtien" Type="int" />
+          <Property Name="ghichu" Type="nvarchar" MaxLength="500" />
         </EntityType>
         <Association Name="FK_loaisp">
           <End Role="LoaiSanPham" Type="Self.LoaiSanPham" Multiplicity="0..1" />
@@ -102,7 +106,7 @@
               <PropertyRef Name="idloaiSP" />
             </Principal>
             <Dependent Role="tablePRODUCT">
-              <PropertyRef Name="idLSP" />
+              <PropertyRef Name="idloaiSP" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -119,13 +123,13 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="CsK23T2aModelStoreContainer">
-          <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LoaiSanPham" EntityType="Self.LoaiSanPham" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="NHACUNGCAP" EntityType="Self.NHACUNGCAP" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tableBILL" EntityType="Self.tableBILL" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tableCUSTOMER" EntityType="Self.tableCUSTOMER" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tablePRODUCT" EntityType="Self.tablePRODUCT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tablePRODUCTofYourCart" EntityType="Self.tablePRODUCTofYourCart" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_loaisp" Association="Self.FK_loaisp">
             <End Role="LoaiSanPham" EntitySet="LoaiSanPham" />
             <End Role="tablePRODUCT" EntitySet="tablePRODUCT" />
@@ -184,9 +188,10 @@
           <Property Name="ngaynhap" Type="DateTime" Precision="0" />
           <Property Name="img" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="ghichuSP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="idloaiSP" Type="Int32" />
           <Property Name="MaNCC" Type="Int32" />
+          <NavigationProperty Name="LoaiSanPham" Relationship="CsK23T2aModel.FK_loaisp" FromRole="tablePRODUCT" ToRole="LoaiSanPham" />
           <NavigationProperty Name="NHACUNGCAP" Relationship="CsK23T2aModel.FK_nhacungcap" FromRole="tablePRODUCT" ToRole="NHACUNGCAP" />
-          <Property Name="idLSP" Type="Int32" />
         </EntityType>
         <EntityContainer Name="CsK23T2aEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="tableBILLs" EntityType="Self.tableBILL" />
@@ -195,15 +200,15 @@
           <EntitySet Name="Contacts" EntityType="CsK23T2aModel.Contact" />
           <EntitySet Name="LoaiSanPhams" EntityType="CsK23T2aModel.LoaiSanPham" />
           <EntitySet Name="NHACUNGCAPs" EntityType="CsK23T2aModel.NHACUNGCAP" />
+          <AssociationSet Name="FK_loaisp" Association="CsK23T2aModel.FK_loaisp">
+            <End Role="LoaiSanPham" EntitySet="LoaiSanPhams" />
+            <End Role="tablePRODUCT" EntitySet="tablePRODUCTs" />
+          </AssociationSet>
           <AssociationSet Name="FK_nhacungcap" Association="CsK23T2aModel.FK_nhacungcap">
             <End Role="NHACUNGCAP" EntitySet="NHACUNGCAPs" />
             <End Role="tablePRODUCT" EntitySet="tablePRODUCTs" />
           </AssociationSet>
-          <AssociationSet Name="FK_loaisp1" Association="CsK23T2aModel.FK_loaisp1">
-            <End Role="LoaiSanPham" EntitySet="LoaiSanPhams" />
-            <End Role="tablePRODUCT" EntitySet="tablePRODUCTs" />
-          </AssociationSet>
-          <EntitySet Name="Admins" EntityType="CsK23T2aModel.Admin" />
+          <EntitySet Name="tablePRODUCTofYourCarts" EntityType="CsK23T2aModel.tablePRODUCTofYourCart" />
         </EntityContainer>
         <EntityType Name="Contact">
           <Key>
@@ -228,6 +233,7 @@
           </Key>
           <Property Name="idloaiSP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TenLoaiSP" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tablePRODUCTs" Relationship="CsK23T2aModel.FK_loaisp" FromRole="LoaiSanPham" ToRole="tablePRODUCT" />
         </EntityType>
         <EntityType Name="NHACUNGCAP">
           <Key>
@@ -239,6 +245,18 @@
           <Property Name="DienThoai" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="tablePRODUCTs" Relationship="CsK23T2aModel.FK_nhacungcap" FromRole="NHACUNGCAP" ToRole="tablePRODUCT" />
         </EntityType>
+        <Association Name="FK_loaisp">
+          <End Type="CsK23T2aModel.LoaiSanPham" Role="LoaiSanPham" Multiplicity="0..1" />
+          <End Type="CsK23T2aModel.tablePRODUCT" Role="tablePRODUCT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LoaiSanPham">
+              <PropertyRef Name="idloaiSP" />
+            </Principal>
+            <Dependent Role="tablePRODUCT">
+              <PropertyRef Name="idloaiSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_nhacungcap">
           <End Type="CsK23T2aModel.NHACUNGCAP" Role="NHACUNGCAP" Multiplicity="0..1" />
           <End Type="CsK23T2aModel.tablePRODUCT" Role="tablePRODUCT" Multiplicity="*" />
@@ -251,25 +269,17 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_loaisp1">
-          <End Type="CsK23T2aModel.LoaiSanPham" Role="LoaiSanPham" Multiplicity="0..1" />
-          <End Type="CsK23T2aModel.tablePRODUCT" Role="tablePRODUCT" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="LoaiSanPham">
-              <PropertyRef Name="idloaiSP" />
-            </Principal>
-            <Dependent Role="tablePRODUCT">
-              <PropertyRef Name="idLSP" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityType Name="Admin">
+        <EntityType Name="tablePRODUCTofYourCart">
           <Key>
-            <PropertyRef Name="UserAdmin" />
+            <PropertyRef Name="idSP" />
           </Key>
-          <Property Name="UserAdmin" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="PassAdmin" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="idSP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tenSP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="img" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="dongiaSP" Type="Int32" />
+          <Property Name="soluongSP" Type="Int32" />
+          <Property Name="thanhtien" Type="Int32" />
+          <Property Name="ghichu" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -316,8 +326,8 @@
           <EntitySetMapping Name="tablePRODUCTs">
             <EntityTypeMapping TypeName="CsK23T2aModel.tablePRODUCT">
               <MappingFragment StoreEntitySet="tablePRODUCT">
-                <ScalarProperty Name="idLSP" ColumnName="idLSP" />
                 <ScalarProperty Name="MaNCC" ColumnName="MaNCC" />
+                <ScalarProperty Name="idloaiSP" ColumnName="idloaiSP" />
                 <ScalarProperty Name="idSP" ColumnName="idSP" />
                 <ScalarProperty Name="tenSP" ColumnName="tenSP" />
                 <ScalarProperty Name="dongiaSP" ColumnName="dongiaSP" />
@@ -349,8 +359,8 @@
           <EntitySetMapping Name="LoaiSanPhams">
             <EntityTypeMapping TypeName="CsK23T2aModel.LoaiSanPham">
               <MappingFragment StoreEntitySet="LoaiSanPham">
-                <ScalarProperty Name="idloaiSP" ColumnName="idloaiSP" />
                 <ScalarProperty Name="TenLoaiSP" ColumnName="TenLoaiSP" />
+                <ScalarProperty Name="idloaiSP" ColumnName="idloaiSP" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -364,12 +374,16 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Admins">
-            <EntityTypeMapping TypeName="CsK23T2aModel.Admin">
-              <MappingFragment StoreEntitySet="Admin">
-                <ScalarProperty Name="HoTen" ColumnName="HoTen" />
-                <ScalarProperty Name="PassAdmin" ColumnName="PassAdmin" />
-                <ScalarProperty Name="UserAdmin" ColumnName="UserAdmin" />
+          <EntitySetMapping Name="tablePRODUCTofYourCarts">
+            <EntityTypeMapping TypeName="CsK23T2aModel.tablePRODUCTofYourCart">
+              <MappingFragment StoreEntitySet="tablePRODUCTofYourCart">
+                <ScalarProperty Name="ghichu" ColumnName="ghichu" />
+                <ScalarProperty Name="thanhtien" ColumnName="thanhtien" />
+                <ScalarProperty Name="soluongSP" ColumnName="soluongSP" />
+                <ScalarProperty Name="dongiaSP" ColumnName="dongiaSP" />
+                <ScalarProperty Name="img" ColumnName="img" />
+                <ScalarProperty Name="tenSP" ColumnName="tenSP" />
+                <ScalarProperty Name="idSP" ColumnName="idSP" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
