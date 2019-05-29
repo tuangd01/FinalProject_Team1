@@ -379,7 +379,6 @@
       <BrowseToURL>~/YourCart/YourCartViews</BrowseToURL>
     </Content>
     <Content Include="Views\ProductDetail\ProductDetailView.cshtml" />
-    <Content Include="Views\M4_KH_TaoThongTinLienHe\Index.cshtml" />
     <Content Include="Views\Admin_tablePRODUCTs\Create.cshtml" />
     <Content Include="Views\Admin_tablePRODUCTs\Delete.cshtml" />
     <Content Include="Views\Admin_tablePRODUCTs\Details.cshtml" />
@@ -399,7 +398,7 @@
     <Content Include="Views\Admin_CapNhat_Xoa_TraLoi\Create.cshtml" />
     <Content Include="Views\Admin_CapNhat_Xoa_TraLoi\Delete.cshtml" />
     <Content Include="Views\Admin_CapNhat_Xoa_TraLoi\Details.cshtml" />
-    <Content Include="Views\Admin_CapNhat_Xoa_TraLoi\Edit.cshtml" />
+    <Content Include="Views\Admin_CapNhat_Xoa_TraLoi\TraLoi.cshtml" />
     <Content Include="Views\Admin_CapNhat_Xoa_TraLoi\Index.cshtml" />
     <Content Include="Views\M4_Admin_TimKiemHienThi\Details.cshtml" />
     <Content Include="Views\M4_Admin_TimKiemHienThi\Index.cshtml" />

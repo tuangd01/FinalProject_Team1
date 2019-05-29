@@ -59,12 +59,8 @@ namespace BanHangXachTay.Controllers
         }
 
         // GET: /Admin_CapNhat_Xoa_TraLoi/Edit/5
-        public ActionResult Edit(int? id)
+        public ActionResult TraLoi(int? id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
             Contact contact = db.Contacts.Find(id);
             if (contact == null)
             {
@@ -78,13 +74,17 @@ namespace BanHangXachTay.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Contact model)
+        public ActionResult TraLoi(Contact model)
         {
+            if (model.traLoi == null) { model.trangThai = false; }
+            else { model.trangThai = true; }
+            model.thoigianTraLoi = DateTime.Now.Date;
+
             if (ModelState.IsValid)
             {
                 db.Entry(model).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "M4_Admin_TimKiemHienThi");
             }
             return View(model);
         }
