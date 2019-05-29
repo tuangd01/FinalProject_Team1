@@ -42,6 +42,15 @@
             <div class="span8">
                 <div class="account pull-right">
                     <ul class="user-menu">
+                        <li>
+                            <a href="@Url.Action("Index")">Admin</a>
+                            <ul>
+                                <li><a href="@Url.Action("Index","Admin_tableCUSTOMERs")">Admin_Customer</a></li>
+                                <li><a href="@Url.Action("Index","Admin_tablePRODUCTofYourCarts")">Admin_Product</a></li>
+                                <li><a href="@Url.Action("Index","Admin_tableBILLs")">Admin_Bill</a></li>
+                            </ul>
+                        </li>
+                        
                         <li><a href="@Url.Action("AboutViews","Home")">Tài khoàn của bạn</a></li>
                         <li><a href="@Url.Action("Index","Cart")">Giỏ Hàng</a></li>
                         <li><a href="@Url.Action("ContactViews","Home")">Hỗ trợ khách hàng</a></li>
