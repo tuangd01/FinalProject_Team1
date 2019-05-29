@@ -4,16 +4,16 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="9b79c46f85174c19b2bc144d344194f7" Name="Diagram1" ZoomLevel="114">
+      <Diagram DiagramId="9b79c46f85174c19b2bc144d344194f7" Name="Diagram1" ZoomLevel="84">
         <EntityTypeShape EntityType="CsK23T2aModel.tableBILL" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CsK23T2aModel.tableCUSTOMER" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CsK23T2aModel.tablePRODUCT" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CsK23T2aModel.Contact" Width="1.5" PointX="5.375" PointY="0.75" />
         <EntityTypeShape EntityType="CsK23T2aModel.LoaiSanPham" Width="1.5" PointX="0.5" PointY="6.375" />
         <EntityTypeShape EntityType="CsK23T2aModel.NHACUNGCAP" Width="1.5" PointX="0.75" PointY="8.75" />
-        <AssociationConnector Association="CsK23T2aModel.FK_loaisp" />
         <AssociationConnector Association="CsK23T2aModel.FK_nhacungcap" />
         <EntityTypeShape EntityType="CsK23T2aModel.tablePRODUCTofYourCart" Width="1.5" PointX="5.375" PointY="5.75" />
+        <AssociationConnector Association="CsK23T2aModel.FK_loaisp1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

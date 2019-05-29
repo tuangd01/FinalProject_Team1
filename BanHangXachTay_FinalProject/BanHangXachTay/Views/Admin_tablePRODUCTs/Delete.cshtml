@@ -1,7 +1,7 @@
 ﻿@model BanHangXachTay.Models.tablePRODUCT
 
 @{
-    ViewBag.Title = "Xóa Sản Phẩm"; 
+    ViewBag.Title = "Xóa Sản Phẩm";
 }
 
 
@@ -28,11 +28,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.idloaiSP)
+            @Html.DisplayNameFor(model => model.idLSP)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.idloaiSP)
+            @Html.DisplayFor(model => model.idLSP)
         </dd>
 
 
@@ -85,7 +85,8 @@
         </dd>
     </dl>
 
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">

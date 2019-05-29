@@ -110,7 +110,7 @@ namespace BanHangXachTay.Controllers
         public ActionResult Create()
         {
             ViewBag.idloaiSP = new SelectList(db.LoaiSanPhams.ToList().OrderBy(n => n.TenLoaiSP), "idloaiSP", "TenLoaiSP");
-            ViewBag.MaNCC = new SelectList(db.NHACUNGCAPs.ToList().OrderBy(n => n.TenNCC), "MaNCC","TenNCC");
+            ViewBag.MaNCC = new SelectList(db.NHACUNGCAPs.ToList().OrderBy(n => n.TenNCC), "MaNCC", "TenNCC");
             return View();
         }
 
@@ -118,7 +118,7 @@ namespace BanHangXachTay.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-         [ValidateAntiForgeryToken]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(tablePRODUCT model)
         {
             if (ModelState.IsValid)
@@ -145,8 +145,8 @@ namespace BanHangXachTay.Controllers
             return View(model);
         }
 
-        
-        
+
+
 
         public ActionResult Image(string id)
         {
@@ -169,11 +169,11 @@ namespace BanHangXachTay.Controllers
                 Response.StatusCode = 404;
                 return null;
             }
-            ViewBag.idloaiSP = new SelectList(db.LoaiSanPhams.ToList().OrderBy(n => n.TenLoaiSP), "idLSP", "TenLoaiSP", tablePRODUCT.idloaiSP);
+            ViewBag.idloaiSP = new SelectList(db.LoaiSanPhams.ToList().OrderBy(n => n.TenLoaiSP), "idloaiSP", "TenLoaiSP", tablePRODUCT.idLSP);
             ViewBag.MaNCC = new SelectList(db.NHACUNGCAPs.ToList().OrderBy(n => n.TenNCC), "MaNCC", "TenNCC", tablePRODUCT.MaNCC);
             return View(tablePRODUCT);
 
-            
+
         }
 
 
@@ -184,28 +184,24 @@ namespace BanHangXachTay.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(tablePRODUCT model)
         {
-           if (ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 using (var scope = new TransactionScope())
                 {
-                    //Add Day
-                    model.ngaynhap = DateTime.Today;
 
-                    //Add model to database
-                    db.tablePRODUCTs.Add(model);
-                    db.SaveChanges();
 
-                    //Save file to App_Data
+
+
                     var path = Server.MapPath("~/App_Data");
                     path = System.IO.Path.Combine(path, model.idSP.ToString());
-                    Request.Files["Image"].SaveAs(path);
 
-                    //Accept all and persistence
+                    UpdateModel(model);
+                    db.SaveChanges();
                     scope.Complete();
-                    return RedirectToAction("Index");
+
                 }
             }
-            return View(model);
+            return RedirectToAction("Index");
         }
 
         // GET: Admin_tablePRODUCTs/Delete/5
@@ -234,7 +230,7 @@ namespace BanHangXachTay.Controllers
             return RedirectToAction("Index");
         }
 
-       
+
 
 
     }

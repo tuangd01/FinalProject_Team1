@@ -17,13 +17,13 @@ namespace BanHangXachTay.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public LoaiSanPham()
         {
-            this.tablePRODUCTs = new HashSet<tablePRODUCT>();
+            this.tablePRODUCTs1 = new HashSet<tablePRODUCT>();
         }
     
         public int idloaiSP { get; set; }
         public string TenLoaiSP { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tablePRODUCT> tablePRODUCTs { get; set; }
+        public virtual ICollection<tablePRODUCT> tablePRODUCTs1 { get; set; }
     }
 }

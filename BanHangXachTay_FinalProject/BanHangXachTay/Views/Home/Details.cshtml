@@ -1,35 +1,44 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Chi Tiết Sản Phẩm ";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <style type="text/css">
-    #Datmua a{
-        clear:both; background-color:red;
-        color:white;    width:120px;  height:35px;
-        display:block;      float:right;  text-align:center;
-        padding-top:10px;   text-decoration:none; font-weight:bold;
+    #Datmua a {
+        clear: both;
+        background-color: red;
+        color: white;
+        width: 120px;
+        height: 35px;
+        display: block;
+        float: right;
+        text-align: center;
+        padding-top: 10px;
+        text-decoration: none;
+        font-weight: bold;
     }
-    #Datmua a:hover{
-        background-color:gray;
-        color: red;
-    }
+
+        #Datmua a:hover {
+            background-color: gray;
+            color: red;
+        }
 </style>
 
 <h2>Thông Tin Chi Tiết Sản Phẩm</h2>
 <div>
-  
-    <div style="width:40%; float:left; border-left: dotted 1px; border-color:azure">
-        <img src="@Url.Action("Image", new { id = Model.idSP})" width="100%" />
-    </div>
-    <div style="width:60%; float:left; padding:10px">
-        <h4 style="font-weight:bold;color:red"> Tên Sản Phẩm : @Model.tenSP</h4> 
-        <p style="text-align:justify"><span style="color:red; font-weight:bold"> Ghi Chú: </span> @Model.ghichuSP</p>
-        <p style="font-weight:bold"> Giá Bán: <span style="color:red;font-size:16pt">
-  
-    @Model.dongiaSP.ToString("N0") VNĐ
 
-</span></p>
+    <div style="width:40%; float:left; border-left: dotted 1px; border-color:azure">
+        <img src="~/Admin_tablePRODUCTs/image/@Model.idSP" width="100%" />
+    </div>
+    <div style="width:58%; float:right; padding:10px">
+        <h4 style="font-weight:bold;color:red"> Tên Sản Phẩm : @Model.tenSP</h4>
+        <p style="text-align:justify"><span style="color:red; font-weight:bold"> Ghi Chú: </span> @Model.ghichuSP</p>
+        <p style="font-weight:bold">
+            Giá Bán: <span style="color:red;font-size:16pt">
+
+                @Model.dongiaSP.ToString("N0") VNĐ
+
+            </span>
+        </p>
     </div>
     <div>
         <div id="Datmua">
