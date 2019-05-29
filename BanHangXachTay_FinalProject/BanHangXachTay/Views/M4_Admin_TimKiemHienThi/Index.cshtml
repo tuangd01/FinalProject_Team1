@@ -13,6 +13,7 @@
     <div class="search">
         @using (Html.BeginForm())
         {
+            <a href="@Url.Action("Index","Home")" class="logo pull-left"><img src="/Content/themes/images/logo.png" class="site_logo" alt=""></a>
             <p>
                 @Html.TextBox("SearchString", "", new { @class = "txtSearch", @placeholder = "Bạn muốn tìm kiếm..." })
                 <button class="btnSearch" id="buttonSearch"><i class="fas fa-search"></i></button>
@@ -66,7 +67,8 @@
 
                 <td>
 
-                    @Html.ActionLink("Chi tiết", "Details", new { id = item.idContact })
+                    @Html.ActionLink("Chi tiết", "Details", new { id = item.idContact })|
+                    @Html.ActionLink("Xóa", "Xoa", "Admin_CapNhat_Xoa_TraLoi", new { id = item.idContact }, "")
 
                 </td>
             </tr>

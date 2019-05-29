@@ -33,6 +33,8 @@ namespace BanHangXachTay.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(Contact model)
         {
+
+            model.thoiGianGui = DateTime.Now.Date;
             if (ModelState.IsValid)
             {
                 db.Contacts.Add(model);

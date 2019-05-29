@@ -23,7 +23,7 @@ h1{
 .border{ 
 	width: 100px;
 	height: 10px;
-	background: #34495e;
+	background: #ff9800b0;
 	margin: 20px auto 0 auto;
 
 }
@@ -119,14 +119,14 @@ display: flex;
     float: right;
     cursor: pointer;
     transition: 0.5s;
-    background-color: #34495e;
+    background-color: #ffc10700;
     outline: none;
     font-size: 20px;
     font-weight: 700;
 }
 
 #save:hover{
-	background-color: #2980b9;
+	background-color: #ff9800b0;
 }
 
 

@@ -391,11 +391,8 @@
     <Content Include="Views\Admin_tableBILLs\Edit.cshtml" />
     <Content Include="Views\Admin_tableBILLs\Index.cshtml" />
     <Content Include="Views\Shared\_Layout1.cshtml" />
-    <Content Include="Views\Admin_CapNhat_Xoa_TraLoi\Create.cshtml" />
-    <Content Include="Views\Admin_CapNhat_Xoa_TraLoi\Delete.cshtml" />
-    <Content Include="Views\Admin_CapNhat_Xoa_TraLoi\Details.cshtml" />
+    <Content Include="Views\Admin_CapNhat_Xoa_TraLoi\Xoa.cshtml" />
     <Content Include="Views\Admin_CapNhat_Xoa_TraLoi\TraLoi.cshtml" />
-    <Content Include="Views\Admin_CapNhat_Xoa_TraLoi\Index.cshtml" />
     <Content Include="Views\M4_Admin_TimKiemHienThi\Details.cshtml" />
     <Content Include="Views\M4_Admin_TimKiemHienThi\Index.cshtml" />
     <Content Include="Views\Home\Details.cshtml" />
@@ -406,10 +403,6 @@
     <Content Include="Views\Admin_tablePRODUCTofYourCarts\Index.cshtml" />
     <Content Include="Views\Cart\Index.cshtml" />
     <Content Include="Views\KH_TaoThongTinLienHe\Create.cshtml" />
-    <Content Include="Views\KH_TaoThongTinLienHe\Delete.cshtml" />
-    <Content Include="Views\KH_TaoThongTinLienHe\Details.cshtml" />
-    <Content Include="Views\KH_TaoThongTinLienHe\Edit.cshtml" />
-    <Content Include="Views\KH_TaoThongTinLienHe\Index.cshtml" />
     <Content Include="Views\Admin_tableCUSTOMERs\Create.cshtml" />
     <Content Include="Views\Admin_tableCUSTOMERs\Delete.cshtml" />
     <Content Include="Views\Admin_tableCUSTOMERs\Details.cshtml" />
