@@ -17,8 +17,6 @@
         @Html.ValidationSummary(true)
         @Html.HiddenFor(model => model.idSP)
 
-
-
         <div class="form-group">
             @Html.LabelFor(model => model.tenSP, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -80,7 +78,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.ghichuSP, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.ghichuSP)
+                @Html.TextAreaFor(model => model.ghichuSP)
                 @Html.ValidationMessageFor(model => model.ghichuSP)
             </div>
         </div>

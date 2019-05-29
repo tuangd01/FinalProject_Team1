@@ -188,17 +188,14 @@ namespace BanHangXachTay.Controllers
             {
                 using (var scope = new TransactionScope())
                 {
-
-
-
-
                     var path = Server.MapPath("~/App_Data");
                     path = System.IO.Path.Combine(path, model.idSP.ToString());
 
                     UpdateModel(model);
+
+                    db.Entry(model).State = EntityState.Modified;
                     db.SaveChanges();
                     scope.Complete();
-
                 }
             }
             return RedirectToAction("Index");
