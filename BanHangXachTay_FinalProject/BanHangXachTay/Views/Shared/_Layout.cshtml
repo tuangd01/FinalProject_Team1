@@ -40,7 +40,7 @@
                         <li><a href="@Url.Action("AboutViews","Home")">Tài khoản của bạn</a></li>
                         <li><a href="@Url.Action("Index","Cart")">Giỏ Hàng</a></li>
                         <li><a href="@Url.Action("ContactViews","Home")">Địa điểm</a></li>
-                        <li><a href="#">Login</a></li>
+                        <li><a href="@Url.Action("Login","Account")">Login</a></li>
                     </ul>
                 </div>
             </div>
@@ -54,26 +54,15 @@
                 <a href="@Url.Action("Index","Home")" class="logo pull-left"><img src="/Content/themes/images/logo.png" class="site_logo" alt=""></a>
                 <nav id="menu" class="pull-right">
                     <ul>
-                        <li>
-                            <a href="./WomanViews">Quần Áo Nữ</a>
+                        <li>                 
+                            <a href="@Url.Action("Index")">Admin</a>
                             <ul>
-                                <li><a href="#">Áo</a></li>
-                                <li><a href="#">Quần</a></li>
-                                <li><a href="#">Váy</a></li>
+                                <li><a href="@Url.Action("Index","Admin_tableCUSTOMERs")">Admin_Customer</a></li>
+                                <li><a href="@Url.Action("Index","Admin_tablePRODUCTofYourCarts")">Admin_Product</a></li>
+                                <li><a href="@Url.Action("Index","Admin_tableBILLs")">Admin_Bill</a></li>
+                                <li><a href="@Url.Action("Index", "M4_Admin_TimKiemHienThi")">Admin_Contact</a></li>
                             </ul>
                         </li>
-                        <li><a href="./ManViews">Quần Áo Nam</a></li>
-                        <li>
-                            <a href="#">Mũ</a>
-                            <a href="#">Phụ kiện</a>
-                            <ul>
-                                <li><a href="#">Thắt Lưng</a></li>
-                                <li><a href="#">Balo</a></li>
-                                <li><a href="#">Túi</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Giầy</a></li>
-                        <li><a href="#">Hàng Giảm giá</a></li>
 
                     </ul>
                 </nav>

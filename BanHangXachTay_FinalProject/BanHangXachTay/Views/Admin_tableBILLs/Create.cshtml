@@ -49,32 +49,6 @@
             </div>
         </div>
 
-        
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.tenSP, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.tenSP)
-                @Html.ValidationMessageFor(model => model.tenSP)
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.dongiaSP, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.dongiaSP)
-                @Html.ValidationMessageFor(model => model.dongiaSP)
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.soluongSP, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.soluongSP)
-                @Html.ValidationMessageFor(model => model.soluongSP)
-            </div>
-        </div>
-
         <div class="form-group">
             @Html.LabelFor(model => model.ghichuSP, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -83,13 +57,7 @@
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.thanhtienBILL, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.thanhtienBILL)
-                @Html.ValidationMessageFor(model => model.thanhtienBILL)
-            </div>
-        </div>
+        
 
         
 
@@ -111,6 +79,9 @@
 
 <div>
     @Html.ActionLink("Quay lại", "Index")
+</div>
+<div>
+    <a href="@Url.Action("Index","Cart")">Quay lại YourCart</a>
 </div>
 
 

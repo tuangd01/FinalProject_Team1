@@ -15,6 +15,7 @@ namespace BanHangXachTay.Controllers
     {
         private CsK23T2aEntities1 db = new CsK23T2aEntities1();
 
+       
         // GET: Admin_tableCUSTOMERs
         public ActionResult Index(string searchString)
         {

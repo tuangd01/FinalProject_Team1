@@ -39,7 +39,7 @@ namespace BanHangXachTay.Models
         [Display(Name = "Password")]
         public string Password { get; set; }
 
-        [Display(Name = "Remember me?")]
+        [Display(Name = "Lưu mật khẩu?")]
         public bool RememberMe { get; set; }
     }
 

@@ -32,7 +32,7 @@
 
 
         <th>
-            @Html.DisplayNameFor(model => model.thanhtienBILL)
+            @Html.DisplayNameFor(model => model.ngaydathang)
         </th>
 
 
@@ -64,7 +64,7 @@
 
 
             <td>
-                @(item.dongiaSP * item.soluongSP)
+                @Html.DisplayFor(modelItem => item.ngaydathang)
             </td>
 
 

@@ -14,7 +14,8 @@ namespace BanHangXachTay.Controllers
     {
         private CsK23T2aEntities1 db = new CsK23T2aEntities1();
 
-        // GET: Admin_tableBILLs
+        
+        // GET: Admin_tableBILLs      
         public ActionResult Index(String searchString)
         {
             var model = db.tableBILLs.ToList();
@@ -47,6 +48,7 @@ namespace BanHangXachTay.Controllers
             return View(model);
         }
 
+        
         // GET: Admin_tableBILLs/Create
         public ActionResult Create()
         {
@@ -56,6 +58,7 @@ namespace BanHangXachTay.Controllers
         // POST: Admin_tableBILLs/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create( tableBILL model)
