@@ -34,8 +34,15 @@ namespace BanHangXachTay.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult TraLoi(Contact model)
         {
-            if (model.traLoi == null) { model.trangThai = false; }
-            else { model.trangThai = true; }
+            if (model.trangThai == true)
+            {
+                model.trangThai = true;
+            }else if (model.traLoi == null)
+            {
+                model.trangThai = false;
+            }else{
+                model.trangThai = true;
+            }
             model.thoigianTraLoi = DateTime.Now.Date;
 
             if (ModelState.IsValid)
@@ -50,18 +57,18 @@ namespace BanHangXachTay.Controllers
         // GET: /Admin_CapNhat_Xoa_TraLoi/Delete/5
         public ActionResult Xoa(int? id)
         {
-            
+
             var model = db.Contacts.Find(id);
             if (model == null)
             {
                 return HttpNotFound();
             } db.Contacts.Remove(model);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "M4_Admin_TimKiemHienThi");
         }
 
         // POST: /Admin_CapNhat_Xoa_TraLoi/Delete/5
-    
+
 
         protected override void Dispose(bool disposing)
         {

@@ -93,6 +93,7 @@
     <Compile Include="Controllers\Admin_tablePRODUCTofYourCartsControllerTest.cs" />
     <Compile Include="Controllers\Admin_tableCUSTOMERsControllerTest.cs" />
     <Compile Include="Controllers\Admin_tableBILLsControllerTest.cs" />
+    <Compile Include="Controllers\Admin_CapNhat_Xoa_TraLoiTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\HomeControllerTest.cs" />
   </ItemGroup>
