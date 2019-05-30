@@ -1,11 +1,47 @@
 ﻿dt {
-    font-size: 15px;
+    font-size: 20px;
+    padding: 10px;
 }
 
 dd {
-    font-size: 12px;
+    font-size: 15px;
+    border: 1px solid #ff6a00;
+    padding: 10px;
+    width: 300px;
+    display: block;
 }
 
-dl {
-    padding: 20px;
+h2 {
+    font-size: 30px;
+    color: #ff6a00;
+    text-align: center;
+}
+
+select:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.left {
+    padding: 5px;
+    position: absolute;
+    left: 20%;
+}
+
+.right {
+    padding: 5px;
+    position: absolute;
+    left: 50%;
+}
+
+.Bo {
+    border: 1px solid white;
+}
+
+p {
+    position: absolute;
+    top: 100%;
+    left: 10%;
+    padding: 40px;
 }

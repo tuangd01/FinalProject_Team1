@@ -2,105 +2,114 @@
 
 @{
     ViewBag.Title = "Details";
+    Layout = null;
 }
+
 
 <link href="~/Content/Contact/css/CssDetails.css" rel="stylesheet" />
 <h2>Thông tin</h2>
 
 <div>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            Chủ đề:
-        </dt>
+    <section>
+        <dl class="left">
+            <dt>
+                Chủ đề:
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.chuDe)
-        </dd>
+            <dd>
+                @Html.TextBoxFor(model => model.chuDe)
+            </dd>
 
-        <dt>
-            Tiêu đề:
-        </dt>
+            <dt>
+                Tiêu đề:
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.tieuDe)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.tieuDe)
+            </dd>
 
-        <dt>
-            Nội dung:
-        </dt>
+            <dt>
+                Nội dung:
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.noiDung)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.noiDung)
+            </dd>
 
-        <dt>
-            Họ và Tên:
-        </dt>
+            <dt>
+                Họ và Tên:
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.hoTen)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.hoTen)
+            </dd>
 
-        <dt>
-            Email:
-        </dt>
+            <dt>
+                Email:
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.email)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.email)
+            </dd>
 
-        <dt>
-            Số điện thoại:
-        </dt>
+            <dt>
+                Số điện thoại:
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.sdt)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.sdt)
+            </dd>
 
-        <dt>
-            Thời gian gửi:
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.thoiGianGui)
-        </dd>
+        </dl>
+        <dl class="right">
+            <dt>
+                Thời gian gửi:
+            </dt>
 
-        <dt>
-            Trạng thái:
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.thoiGianGui)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.trangThai)
-        </dd>
+            <dt>
+                Trạng thái:
+            </dt>
 
-        <dt>
-            Trả lời:
-        </dt>
+            <dd class="Bo">
+                @Html.DisplayFor(model => model.trangThai)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.traLoi)
-        </dd>
+            <dt>
+                Trả lời:
+            </dt>
 
-        <dt>
-            Thời gian trả lời:
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.traLoi)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.thoigianTraLoi)
-        </dd>
+            <dt>
+                Thời gian trả lời:
+            </dt>
 
-        <dt>
-            Ghi chú:
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.thoigianTraLoi)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.ghiChu)
-        </dd>
+            <dt>
+                Ghi chú:
+            </dt>
 
-    </dl>
+            <dd>
+                @Html.DisplayFor(model => model.ghiChu)
+            </dd>
+
+        </dl>
+    </section>
+
+    <p>
+        @Html.ActionLink("Thoát ra", "Index") |
+        @Html.ActionLink("Trả Lời", "TraLoi", "Admin_CapNhat_Xoa_TraLoi", new { id = Model.idContact }, "")
+    </p>
+
 </div>
-<p>
-    @Html.ActionLink("Thoát ra", "Index") |
-    @Html.ActionLink("Trả Lời", "TraLoi", "Admin_CapNhat_Xoa_TraLoi", new { id = Model.idContact }, "")
-</p>

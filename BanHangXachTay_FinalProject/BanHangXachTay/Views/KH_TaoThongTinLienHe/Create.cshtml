@@ -19,54 +19,56 @@
             @Html.ValidationSummary(true)
 
             <div class="form-group" id="left">
-                @Html.LabelFor(model => model.chuDe, "Chủ đề: ", htmlAttributes: new { @class = "" })
+                @Html.LabelFor(model => model.chuDe, "Chủ đề: ", htmlAttributes: new { @class = "", @id = "txtInput" })
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.chuDe)
                     @Html.ValidationMessageFor(model => model.chuDe)
                 </div>
-                @Html.LabelFor(model => model.tieuDe, "Tiêu đề: ", htmlAttributes: new { @class = "" })
+                @Html.LabelFor(model => model.tieuDe, "Tiêu đề: ", htmlAttributes: new { @class = "", @id = "txtInput" })
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.tieuDe)
                     @Html.ValidationMessageFor(model => model.tieuDe)
                 </div>
-                @Html.LabelFor(model => model.hoTen, "Họ và tên: ", htmlAttributes: new { @class = "" })
+                @Html.LabelFor(model => model.hoTen, "Họ và tên: ", htmlAttributes: new { @class = "", @id = "txtInput" })
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.hoTen)
                     @Html.ValidationMessageFor(model => model.hoTen)
                 </div>
                 <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Gửi liên hệ" class="btn btn-default" />
+                    <input type="submit" value="Gửi liên hệ" class="btn btn-default" id="btn" />
                 </div>
 
             </div>
 
 
             <div class="form-group" id="right">
-                @Html.LabelFor(model => model.email, "Địa chỉ email: ", htmlAttributes: new { @class = "" })
+                @Html.LabelFor(model => model.email, "Địa chỉ email: ", htmlAttributes: new { @class = "", @id = "txtInput" })
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.email)
+                    @Html.TextBoxFor(model => model.email)
                     @Html.ValidationMessageFor(model => model.email)
                 </div>
-                @Html.LabelFor(model => model.sdt, "Số điện thoại: ", htmlAttributes: new { @class = "" })
+                @Html.LabelFor(model => model.sdt, "Số điện thoại: ", htmlAttributes: new { @class = "", @id = "txtInput" })
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.sdt)
                     @Html.ValidationMessageFor(model => model.sdt)
                 </div>
-                @Html.LabelFor(model => model.noiDung, "Nội dung: ", htmlAttributes: new { @class = "" })
+                @Html.LabelFor(model => model.noiDung, "Nội dung: ", htmlAttributes: new { @class = "", @id = "txtInput" })
                 <div class="col-md-10" id="txtRight">
-                    @Html.TextAreaFor(model => model.noiDung)
+                    @Html.TextAreaFor(model => model.noiDung, new { @rows = "5" })
                     @Html.ValidationMessageFor(model => model.noiDung)
                 </div>
             </div>
 
-            <div class="form-group">
-
-            </div>
         </div>
     }
 </section>
 
-
+<script>
+    $('#btn').on('click', function () {
+        var giaTriNhap = $('#txtInput').val();
+        alert("Gửi thành công");
+    });
+</script>
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
