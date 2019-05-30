@@ -6,6 +6,16 @@
 
 <h4 class="title"><span class="text">Thông tin khách hàng</span></h4>
 <h4>@ViewBag.Message</h4>
+
+@using (Html.BeginForm())
+{
+
+    <p>
+        Title: @Html.TextBox("SearchString")
+        <button class="btn" style="margin-bottom:12px" value="Filter" onclick="javascript:return ShowMessage()">Tìm kiếm</button>
+    </p>
+}
+
 <p>
     @Html.ActionLink("Thêm thông tin khách hàng", "Create")
 </p>
@@ -29,29 +39,30 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.tenKH)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.gioitinh)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.sodienthoaiKH)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.diachi)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ghichu)
-        </td>
-        <td>
-            @Html.ActionLink("Sửa", "Edit", new { id=item.idKH }) |
-            @Html.ActionLink("Xem", "Details", new { id=item.idKH }) |
-            @Html.ActionLink("Xóa", "Delete", new { id=item.idKH })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.tenKH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.gioitinh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sodienthoaiKH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.diachi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ghichu)
+            </td>
+            <td>
+                @Html.ActionLink("Sửa", "Edit", new { id = item.idKH }) |
+                @Html.ActionLink("Xem", "Details", new { id = item.idKH }) |
+                @Html.ActionLink("Xóa", "Delete", new { id = item.idKH })
+            </td>
+        </tr>
+    }
 
 </table>

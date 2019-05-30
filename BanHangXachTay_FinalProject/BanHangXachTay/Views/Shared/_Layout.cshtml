@@ -219,6 +219,15 @@
                 });
             });
         });
+
+        function ShowMessage() {
+            var result = confirm("Bạn có chắc chắn muốn vậy?");
+            if (result) {
+                return true;
+            } else {
+                return false;
+            }
+        }
     </script>
     @RenderSection("Scripts", false)
 </body>

@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using BanHangXachTay.Models;
@@ -15,12 +16,28 @@ namespace BanHangXachTay.Controllers
         private CsK23T2aEntities1 db = new CsK23T2aEntities1();
 
         // GET: Admin_tableCUSTOMERs
-        public ActionResult Index()
+        public ActionResult Index(string searchString)
         {
             var model = db.tableCUSTOMERs.ToList();
             ViewBag.Message = TempData["StatusMessage"];
-            return View(model);
+            var movies = from m in db.tableCUSTOMERs
+                         select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                movies = movies.Where(s => s.tenKH.Contains(searchString));
+                
+            }
+            
+            return View(movies);
+            
+
         }
+
+        // SORT
+
+
+
 
         // GET: Admin_tableCUSTOMERs/Details/5
         public ActionResult Details(int id)
