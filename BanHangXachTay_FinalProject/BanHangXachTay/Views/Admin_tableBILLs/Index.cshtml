@@ -6,6 +6,14 @@
 
 <h4 class="title"><span class="text">Thông tin đơn hàng</span></h4>
 <h4>@ViewBag.Message</h4>
+@using (Html.BeginForm())
+{
+
+    <p>
+        Title: @Html.TextBox("SearchString")
+        <button class="btn" style="margin-bottom:12px" value="Filter" onclick="javascript:return ShowMessage()">Tìm kiếm</button>
+    </p>
+}
 <p>
     @Html.ActionLink("Thêm mới", "Create")
 </p>
@@ -19,9 +27,9 @@
             @Html.DisplayNameFor(model => model.tenKH)
         </th>
 
-        
 
-        
+
+
 
         <th>
             @Html.DisplayNameFor(model => model.thanhtienBILL)
@@ -29,11 +37,11 @@
 
 
 
-        
 
-        
 
-        
+
+
+
 
         <th>
             @Html.DisplayNameFor(model => model.ghichuBILL)
@@ -48,19 +56,19 @@
             <td>
                 @Html.DisplayFor(modelItem => item.idHD)
             </td>
-            
+
             <td>
                 @Html.DisplayFor(modelItem => item.tenKH)
             </td>
-            
-            
+
+
 
             <td>
-                @(item.dongiaSP*item.soluongSP)
+                @(item.dongiaSP * item.soluongSP)
             </td>
-            
-            
-            
+
+
+
             <td>
                 @Html.DisplayFor(modelItem => item.ghichuBILL)
             </td>

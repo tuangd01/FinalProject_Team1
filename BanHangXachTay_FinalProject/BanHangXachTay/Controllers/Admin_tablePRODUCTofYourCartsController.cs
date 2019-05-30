@@ -15,10 +15,20 @@ namespace BanHangXachTay.Controllers
         private CsK23T2aEntities1 db = new CsK23T2aEntities1();
 
         // GET: Admin_tablePRODUCTofYourCarts
-        public ActionResult Index()
+        public ActionResult Index(string searchString)
         {
             var model = db.tablePRODUCTofYourCarts.ToList();
             ViewBag.Message = TempData["StatusMessage"];
+            var movies = from m in db.tablePRODUCTofYourCarts
+                         select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                movies = movies.Where(s => s.tenSP.Contains(searchString));
+
+            }
+
+            return View(movies);
             return View(model);
         }
 

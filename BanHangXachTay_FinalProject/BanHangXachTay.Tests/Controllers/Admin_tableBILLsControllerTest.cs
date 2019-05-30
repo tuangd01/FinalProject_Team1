@@ -12,20 +12,24 @@ namespace BanHangXachTay.Tests.Controllers
     [TestClass]
     public class Admin_tableBILLsControllerTest
     {
+        private string searchString;
+
         [TestMethod]
         public void TestIndex()
         {
             var db = new CsK23T2aEntities1();
             var controller = new Admin_tableBILLsController();
-            var result = controller.Index();
+            var result = controller.Index(searchString);
             var view = result as ViewResult;
 
             Assert.IsNotNull(view);
 
             var model = view.Model as List<tableBILL>;
+            var movies = from m in db.tableBILLs
+                         select m;
 
-            Assert.IsNotNull(model);
-            Assert.AreEqual(db.tableBILLs.Count(), model.Count);
+            Assert.IsNotNull(movies);
+            Assert.AreEqual(model, searchString);
         }
 
         [TestMethod]

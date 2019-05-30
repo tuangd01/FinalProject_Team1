@@ -15,10 +15,20 @@ namespace BanHangXachTay.Controllers
         private CsK23T2aEntities1 db = new CsK23T2aEntities1();
 
         // GET: Admin_tableBILLs
-        public ActionResult Index()
+        public ActionResult Index(String searchString)
         {
             var model = db.tableBILLs.ToList();
             ViewBag.Message = TempData["StatusMessage"];
+            var movies = from m in db.tableBILLs
+                         select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                movies = movies.Where(s => s.tenKH.Contains(searchString));
+
+            }
+
+            return View(movies);
             return View(model);
         }
 
